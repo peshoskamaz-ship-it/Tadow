@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Menu — Tadow Cocktail Lounge</title>
+  <meta name="description" content="Coffee, seasonal lattes, homemade lemonades, matcha, and iced teas at Tadow Cocktail Lounge in Blagoevgrad." />
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Daily Menu — Tadow Cocktail Lounge" />
+  <meta property="og:description" content="Seasonal lattes, matcha, lemonades, iced teas and more — all day, every day." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://mytadowcocktaillounge.com/daily-menu.html" />
+  <meta property="og:image"       content="https://mytadowcocktaillounge.com/images/og-cover.jpg" />
+  <link rel="canonical" href="https://mytadowcocktaillounge.com/daily-menu.html" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <style>
+    /* Daily menu simple price card (no description) */
+    .dm-card {
+      position: relative;
+      background: var(--panel);
+      border: 1px solid rgba(201,162,39,0.28);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      overflow: hidden;
+      transition: border-color var(--transition), box-shadow var(--transition),
+                  transform var(--transition);
+    }
+
+    .dm-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--gold) 0 4px,
+        transparent 4px 8px,
+        var(--terracotta) 8px 12px,
+        transparent 12px 16px
+      );
+      opacity: 0.5;
+    }
+
+    .dm-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 0 20px var(--gold-glow);
+      transform: translateY(-2px);
+    }
+
+    .dm-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1.3;
+    }
+
+    .dm-price {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--gold);
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+    }
+
+    .section-price-note {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="nav-inner">
+      <a href="index.html" class="logo-lockup" aria-label="Tadow Cocktail Lounge — home">
+        <svg class="logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon points="8,8 56,8 32,38" fill="none" stroke="#C9A227" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="32" y1="38" x2="32" y2="56" stroke="#C9A227" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="20" y1="56" x2="44" y2="56" stroke="#C9A227" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="22" cy="20" r="3" fill="#C9A227" opacity="0.7"/>
+          <circle cx="38" cy="16" r="2" fill="#D2691E" opacity="0.8"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-wordmark">TADOW</span>
+          <span class="logo-est">EST 2023</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cocktails.html">Cocktails</a></li>
+          <li><a href="daily-menu.html">Daily Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="visit.html">Visit Us</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Daily menu header">
+      <div class="afro-pattern-overlay" aria-hidden="true"></div>
+      <h1>Daily Menu</h1>
+      <p>From morning espresso to afternoon matcha</p>
+    </section>
+
+    <div class="kente-divider" aria-hidden="true"></div>
+
+    <section class="section section-dark" aria-label="Daily menu items">
+      <div class="section-inner">
+
+        <!-- SEASONAL LATTES -->
+        <div class="category-section reveal">
+          <div class="category-label cat-latte">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <circle cx="7" cy="7" r="5" fill="none" stroke="white" stroke-width="1.2" opacity="0.8"/>
+              <circle cx="7" cy="7" r="2" fill="white" opacity="0.5"/>
+            </svg>
+            Seasonal Lattes
+          </div>
+
+          <div class="grid-3" role="list">
+            <div class="dm-card reveal reveal-delay-1" role="listitem">
+              <span class="dm-name">Biscoff</span>
+              <span class="dm-price">3.90€ / 7.63 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-2" role="listitem">
+              <span class="dm-name">Coconut</span>
+              <span class="dm-price">3.90€ / 7.63 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-3" role="listitem">
+              <span class="dm-name">Salted Caramel</span>
+              <span class="dm-price">3.90€ / 7.63 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-1" role="listitem">
+              <span class="dm-name">Espresso Tonic</span>
+              <span class="dm-price">3.00€ / 5.87 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-2" role="listitem">
+              <span class="dm-name">Ube Latte</span>
+              <span class="dm-price">4.00€ / 7.82 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-3" role="listitem">
+              <span class="dm-name">Pistachio</span>
+              <span class="dm-price">3.90€ / 7.63 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-1" role="listitem">
+              <span class="dm-name">Matcha</span>
+              <span class="dm-price">4.00€ / 7.82 BGN</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="zigzag-border" style="margin:0 0 2.5rem;" aria-hidden="true"></div>
+
+        <!-- MATCHA -->
+        <div class="category-section reveal">
+          <div class="category-label cat-matcha">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <polygon points="7,1 13,13 1,13" fill="none" stroke="white" stroke-width="1.2" opacity="0.8"/>
+              <line x1="7" y1="5" x2="7" y2="10" stroke="white" stroke-width="0.8" opacity="0.6"/>
+            </svg>
+            Matcha
+          </div>
+
+          <div class="grid-3" role="list">
+            <div class="dm-card reveal reveal-delay-1" role="listitem">
+              <span class="dm-name">Strawberry Cloud</span>
+              <span class="dm-price">4.20€ / 8.21 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-2" role="listitem">
+              <span class="dm-name">Passion Fruit</span>
+              <span class="dm-price">4.20€ / 8.21 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-3" role="listitem">
+              <span class="dm-name">Strawberry, Pineapple &amp; Dragon Fruit</span>
+              <span class="dm-price">4.20€ / 8.21 BGN</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="zigzag-border" style="margin:0 0 2.5rem;" aria-hidden="true"></div>
+
+        <!-- HOMEMADE LEMONADES -->
+        <div class="category-section reveal">
+          <div class="category-label cat-lemonade">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <polygon points="7,1 13,7 7,13 1,7" fill="none" stroke="white" stroke-width="1.2" opacity="0.8"/>
+            </svg>
+            Homemade Lemonades
+          </div>
+          <span class="section-price-note">All at 3.50€ / 6.85 BGN</span>
+
+          <div class="grid-3" role="list">
+            <div class="dm-card reveal reveal-delay-1" role="listitem">
+              <span class="dm-name">Fig</span>
+              <span class="dm-price">3.50€ / 6.85 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-2" role="listitem">
+              <span class="dm-name">Raspberry</span>
+              <span class="dm-price">3.50€ / 6.85 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-3" role="listitem">
+              <span class="dm-name">
+                Passion Fruit
+                <span class="badge-no-sugar" aria-label="No added sugar">No Sugar</span>
+              </span>
+              <span class="dm-price">3.50€ / 6.85 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-1" role="listitem">
+              <span class="dm-name">
+                Elderflower &amp; Grapefruit
+                <span class="badge-no-sugar" aria-label="No added sugar">No Sugar</span>
+              </span>
+              <span class="dm-price">3.50€ / 6.85 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-2" role="listitem">
+              <span class="dm-name">
+                Strawberry, Pineapple &amp; Dragon Fruit
+                <span class="badge-no-sugar" aria-label="No added sugar">No Sugar</span>
+              </span>
+              <span class="dm-price">3.50€ / 6.85 BGN</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="zigzag-border" style="margin:0 0 2.5rem;" aria-hidden="true"></div>
+
+        <!-- HOMEMADE ICED TEA -->
+        <div class="category-section reveal">
+          <div class="category-label cat-iced-tea">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="10" height="10" rx="2" fill="none" stroke="white" stroke-width="1.2" opacity="0.8"/>
+            </svg>
+            Homemade Iced Tea
+          </div>
+          <span class="section-price-note">All at 2.50€ / 4.89 BGN</span>
+
+          <div class="grid-2" role="list">
+            <div class="dm-card reveal reveal-delay-1" role="listitem">
+              <span class="dm-name">
+                Cherry with Red Berries
+                <span class="badge-no-sugar" aria-label="No added sugar">No Sugar</span>
+              </span>
+              <span class="dm-price">2.50€ / 4.89 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-2" role="listitem">
+              <span class="dm-name">
+                Apple &amp; Pear
+                <span class="badge-no-sugar" aria-label="No added sugar">No Sugar</span>
+              </span>
+              <span class="dm-price">2.50€ / 4.89 BGN</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="zigzag-border" style="margin:0 0 2.5rem;" aria-hidden="true"></div>
+
+        <!-- COFFEE & MORE -->
+        <div class="category-section reveal">
+          <div class="category-label cat-coffee">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M3 5 Q7 3 11 5 Q11 10 7 12 Q3 10 3 5Z" fill="none" stroke="#C9A227" stroke-width="1.2" opacity="0.9"/>
+            </svg>
+            Coffee &amp; More
+          </div>
+
+          <div class="grid-3" role="list">
+            <div class="dm-card reveal reveal-delay-1" role="listitem">
+              <span class="dm-name">Espresso Musetti</span>
+              <span class="dm-price">1.80€ / 3.52 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-2" role="listitem">
+              <span class="dm-name">Double Espresso</span>
+              <span class="dm-price">3.40€ / 6.65 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-3" role="listitem">
+              <span class="dm-name">Cappuccino</span>
+              <span class="dm-price">2.50€ / 4.89 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-1" role="listitem">
+              <span class="dm-name">Espresso Macchiato</span>
+              <span class="dm-price">2.00€ / 3.91 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-2" role="listitem">
+              <span class="dm-name">Latte Macchiato</span>
+              <span class="dm-price">2.60€ / 5.09 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-3" role="listitem">
+              <span class="dm-name">Organic Tea</span>
+              <span class="dm-price">2.30€ / 4.50 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-1" role="listitem">
+              <span class="dm-name">Hot Chocolate</span>
+              <span class="dm-price">3.00€ / 5.87 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-2" role="listitem">
+              <span class="dm-name">Frappe</span>
+              <span class="dm-price">2.50€ / 4.89 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-3" role="listitem">
+              <span class="dm-name">Natural Juice</span>
+              <span class="dm-price">2.00€ / 3.91 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-1" role="listitem">
+              <span class="dm-name">Coca-Cola Products</span>
+              <span class="dm-price">2.00€ / 3.91 BGN</span>
+            </div>
+            <div class="dm-card reveal reveal-delay-2" role="listitem">
+              <span class="dm-name">Fresh Juice</span>
+              <span class="dm-price">2.50€ / 4.89 BGN</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CALLOUT: ALTERNATIVE MILKS -->
+        <div class="callout reveal" role="note" aria-label="Alternative milks notice">
+          <span class="callout-icon" aria-hidden="true">&#9432;</span>
+          <span>
+            All drinks available with <strong>alternative milks</strong> (coconut, almond, oat) — add just <strong>+0.50€</strong>.
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="kente-divider" aria-hidden="true"></div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <span class="footer-brand">TADOW · EST 2023</span>
+        <p>A vibrant cocktail lounge nestled in Gradska Gradina park, Blagoevgrad.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cocktails.html">Cocktails</a></li>
+          <li><a href="daily-menu.html">Daily Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="visit.html">Visit Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><strong>Phone:</strong><br/><a href="tel:+359879868679">+359 87 986 8679</a></p>
+        <p style="margin-top:0.75rem;"><strong>Address:</strong><br/>Gradska Gradina,<br/>pl. Georgi Izmirliev-Makedonche,<br/>2700 Blagoevgrad, Bulgaria</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/tadowcocktaillounge" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Tadow on Instagram">Instagram</a>
+          <a href="https://www.facebook.com/tadowcocktaillounge" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Tadow on Facebook">Facebook</a>
+        </div>
+        <p style="margin-top:1rem;font-size:0.8rem;"><a href="https://mytadowcocktaillounge.com" target="_blank" rel="noopener noreferrer">mytadowcocktaillounge.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Tadow Cocktail Lounge. All rights reserved.</span>
+      <span>Blagoevgrad, Bulgaria</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
