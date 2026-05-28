@@ -4,39 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cocktail Menu — Tadow Cocktail Lounge</title>
-  <meta name="description" content="Explore Tadow's full cocktail menu — floral, velvet, spring, and citrus categories crafted by our expert mixologists in Blagoevgrad." />
-  <!-- Open Graph -->
+  <meta name="description" content="Explore Tadow's full cocktail menu — ten signature drinks across four categories, crafted by expert bartenders in Blagoevgrad." />
   <meta property="og:title"       content="Cocktail Menu — Tadow Cocktail Lounge" />
-  <meta property="og:description" content="Ten signature cocktails across four categories. Bold, creative, and made to order in Blagoevgrad, Bulgaria." />
+  <meta property="og:description" content="Ten signature cocktails across four categories. Bold, creative, made to order." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://mytadowcocktaillounge.com/cocktails.html" />
-  <meta property="og:image"       content="https://mytadowcocktaillounge.com/images/og-cover.jpg" />
-  <link rel="canonical" href="https://mytadowcocktaillounge.com/cocktails.html" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta property="og:image"       content="https://mytadowcocktaillounge.com/IMG_9544.JPG" />
+  <link rel="canonical"           href="https://mytadowcocktaillounge.com/cocktails.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="nav-inner">
       <a href="index.html" class="logo-lockup" aria-label="Tadow Cocktail Lounge — home">
-        <svg class="logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polygon points="8,8 56,8 32,38" fill="none" stroke="#C9A227" stroke-width="2.5" stroke-linejoin="round"/>
-          <line x1="32" y1="38" x2="32" y2="56" stroke="#C9A227" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="20" y1="56" x2="44" y2="56" stroke="#C9A227" stroke-width="2.5" stroke-linecap="round"/>
-          <circle cx="22" cy="20" r="3" fill="#C9A227" opacity="0.7"/>
-          <circle cx="38" cy="16" r="2" fill="#D2691E" opacity="0.8"/>
-        </svg>
-        <div class="logo-text">
-          <span class="logo-wordmark">TADOW</span>
-          <span class="logo-est">EST 2023</span>
-        </div>
+        <span class="logo-est">EST &nbsp;🍸&nbsp; 2023</span>
+        <span class="logo-wordmark">TADOW</span>
+        <span class="logo-sub">Cocktail Lounge</span>
       </a>
-
       <nav aria-label="Main navigation">
         <ul class="nav-links" id="nav-links" role="list">
           <li><a href="index.html">Home</a></li>
@@ -46,194 +36,171 @@
           <li><a href="visit.html">Visit Us</a></li>
         </ul>
       </nav>
-
-      <div style="display:flex;align-items:center;gap:0.75rem;">
-        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- MAIN -->
   <main id="main-content">
 
     <!-- PAGE HERO -->
     <section class="page-hero" aria-label="Cocktail menu header">
-      <div class="afro-pattern-overlay" aria-hidden="true"></div>
-      <h1>Cocktail Menu</h1>
-      <p>Crafted with intention &mdash; served with pride</p>
+      <div class="page-hero-bg" style="background-image: url('IMG_9544.JPG');" role="img" aria-label="A raspberry foam cocktail with fresh raspberries on a dark leather surface"></div>
+      <div class="page-hero-overlay"></div>
+      <div class="page-hero-content">
+        <h1>Cocktail Menu</h1>
+        <p class="page-hero-intro">Every drink is a destination.</p>
+      </div>
     </section>
 
-    <div class="kente-divider" aria-hidden="true"></div>
-
-    <!-- MENU CATEGORIES -->
+    <!-- MENU CONTENT -->
     <section class="section section-dark" aria-label="Cocktail menu">
       <div class="section-inner">
 
         <!-- FLORAL & NATURAL -->
-        <div class="category-section reveal">
-          <div class="category-label cat-floral" aria-label="Category: Floral and Natural">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <circle cx="7" cy="7" r="3" fill="white" opacity="0.8"/>
-              <circle cx="7" cy="2" r="1.5" fill="white" opacity="0.6"/>
-              <circle cx="7" cy="12" r="1.5" fill="white" opacity="0.6"/>
-              <circle cx="2" cy="7" r="1.5" fill="white" opacity="0.6"/>
-              <circle cx="12" cy="7" r="1.5" fill="white" opacity="0.6"/>
-            </svg>
-            Floral &amp; Natural
+        <div class="menu-section reveal">
+          <div class="category-header" aria-label="Category: Floral and Natural">
+            <div class="category-header-line"></div>
+            <span class="category-header-label">Floral &amp; Natural</span>
+            <div class="category-header-line right"></div>
           </div>
-
-          <div class="grid-3" role="list">
-            <article class="card reveal reveal-delay-1" role="listitem">
-              <div class="card-corner" aria-hidden="true"></div>
-              <div class="card-name">Fig Garden</div>
-              <p class="card-desc">Green fig leaves and gin — fresh, minimal, and effortlessly cool.</p>
-              <p class="card-price"><span class="eur">7€</span> / <span class="bgn">13.69 BGN</span></p>
+          <div class="cocktail-grid" role="list">
+            <article class="cocktail-card" role="listitem">
+              <div class="cocktail-name">Fig Garden</div>
+              <p class="cocktail-desc">Green fig leaves and gin — fresh, minimal, and effortlessly cool.</p>
+              <div class="cocktail-price">7€ / 13.69 BGN</div>
             </article>
-
-            <article class="card reveal reveal-delay-2" role="listitem">
-              <div class="card-corner" aria-hidden="true"></div>
-              <div class="card-name">Aegean Blossom</div>
-              <p class="card-desc">Tequila and mastiha with berries and tea — Mediterranean, herbal, quietly complex.</p>
-              <p class="card-price"><span class="eur">7€</span> / <span class="bgn">13.69 BGN</span></p>
+            <article class="cocktail-card" role="listitem">
+              <div class="cocktail-name">Aegean Blossom</div>
+              <p class="cocktail-desc">Tequila and mastiha with berries and tea — Mediterranean, herbal, quietly complex.</p>
+              <div class="cocktail-price">7€ / 13.69 BGN</div>
             </article>
-
-            <article class="card reveal reveal-delay-3" role="listitem">
-              <div class="card-corner" aria-hidden="true"></div>
-              <div class="card-name">
+            <article class="cocktail-card" role="listitem">
+              <div class="cocktail-name">
                 Tropical Bloom
                 <span class="badge-no-sugar" aria-label="No added sugar">No Sugar</span>
               </div>
-              <p class="card-desc">Pineapple, strawberry, lime and ginger — raw, fresh, and clean by design.</p>
-              <p class="card-price"><span class="eur">7.80€</span> / <span class="bgn">15.25 BGN</span></p>
+              <p class="cocktail-desc">Pineapple, strawberry, lime and ginger — raw, fresh, and clean by design.</p>
+              <div class="cocktail-price">7.80€ / 15.25 BGN</div>
             </article>
           </div>
         </div>
 
-        <div class="zigzag-border" aria-hidden="true"></div>
+        <!-- GOLD DIVIDER -->
+        <div class="gold-divider" style="margin:0 0 3rem;" aria-hidden="true">
+          <span class="gold-divider-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polygon points="6,1 11,6 6,11 1,6" fill="#C9A227" opacity="0.5"/></svg>
+          </span>
+        </div>
 
         <!-- VELVET & AROMATIC -->
-        <div class="category-section reveal" style="margin-top:2.5rem;">
-          <div class="category-label cat-velvet" aria-label="Category: Velvet and Aromatic">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <polygon points="7,1 13,13 1,13" fill="none" stroke="white" stroke-width="1.2" opacity="0.8"/>
-            </svg>
-            Velvet &amp; Aromatic
+        <div class="menu-section reveal">
+          <div class="category-header" aria-label="Category: Velvet and Aromatic">
+            <div class="category-header-line"></div>
+            <span class="category-header-label">Velvet &amp; Aromatic</span>
+            <div class="category-header-line right"></div>
           </div>
-
-          <div class="grid-2" role="list">
-            <article class="card reveal reveal-delay-1" role="listitem">
-              <div class="card-corner" aria-hidden="true"></div>
-              <div class="card-name">Golden Orchid</div>
-              <p class="card-desc">Bourbon, brûlée and citrus — silky, structured, and built to linger.</p>
-              <p class="card-price"><span class="eur">8€</span> / <span class="bgn">15.65 BGN</span></p>
+          <div class="cocktail-grid" role="list">
+            <article class="cocktail-card" role="listitem">
+              <div class="cocktail-name">Golden Orchid</div>
+              <p class="cocktail-desc">Bourbon, brûlée and citrus — silky, structured, and built to linger.</p>
+              <div class="cocktail-price">8€ / 15.65 BGN</div>
             </article>
-
-            <article class="card reveal reveal-delay-2" role="listitem">
-              <div class="card-corner" aria-hidden="true"></div>
-              <div class="card-name">Velvet Espresso</div>
-              <p class="card-desc">Espresso, vodka and ice cream — rich, smooth, and impossible to rush.</p>
-              <p class="card-price"><span class="eur">7.80€</span> / <span class="bgn">15.25 BGN</span></p>
+            <article class="cocktail-card" role="listitem">
+              <div class="cocktail-name">Velvet Espresso</div>
+              <p class="cocktail-desc">Espresso, vodka and ice cream — rich, smooth, and impossible to rush.</p>
+              <div class="cocktail-price">7.80€ / 15.25 BGN</div>
             </article>
           </div>
         </div>
 
-        <div class="zigzag-border" aria-hidden="true"></div>
+        <!-- GOLD DIVIDER -->
+        <div class="gold-divider" style="margin:0 0 3rem;" aria-hidden="true">
+          <span class="gold-divider-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polygon points="6,1 11,6 6,11 1,6" fill="#C9A227" opacity="0.5"/></svg>
+          </span>
+        </div>
 
         <!-- SPRING IN BLOOM -->
-        <div class="category-section reveal" style="margin-top:2.5rem;">
-          <div class="category-label cat-spring" aria-label="Category: Spring in Bloom">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <polygon points="7,1 13,7 7,13 1,7" fill="none" stroke="white" stroke-width="1.2" opacity="0.8"/>
-            </svg>
-            Spring in Bloom
+        <div class="menu-section reveal">
+          <div class="category-header" aria-label="Category: Spring in Bloom">
+            <div class="category-header-line"></div>
+            <span class="category-header-label">Spring in Bloom</span>
+            <div class="category-header-line right"></div>
           </div>
-
-          <div class="grid-2" role="list">
-            <article class="card reveal reveal-delay-1" role="listitem">
-              <div class="card-corner" aria-hidden="true"></div>
-              <div class="card-name">Sunset Spritz</div>
-              <p class="card-desc">Tropical passion fruit wrapped in caramel and prosecco — soft, but not innocent.</p>
-              <p class="card-price"><span class="eur">7€</span> / <span class="bgn">13.69 BGN</span></p>
+          <div class="cocktail-grid" role="list">
+            <article class="cocktail-card" role="listitem">
+              <div class="cocktail-name">Sunset Spritz</div>
+              <p class="cocktail-desc">Tropical passion fruit wrapped in caramel and prosecco — soft, but not innocent.</p>
+              <div class="cocktail-price">7€ / 13.69 BGN</div>
             </article>
-
-            <article class="card reveal reveal-delay-2" role="listitem">
-              <div class="card-corner" aria-hidden="true"></div>
-              <div class="card-name">Florale Spritz</div>
-              <p class="card-desc">Italicus, elderflower and grapefruit — floral, bitter, and unapologetically bright.</p>
-              <p class="card-price"><span class="eur">7€</span> / <span class="bgn">13.69 BGN</span></p>
+            <article class="cocktail-card" role="listitem">
+              <div class="cocktail-name">Florale Spritz</div>
+              <p class="cocktail-desc">Italicus, elderflower and grapefruit — floral, bitter, and unapologetically bright.</p>
+              <div class="cocktail-price">7€ / 13.69 BGN</div>
             </article>
           </div>
         </div>
 
-        <div class="zigzag-border" aria-hidden="true"></div>
+        <!-- GOLD DIVIDER -->
+        <div class="gold-divider" style="margin:0 0 3rem;" aria-hidden="true">
+          <span class="gold-divider-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polygon points="6,1 11,6 6,11 1,6" fill="#C9A227" opacity="0.5"/></svg>
+          </span>
+        </div>
 
         <!-- CITRUS & FRESH ENERGY -->
-        <div class="category-section reveal" style="margin-top:2.5rem;">
-          <div class="category-label cat-citrus" aria-label="Category: Citrus and Fresh Energy">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <circle cx="7" cy="7" r="6" fill="none" stroke="white" stroke-width="1.2" opacity="0.8"/>
-              <line x1="7" y1="1" x2="7" y2="13" stroke="white" stroke-width="0.8" opacity="0.5"/>
-              <line x1="1" y1="7" x2="13" y2="7" stroke="white" stroke-width="0.8" opacity="0.5"/>
-            </svg>
-            Citrus &amp; Fresh Energy
+        <div class="menu-section reveal">
+          <div class="category-header" aria-label="Category: Citrus and Fresh Energy">
+            <div class="category-header-line"></div>
+            <span class="category-header-label">Citrus &amp; Fresh Energy</span>
+            <div class="category-header-line right"></div>
           </div>
-
-          <div class="grid-3" role="list">
-            <article class="card reveal reveal-delay-1" role="listitem">
-              <div class="card-corner" aria-hidden="true"></div>
-              <div class="card-name">Clementino</div>
-              <p class="card-desc">A sharp citrus trio over gin, cut with lemon — clean, vibrant, no distractions.</p>
-              <p class="card-price"><span class="eur">7.50€</span> / <span class="bgn">14.67 BGN</span></p>
+          <div class="cocktail-grid" role="list">
+            <article class="cocktail-card" role="listitem">
+              <div class="cocktail-name">Clementino</div>
+              <p class="cocktail-desc">A sharp citrus trio over gin, cut with lemon — clean, vibrant, no distractions.</p>
+              <div class="cocktail-price">7.50€ / 14.67 BGN</div>
             </article>
-
-            <article class="card reveal reveal-delay-2" role="listitem">
-              <div class="card-corner" aria-hidden="true"></div>
-              <div class="card-name">Hibiscus Veil</div>
-              <p class="card-desc">Hibiscus and orange peel over vodka, stretched long with tonic — dry and seductive.</p>
-              <p class="card-price"><span class="eur">8.50€</span> / <span class="bgn">16.62 BGN</span></p>
+            <article class="cocktail-card" role="listitem">
+              <div class="cocktail-name">Hibiscus Veil</div>
+              <p class="cocktail-desc">Hibiscus and orange peel over vodka, stretched long with tonic — dry and seductive.</p>
+              <div class="cocktail-price">8.50€ / 16.62 BGN</div>
             </article>
-
-            <article class="card reveal reveal-delay-3" role="listitem">
-              <div class="card-corner" aria-hidden="true"></div>
-              <div class="card-name">
+            <article class="cocktail-card" role="listitem">
+              <div class="cocktail-name">
                 Dragon Paloma
                 <span class="badge-no-sugar" aria-label="No added sugar">No Sugar</span>
               </div>
-              <p class="card-desc">Tequila with dragon fruit and strawberry — light, crisp, and dangerously easy.</p>
-              <p class="card-price"><span class="eur">7.20€</span> / <span class="bgn">14.08 BGN</span></p>
+              <p class="cocktail-desc">Tequila with dragon fruit and strawberry — light, crisp, and dangerously easy.</p>
+              <div class="cocktail-price">7.20€ / 14.08 BGN</div>
             </article>
           </div>
+        </div>
+
+        <!-- CTA strip -->
+        <div class="text-center reveal" style="margin-top:3.5rem;padding-top:2rem;border-top:1px solid rgba(201,162,39,0.15);">
+          <p style="font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--cream-muted);margin-bottom:1.25rem;">
+            Tell us your mood — our bartenders will build something special just for you.
+          </p>
+          <a href="visit.html" class="btn btn-filled">Reserve a Table</a>
         </div>
 
       </div>
     </section>
 
-    <div class="kente-divider" aria-hidden="true"></div>
-
-    <!-- CTA -->
-    <div class="hours-strip">
-      <div class="strip-inner">
-        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.25rem;">
-          Can't find your perfect drink? Our mixologists craft custom cocktails to order.
-        </p>
-        <a href="visit.html" class="btn btn-filled">Reserve a Table</a>
-      </div>
-    </div>
-
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-col">
-        <span class="footer-brand">TADOW · EST 2023</span>
-        <p>A vibrant cocktail lounge nestled in Gradska Gradina park, Blagoevgrad.</p>
+        <span class="footer-brand">TADOW</span>
+        <span class="footer-brand-sub">EST 2023 · Blagoevgrad, Bulgaria</span>
+        <p>A vibrant cocktail lounge nestled in Gradska Gradina park.</p>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
+        <h4>Pages</h4>
         <ul role="list">
           <li><a href="index.html">Home</a></li>
           <li><a href="cocktails.html">Cocktails</a></li>
@@ -243,23 +210,14 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
-        <p><strong>Phone:</strong><br/><a href="tel:+359879868679">+359 87 986 8679</a></p>
-        <p style="margin-top:0.75rem;"><strong>Address:</strong><br/>Gradska Gradina,<br/>pl. Georgi Izmirliev-Makedonche,<br/>2700 Blagoevgrad, Bulgaria</p>
-      </div>
-      <div class="footer-col">
-        <h4>Follow Us</h4>
-        <div class="social-links">
-          <a href="https://www.instagram.com/tadowcocktaillounge" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Tadow on Instagram">Instagram</a>
-          <a href="https://www.facebook.com/tadowcocktaillounge" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Tadow on Facebook">Facebook</a>
-        </div>
-        <p style="margin-top:1rem;font-size:0.8rem;"><a href="https://mytadowcocktaillounge.com" target="_blank" rel="noopener noreferrer">mytadowcocktaillounge.com</a></p>
+        <h4>Get in Touch</h4>
+        <p><a href="tel:+359879868679">+359 87 986 8679</a></p>
+        <p style="margin-top:0.6rem;"><a href="https://www.instagram.com/tadowcocktaillounge" target="_blank" rel="noopener noreferrer">Instagram @tadowcocktaillounge</a></p>
+        <p style="margin-top:0.4rem;"><a href="https://www.facebook.com/tadowcocktaillounge" target="_blank" rel="noopener noreferrer">Facebook · Tadow Cocktail Lounge</a></p>
+        <p style="margin-top:0.4rem;"><a href="https://mytadowcocktaillounge.com" target="_blank" rel="noopener noreferrer">mytadowcocktaillounge.com</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2025 Tadow Cocktail Lounge. All rights reserved.</span>
-      <span>Blagoevgrad, Bulgaria</span>
-    </div>
+    <div class="footer-bottom">&copy; 2025 Tadow Cocktail Lounge &middot; All rights reserved</div>
   </footer>
 
   <script src="js/main.js"></script>

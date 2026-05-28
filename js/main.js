@@ -1,6 +1,6 @@
 /* ============================================================
    TADOW COCKTAIL LOUNGE — main.js
-   Shared vanilla JS: nav, scroll-reveal, lightbox, reservation
+   Nav, scroll-reveal, gallery lightbox (arrows + swipe), reservation form
    ============================================================ */
 
 (function () {
@@ -21,7 +21,7 @@
   })();
 
   /* ----------------------------------------------------------
-     MOBILE NAV TOGGLE
+     MOBILE HAMBURGER TOGGLE
   ---------------------------------------------------------- */
   const navToggle = document.getElementById('nav-toggle');
   const navLinks  = document.getElementById('nav-links');
@@ -30,15 +30,18 @@
     navToggle.addEventListener('click', function () {
       const open = navLinks.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', String(open));
-      navToggle.querySelector('span:nth-child(1)').style.transform =
-        open ? 'rotate(45deg) translate(5px, 5px)' : '';
-      navToggle.querySelector('span:nth-child(2)').style.opacity =
-        open ? '0' : '';
-      navToggle.querySelector('span:nth-child(3)').style.transform =
-        open ? 'rotate(-45deg) translate(5px, -5px)' : '';
+      const spans = navToggle.querySelectorAll('span');
+      if (open) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity   = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      } else {
+        spans[0].style.transform = '';
+        spans[1].style.opacity   = '';
+        spans[2].style.transform = '';
+      }
     });
 
-    /* Close on nav link click (mobile) */
     navLinks.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () {
         navLinks.classList.remove('open');
@@ -52,149 +55,169 @@
   }
 
   /* ----------------------------------------------------------
-     LANGUAGE TOGGLE STUB
-  ---------------------------------------------------------- */
-  const langBtn = document.getElementById('lang-toggle');
-  if (langBtn) {
-    langBtn.addEventListener('click', function () {
-      const current = langBtn.textContent.trim();
-      langBtn.textContent = current === 'EN' ? 'BG' : 'EN';
-      /* Stub — wire up real translations here */
-    });
-  }
-
-  /* ----------------------------------------------------------
-     SCROLL-REVEAL
+     SCROLL-REVEAL (IntersectionObserver)
   ---------------------------------------------------------- */
   function initScrollReveal() {
     const elements = document.querySelectorAll('.reveal');
     if (!elements.length) return;
 
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-      elements.forEach(function (el) { observer.observe(el); });
-    } else {
-      /* Fallback: show all immediately */
+    if (!('IntersectionObserver' in window)) {
       elements.forEach(function (el) { el.classList.add('visible'); });
+      return;
     }
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+    elements.forEach(function (el) { observer.observe(el); });
   }
 
   /* ----------------------------------------------------------
      GALLERY LIGHTBOX
+     - Left/right arrow navigation
+     - Keyboard ← → Escape
+     - Touch swipe support
   ---------------------------------------------------------- */
   function initLightbox() {
-    const lightbox = document.getElementById('lightbox');
+    const lightbox   = document.getElementById('lightbox');
     if (!lightbox) return;
 
-    const lbImgWrap = lightbox.querySelector('.lightbox-img');
-    const lbClose   = lightbox.querySelector('.lightbox-close');
-    const items     = document.querySelectorAll('.gallery-item');
+    const lbImg      = lightbox.querySelector('.lb-img');
+    const lbClose    = lightbox.querySelector('.lightbox-close');
+    const lbPrev     = lightbox.querySelector('.lightbox-arrow.prev');
+    const lbNext     = lightbox.querySelector('.lightbox-arrow.next');
+    const lbCounter  = lightbox.querySelector('.lightbox-counter');
+    const items      = Array.from(document.querySelectorAll('.gallery-item'));
 
-    function openLightbox(label) {
-      lbImgWrap.textContent = label || 'Photo placeholder';
+    let currentIndex = 0;
+    let touchStartX  = 0;
+
+    function openAt(index) {
+      currentIndex = index;
+      const item   = items[index];
+      const img    = item.querySelector('img');
+      if (!img) return;
+
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
+      if (lbCounter) lbCounter.textContent = (index + 1) + ' / ' + items.length;
       lbClose.focus();
     }
 
     function closeLightbox() {
       lightbox.classList.remove('active');
       document.body.style.overflow = '';
+      lbImg.src = '';
     }
 
-    items.forEach(function (item) {
-      item.addEventListener('click', function () {
-        openLightbox(item.dataset.label || '');
-      });
+    function showPrev() { openAt((currentIndex - 1 + items.length) % items.length); }
+    function showNext() { openAt((currentIndex + 1)                 % items.length); }
+
+    items.forEach(function (item, i) {
+      item.setAttribute('tabindex', '0');
+      item.addEventListener('click',   function () { openAt(i); });
       item.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openLightbox(item.dataset.label || '');
-        }
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openAt(i); }
       });
     });
 
-    if (lbClose) {
-      lbClose.addEventListener('click', closeLightbox);
-    }
-
+    lbClose.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', function (e) {
       if (e.target === lightbox) closeLightbox();
     });
+    if (lbPrev) lbPrev.addEventListener('click', showPrev);
+    if (lbNext) lbNext.addEventListener('click', showNext);
 
+    /* Keyboard navigation */
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-        closeLightbox();
-      }
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape')     closeLightbox();
+      if (e.key === 'ArrowLeft')  showPrev();
+      if (e.key === 'ArrowRight') showNext();
     });
+
+    /* Touch swipe */
+    lightbox.addEventListener('touchstart', function (e) {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', function (e) {
+      const delta = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(delta) > 50) {
+        if (delta < 0) showNext(); else showPrev();
+      }
+    }, { passive: true });
   }
 
   /* ----------------------------------------------------------
      RESERVATION FORM (visit.html)
   ---------------------------------------------------------- */
   function initReservationForm() {
-    const form = document.getElementById('reservation-form');
-    if (!form) return;
-
-    const submitBtn     = document.getElementById('reservation-submit');
-    const confirmation  = document.getElementById('reservation-confirm');
-
+    const submitBtn    = document.getElementById('reservation-submit');
+    const confirmation = document.getElementById('reservation-confirm');
+    const formWrapper  = document.getElementById('res-form-wrapper');
     if (!submitBtn) return;
 
     submitBtn.addEventListener('click', function () {
-      /* Basic field presence check */
-      const name    = form.querySelector('#res-name');
-      const date    = form.querySelector('#res-date');
-      const time    = form.querySelector('#res-time');
-      const party   = form.querySelector('#res-party');
+      const name    = document.getElementById('res-name');
+      const date    = document.getElementById('res-date');
+      const time    = document.getElementById('res-time');
+      const party   = document.getElementById('res-party');
 
       let valid = true;
-
-      [name, date, time, party].forEach(function (field) {
-        if (!field) return;
-        if (!field.value.trim()) {
-          field.style.borderColor = '#9B2D1F';
+      [name, date, time, party].forEach(function (f) {
+        if (!f) return;
+        if (!f.value.trim()) {
+          f.classList.add('error');
           valid = false;
         } else {
-          field.style.borderColor = '';
+          f.classList.remove('error');
         }
       });
-
       if (!valid) return;
 
-      /* Show confirmation */
-      const guestName = name ? name.value.trim() : 'Guest';
-      const resDate   = date ? date.value : '';
-      const resTime   = time ? time.value : '';
-      const partySize = party ? party.value : '';
+      /* Format date nicely */
+      let displayDate = date.value;
+      try {
+        displayDate = new Date(date.value).toLocaleDateString('en-GB', {
+          weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+        });
+      } catch (e) { /* use raw value */ }
 
+      if (formWrapper)  formWrapper.style.display = 'none';
       if (confirmation) {
         confirmation.style.display = 'block';
         confirmation.innerHTML =
-          '&#10003; Thank you, <strong>' + guestName + '</strong>! ' +
-          'Your request for <strong>' + partySize + ' guest' +
-          (partySize === '1' ? '' : 's') + '</strong> on ' +
-          '<strong>' + resDate + ' at ' + resTime + '</strong> ' +
-          'has been received. We will confirm shortly via phone.';
+          'Thank you, <strong>' + escapeHtml(name.value.trim()) + '</strong>!<br>' +
+          'We\'ll confirm your table for <strong>' + partyLabel(party.value) + '</strong><br>' +
+          'on <strong>' + displayDate + '</strong> at <strong>' + time.value + '</strong>.<br><br>' +
+          'See you soon. 🥂';
       }
-
-      /* Reset form fields */
-      form.querySelectorAll('input, select, textarea').forEach(function (f) {
-        f.value = '';
-      });
     });
   }
 
+  function partyLabel(v) {
+    return v === '1' ? '1 guest' : v + ' guests';
+  }
+
+  function escapeHtml(str) {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
   /* ----------------------------------------------------------
-     INIT ON DOM READY
+     INIT
   ---------------------------------------------------------- */
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);
@@ -207,4 +230,5 @@
     initLightbox();
     initReservationForm();
   }
+
 })();
