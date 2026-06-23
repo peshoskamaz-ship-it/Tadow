@@ -27,10 +27,7 @@
   font-weight: 300; font-style: normal;
 }
 
-html, body {
-  width: 148mm; height: 210mm;
-  overflow: hidden;
-}
+html, body { width: 148mm; height: 210mm; overflow: hidden; }
 
 .page {
   position: relative;
@@ -40,138 +37,81 @@ html, body {
 }
 
 .deco {
-  position: absolute;
-  top: 0; left: 0;
+  position: absolute; top: 0; left: 0;
   width: 148mm; height: 210mm;
   pointer-events: none;
 }
 
 .content {
-  position: absolute;
-  top: 0; left: 0;
+  position: absolute; top: 0; left: 0;
   width: 148mm; height: 210mm;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; flex-direction: column; align-items: center;
   padding: 19mm 17mm 15mm;
 }
 
 /* ── Masthead ── */
 .venue-name {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 5.5px;
-  letter-spacing: 0.30em;
-  color: #C0B080;
-  text-transform: uppercase;
-  margin-bottom: 3mm;
-  text-align: center;
+  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-size: 5.5px; letter-spacing: 0.30em; color: #C0B080;
+  text-transform: uppercase; margin-bottom: 3mm; text-align: center;
 }
 .cocktails-title {
-  font-family: 'Lora', serif;
-  font-weight: 700;
-  font-size: 27px;
-  color: #D9B259;
-  text-align: center;
-  line-height: 1.05;
-  margin-bottom: 3.5mm;
-  letter-spacing: 0.04em;
+  font-family: 'Lora', serif; font-weight: 700; font-size: 27px;
+  color: #D9B259; text-align: center; line-height: 1.05;
+  margin-bottom: 3.5mm; letter-spacing: 0.04em;
 }
 .sig-row {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 5mm;
+  display: flex; align-items: center; width: 100%; margin-bottom: 5mm;
 }
 .sig-line { flex: 1; height: 0.4px; background: #C9A24B; }
 .sig-text {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 5px;
-  letter-spacing: 0.28em;
-  color: #C9A24B;
-  padding: 0 5px;
-  white-space: nowrap;
+  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-size: 5px; letter-spacing: 0.28em; color: #C9A24B;
+  padding: 0 5px; white-space: nowrap;
 }
 
 /* ── Cocktail cards ── */
 .cocktails {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
+  flex: 1; display: flex; flex-direction: column;
+  justify-content: space-evenly; align-items: center; width: 100%;
 }
-.cocktail {
-  text-align: center;
-  width: 100%;
-}
+.cocktail { text-align: center; width: 100%; }
 .drink-name {
-  font-family: 'Lora', serif;
-  font-weight: 700;
-  font-size: 16.5px;
-  color: #D4AB52;
-  margin-bottom: 2.2mm;
-  letter-spacing: 0.025em;
+  font-family: 'Lora', serif; font-weight: 700; font-size: 16.5px;
+  color: #D4AB52; margin-bottom: 2.2mm; letter-spacing: 0.025em;
 }
 .tasting-note {
-  font-family: 'Lora', serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 9.5px;
-  color: #ECE2C4;
-  line-height: 1.45;
-  margin-bottom: 2.5mm;
-  padding: 0 2mm;
+  font-family: 'Lora', serif; font-weight: 400; font-style: italic;
+  font-size: 9.5px; color: #ECE2C4; line-height: 1.45;
+  margin-bottom: 2.5mm; padding: 0 2mm;
 }
 .ingredients {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 6px;
-  letter-spacing: 0.18em;
-  color: #8FB199;
-  text-transform: uppercase;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-size: 6px; letter-spacing: 0.18em; color: #8FB199;
+  text-transform: uppercase; line-height: 1.6;
 }
 .diamond { color: #C9A24B; }
 
-/* ── Art Deco divider between cocktails ── */
+/* ── Divider between cocktails ── */
 .divider {
-  display: flex;
-  align-items: center;
-  width: 88%;
-  gap: 0;
+  display: flex; align-items: center; width: 88%;
 }
 .div-line { flex: 1; height: 0.4px; background: #C9A24B; opacity: 0.8; }
 .div-diamonds {
-  display: flex;
-  gap: 5px;
-  padding: 0 6px;
-  font-size: 6px;
-  color: #C9A24B;
-  line-height: 1;
+  display: flex; gap: 5px; padding: 0 6px;
+  font-size: 6px; color: #C9A24B; line-height: 1;
 }
 
 /* ── Footer ── */
-.footer {
-  text-align: center;
-  margin-top: 3mm;
-}
+.footer { text-align: center; margin-top: 3mm; }
 .footer-rule {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  margin-bottom: 2mm;
+  display: flex; align-items: center; gap: 0; margin-bottom: 2mm;
 }
 .footer-line { flex: 1; height: 0.4px; background: #C9A24B; opacity: 0.7; }
 .footer-diamond { font-size: 5px; color: #C9A24B; padding: 0 5px; }
 .footer-text {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 5.5px;
-  letter-spacing: 0.30em;
-  color: #C0B890;
+  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-size: 5.5px; letter-spacing: 0.30em; color: #C0B890;
   text-transform: uppercase;
 }
 </style>
@@ -179,510 +119,416 @@ html, body {
 <body>
 <div class="page">
 
-  <!-- Decoration layer -->
   <svg class="deco" viewBox="0 0 148 210" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-  <filter id="sketch" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="linearRGB">
-  <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
-  <feDisplacementMap in="SourceGraphic" in2="n" scale="2.3" xChannelSelector="R" yChannelSelector="G"/>
-</filter>
-  <symbol id="rose" viewBox="-22 -22 44 44" overflow="visible">
-  <defs>
-    <radialGradient id="rg-ro" cx="0" cy="0" r="20" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#A85040"/>
-      <stop offset="0.4" stop-color="#D89080"/>
-      <stop offset="1" stop-color="#F8DDD5"/>
-    </radialGradient>
-    <radialGradient id="rg-rm" cx="0" cy="0" r="14" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#904030"/>
-      <stop offset="1" stop-color="#E0A898"/>
-    </radialGradient>
-    <radialGradient id="rg-ri" cx="0" cy="0" r="9" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#703020"/>
-      <stop offset="1" stop-color="#C07060"/>
-    </radialGradient>
-  </defs>
-  <path d="M 0,0 C 6.55,-1.44 8.89,-11.16 0,-18.00 C -8.89,-11.16 -6.55,-1.44 0,0 Z" fill="url(#rg-ro)" stroke="none" transform="rotate(0.0)"/>
-<path d="M 0,0 C 6.55,-1.44 8.89,-11.16 0,-18.00 C -8.89,-11.16 -6.55,-1.44 0,0 Z" fill="url(#rg-ro)" stroke="none" transform="rotate(72.0)"/>
-<path d="M 0,0 C 6.55,-1.44 8.89,-11.16 0,-18.00 C -8.89,-11.16 -6.55,-1.44 0,0 Z" fill="url(#rg-ro)" stroke="none" transform="rotate(144.0)"/>
-<path d="M 0,0 C 6.55,-1.44 8.89,-11.16 0,-18.00 C -8.89,-11.16 -6.55,-1.44 0,0 Z" fill="url(#rg-ro)" stroke="none" transform="rotate(216.0)"/>
-<path d="M 0,0 C 6.55,-1.44 8.89,-11.16 0,-18.00 C -8.89,-11.16 -6.55,-1.44 0,0 Z" fill="url(#rg-ro)" stroke="none" transform="rotate(288.0)"/>
-  <path d="M 0,0 C 4.37,-1.04 5.93,-8.06 0,-13.00 C -5.93,-8.06 -4.37,-1.04 0,0 Z" fill="url(#rg-rm)" stroke="none" transform="rotate(36.0)"/>
-<path d="M 0,0 C 4.37,-1.04 5.93,-8.06 0,-13.00 C -5.93,-8.06 -4.37,-1.04 0,0 Z" fill="url(#rg-rm)" stroke="none" transform="rotate(108.0)"/>
-<path d="M 0,0 C 4.37,-1.04 5.93,-8.06 0,-13.00 C -5.93,-8.06 -4.37,-1.04 0,0 Z" fill="url(#rg-rm)" stroke="none" transform="rotate(180.0)"/>
-<path d="M 0,0 C 4.37,-1.04 5.93,-8.06 0,-13.00 C -5.93,-8.06 -4.37,-1.04 0,0 Z" fill="url(#rg-rm)" stroke="none" transform="rotate(252.0)"/>
-<path d="M 0,0 C 4.37,-1.04 5.93,-8.06 0,-13.00 C -5.93,-8.06 -4.37,-1.04 0,0 Z" fill="url(#rg-rm)" stroke="none" transform="rotate(324.0)"/>
-  <path d="M 0,0 C 2.46,-0.64 3.34,-4.96 0,-8.00 C -3.34,-4.96 -2.46,-0.64 0,0 Z" fill="url(#rg-ri)" stroke="none" transform="rotate(18.0)"/>
-<path d="M 0,0 C 2.46,-0.64 3.34,-4.96 0,-8.00 C -3.34,-4.96 -2.46,-0.64 0,0 Z" fill="url(#rg-ri)" stroke="none" transform="rotate(90.0)"/>
-<path d="M 0,0 C 2.46,-0.64 3.34,-4.96 0,-8.00 C -3.34,-4.96 -2.46,-0.64 0,0 Z" fill="url(#rg-ri)" stroke="none" transform="rotate(162.0)"/>
-<path d="M 0,0 C 2.46,-0.64 3.34,-4.96 0,-8.00 C -3.34,-4.96 -2.46,-0.64 0,0 Z" fill="url(#rg-ri)" stroke="none" transform="rotate(234.0)"/>
-<path d="M 0,0 C 2.46,-0.64 3.34,-4.96 0,-8.00 C -3.34,-4.96 -2.46,-0.64 0,0 Z" fill="url(#rg-ri)" stroke="none" transform="rotate(306.0)"/>
-  <circle r="3.2" fill="#6A2820"/>
-  <circle cx="2.20" cy="0.00" r="0.55" fill="#F0C870"/><circle cx="1.56" cy="1.56" r="0.55" fill="#F0C870"/><circle cx="0.00" cy="2.20" r="0.55" fill="#F0C870"/><circle cx="-1.56" cy="1.56" r="0.55" fill="#F0C870"/><circle cx="-2.20" cy="0.00" r="0.55" fill="#F0C870"/><circle cx="-1.56" cy="-1.56" r="0.55" fill="#F0C870"/><circle cx="-0.00" cy="-2.20" r="0.55" fill="#F0C870"/><circle cx="1.56" cy="-1.56" r="0.55" fill="#F0C870"/>
-  <circle r="1.3" fill="#E09040"/>
+<defs>
+  
+  <!-- heavier sketch for glassware -->
+  <filter id="sketch" x="-30%" y="-30%" width="160%" height="160%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="2.3" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <!-- lighter wobble for botanicals -->
+  <filter id="sketch-b" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="0.9" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <symbol id="wf5" viewBox="-12 -12 24 24" overflow="visible">
+  <path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(0.0)"/>
+<path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(72.0)"/>
+<path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(144.0)"/>
+<path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(216.0)"/>
+<path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(288.0)"/>
+  <circle r="2.2" fill="#D4C890"/>
+  <circle r="1" fill="#E0D4A0"/>
 </symbol>
-  <symbol id="mum" viewBox="-20 -20 40 40" overflow="visible">
-  <defs>
-    <radialGradient id="rg-mo" cx="0" cy="0" r="18" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#A07820"/>
-      <stop offset="0.5" stop-color="#D4A840"/>
-      <stop offset="1" stop-color="#F2D888"/>
-    </radialGradient>
-    <radialGradient id="rg-mi" cx="0" cy="0" r="11" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#806010"/>
-      <stop offset="1" stop-color="#C89030"/>
-    </radialGradient>
-  </defs>
-  <path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(0.0)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(22.5)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(45.0)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(67.5)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(90.0)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(112.5)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(135.0)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(157.5)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(180.0)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(202.5)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(225.0)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(247.5)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(270.0)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(292.5)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(315.0)"/>
-<path d="M 0,0 C 3.30,-2.25 2.80,-11.25 0,-15.00 C -2.80,-11.25 -3.30,-2.25 0,0 Z" fill="url(#rg-mo)" stroke="none" transform="rotate(337.5)"/>
-  <path d="M 0,0 C 2.40,-1.50 2.04,-7.50 0,-10.00 C -2.04,-7.50 -2.40,-1.50 0,0 Z" fill="url(#rg-mi)" stroke="none" transform="rotate(15.0)"/>
-<path d="M 0,0 C 2.40,-1.50 2.04,-7.50 0,-10.00 C -2.04,-7.50 -2.40,-1.50 0,0 Z" fill="url(#rg-mi)" stroke="none" transform="rotate(45.0)"/>
-<path d="M 0,0 C 2.40,-1.50 2.04,-7.50 0,-10.00 C -2.04,-7.50 -2.40,-1.50 0,0 Z" fill="url(#rg-mi)" stroke="none" transform="rotate(75.0)"/>
-<path d="M 0,0 C 2.40,-1.50 2.04,-7.50 0,-10.00 C -2.04,-7.50 -2.40,-1.50 0,0 Z" fill="url(#rg-mi)" stroke="none" transform="rotate(105.0)"/>
-<path d="M 0,0 C 2.40,-1.50 2.04,-7.50 0,-10.00 C -2.04,-7.50 -2.40,-1.50 0,0 Z" fill="url(#rg-mi)" stroke="none" transform="rotate(135.0)"/>
-<path d="M 0,0 C 2.40,-1.50 2.04,-7.50 0,-10.00 C -2.04,-7.50 -2.40,-1.50 0,0 Z" fill="url(#rg-mi)" stroke="none" transform="rotate(165.0)"/>
-<path d="M 0,0 C 2.40,-1.50 2.04,-7.50 0,-10.00 C -2.04,-7.50 -2.40,-1.50 0,0 Z" fill="url(#rg-mi)" stroke="none" transform="rotate(195.0)"/>
-<path d="M 0,0 C 2.40,-1.50 2.04,-7.50 0,-10.00 C -2.04,-7.50 -2.40,-1.50 0,0 Z" fill="url(#rg-mi)" stroke="none" transform="rotate(225.0)"/>
-<path d="M 0,0 C 2.40,-1.50 2.04,-7.50 0,-10.00 C -2.04,-7.50 -2.40,-1.50 0,0 Z" fill="url(#rg-mi)" stroke="none" transform="rotate(255.0)"/>
-<path d="M 0,0 C 2.40,-1.50 2.04,-7.50 0,-10.00 C -2.04,-7.50 -2.40,-1.50 0,0 Z" fill="url(#rg-mi)" stroke="none" transform="rotate(285.0)"/>
-<path d="M 0,0 C 2.40,-1.50 2.04,-7.50 0,-10.00 C -2.04,-7.50 -2.40,-1.50 0,0 Z" fill="url(#rg-mi)" stroke="none" transform="rotate(315.0)"/>
-<path d="M 0,0 C 2.40,-1.50 2.04,-7.50 0,-10.00 C -2.04,-7.50 -2.40,-1.50 0,0 Z" fill="url(#rg-mi)" stroke="none" transform="rotate(345.0)"/>
-  <path d="M 0,0 C 1.68,-0.90 1.43,-4.50 0,-6.00 C -1.43,-4.50 -1.68,-0.90 0,0 Z" fill="#A07828" stroke="none" transform="rotate(0.0)"/>
-<path d="M 0,0 C 1.68,-0.90 1.43,-4.50 0,-6.00 C -1.43,-4.50 -1.68,-0.90 0,0 Z" fill="#A07828" stroke="none" transform="rotate(51.4)"/>
-<path d="M 0,0 C 1.68,-0.90 1.43,-4.50 0,-6.00 C -1.43,-4.50 -1.68,-0.90 0,0 Z" fill="#A07828" stroke="none" transform="rotate(102.9)"/>
-<path d="M 0,0 C 1.68,-0.90 1.43,-4.50 0,-6.00 C -1.43,-4.50 -1.68,-0.90 0,0 Z" fill="#A07828" stroke="none" transform="rotate(154.3)"/>
-<path d="M 0,0 C 1.68,-0.90 1.43,-4.50 0,-6.00 C -1.43,-4.50 -1.68,-0.90 0,0 Z" fill="#A07828" stroke="none" transform="rotate(205.7)"/>
-<path d="M 0,0 C 1.68,-0.90 1.43,-4.50 0,-6.00 C -1.43,-4.50 -1.68,-0.90 0,0 Z" fill="#A07828" stroke="none" transform="rotate(257.1)"/>
-<path d="M 0,0 C 1.68,-0.90 1.43,-4.50 0,-6.00 C -1.43,-4.50 -1.68,-0.90 0,0 Z" fill="#A07828" stroke="none" transform="rotate(308.6)"/>
-  <circle r="2.5" fill="#705010"/>
-  <circle cx="1.50" cy="0.00" r="0.45" fill="#F8E080"/><circle cx="0.75" cy="1.30" r="0.45" fill="#F8E080"/><circle cx="-0.75" cy="1.30" r="0.45" fill="#F8E080"/><circle cx="-1.50" cy="0.00" r="0.45" fill="#F8E080"/><circle cx="-0.75" cy="-1.30" r="0.45" fill="#F8E080"/><circle cx="0.75" cy="-1.30" r="0.45" fill="#F8E080"/>
+  <symbol id="wf5b" viewBox="-12 -12 24 24" overflow="visible">
+  <path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(0.0)"/>
+<path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(72.0)"/>
+<path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(144.0)"/>
+<path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(216.0)"/>
+<path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(288.0)"/>
+  <path d="M 0,0 C 2.24,-0.56 2.80,-4.06 0,-7.00 C -2.80,-4.06 -2.24,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(36.0)"/>
+<path d="M 0,0 C 2.24,-0.56 2.80,-4.06 0,-7.00 C -2.80,-4.06 -2.24,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(108.0)"/>
+<path d="M 0,0 C 2.24,-0.56 2.80,-4.06 0,-7.00 C -2.80,-4.06 -2.24,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(180.0)"/>
+<path d="M 0,0 C 2.24,-0.56 2.80,-4.06 0,-7.00 C -2.80,-4.06 -2.24,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(252.0)"/>
+<path d="M 0,0 C 2.24,-0.56 2.80,-4.06 0,-7.00 C -2.80,-4.06 -2.24,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(324.0)"/>
+  <circle r="2" fill="#D4C890"/>
 </symbol>
-  <symbol id="cosmos" viewBox="-20 -20 40 40" overflow="visible">
-  <defs>
-    <radialGradient id="rg-cs" cx="0" cy="0" r="19" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#988010"/>
-      <stop offset="0.45" stop-color="#C8A030"/>
-      <stop offset="1" stop-color="#EDD880"/>
-    </radialGradient>
-  </defs>
-  <path d="M 0,0 C 7.20,-1.28 10.08,-8.00 5.76,-14.40 Q 0,-16.80 -5.76,-14.40 C -10.08,-8.00 -7.20,-1.28 0,0 Z" fill="url(#rg-cs)" stroke="none" transform="rotate(0.0)"/>
-<path d="M 0,0 C 7.20,-1.28 10.08,-8.00 5.76,-14.40 Q 0,-16.80 -5.76,-14.40 C -10.08,-8.00 -7.20,-1.28 0,0 Z" fill="url(#rg-cs)" stroke="none" transform="rotate(45.0)"/>
-<path d="M 0,0 C 7.20,-1.28 10.08,-8.00 5.76,-14.40 Q 0,-16.80 -5.76,-14.40 C -10.08,-8.00 -7.20,-1.28 0,0 Z" fill="url(#rg-cs)" stroke="none" transform="rotate(90.0)"/>
-<path d="M 0,0 C 7.20,-1.28 10.08,-8.00 5.76,-14.40 Q 0,-16.80 -5.76,-14.40 C -10.08,-8.00 -7.20,-1.28 0,0 Z" fill="url(#rg-cs)" stroke="none" transform="rotate(135.0)"/>
-<path d="M 0,0 C 7.20,-1.28 10.08,-8.00 5.76,-14.40 Q 0,-16.80 -5.76,-14.40 C -10.08,-8.00 -7.20,-1.28 0,0 Z" fill="url(#rg-cs)" stroke="none" transform="rotate(180.0)"/>
-<path d="M 0,0 C 7.20,-1.28 10.08,-8.00 5.76,-14.40 Q 0,-16.80 -5.76,-14.40 C -10.08,-8.00 -7.20,-1.28 0,0 Z" fill="url(#rg-cs)" stroke="none" transform="rotate(225.0)"/>
-<path d="M 0,0 C 7.20,-1.28 10.08,-8.00 5.76,-14.40 Q 0,-16.80 -5.76,-14.40 C -10.08,-8.00 -7.20,-1.28 0,0 Z" fill="url(#rg-cs)" stroke="none" transform="rotate(270.0)"/>
-<path d="M 0,0 C 7.20,-1.28 10.08,-8.00 5.76,-14.40 Q 0,-16.80 -5.76,-14.40 C -10.08,-8.00 -7.20,-1.28 0,0 Z" fill="url(#rg-cs)" stroke="none" transform="rotate(315.0)"/>
-  <circle r="4" fill="#806010"/>
-  <circle cx="2.80" cy="0.00" r="0.5" fill="#F4DC60"/><circle cx="2.27" cy="1.65" r="0.5" fill="#F4DC60"/><circle cx="0.87" cy="2.66" r="0.5" fill="#F4DC60"/><circle cx="-0.87" cy="2.66" r="0.5" fill="#F4DC60"/><circle cx="-2.27" cy="1.65" r="0.5" fill="#F4DC60"/><circle cx="-2.80" cy="0.00" r="0.5" fill="#F4DC60"/><circle cx="-2.27" cy="-1.65" r="0.5" fill="#F4DC60"/><circle cx="-0.87" cy="-2.66" r="0.5" fill="#F4DC60"/><circle cx="0.87" cy="-2.66" r="0.5" fill="#F4DC60"/><circle cx="2.27" cy="-1.65" r="0.5" fill="#F4DC60"/>
-  <circle r="1.8" fill="#C09020"/>
+  <symbol id="wf8" viewBox="-14 -14 28 28" overflow="visible">
+  <path d="M 0,0 C 3.34,-0.88 4.18,-6.38 0,-11.00 C -4.18,-6.38 -3.34,-0.88 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(0.0)"/>
+<path d="M 0,0 C 3.34,-0.88 4.18,-6.38 0,-11.00 C -4.18,-6.38 -3.34,-0.88 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(45.0)"/>
+<path d="M 0,0 C 3.34,-0.88 4.18,-6.38 0,-11.00 C -4.18,-6.38 -3.34,-0.88 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(90.0)"/>
+<path d="M 0,0 C 3.34,-0.88 4.18,-6.38 0,-11.00 C -4.18,-6.38 -3.34,-0.88 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(135.0)"/>
+<path d="M 0,0 C 3.34,-0.88 4.18,-6.38 0,-11.00 C -4.18,-6.38 -3.34,-0.88 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(180.0)"/>
+<path d="M 0,0 C 3.34,-0.88 4.18,-6.38 0,-11.00 C -4.18,-6.38 -3.34,-0.88 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(225.0)"/>
+<path d="M 0,0 C 3.34,-0.88 4.18,-6.38 0,-11.00 C -4.18,-6.38 -3.34,-0.88 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(270.0)"/>
+<path d="M 0,0 C 3.34,-0.88 4.18,-6.38 0,-11.00 C -4.18,-6.38 -3.34,-0.88 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(315.0)"/>
+  <path d="M 0,0 C 1.96,-0.56 2.45,-4.06 0,-7.00 C -2.45,-4.06 -1.96,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(22.5)"/>
+<path d="M 0,0 C 1.96,-0.56 2.45,-4.06 0,-7.00 C -2.45,-4.06 -1.96,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(67.5)"/>
+<path d="M 0,0 C 1.96,-0.56 2.45,-4.06 0,-7.00 C -2.45,-4.06 -1.96,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(112.5)"/>
+<path d="M 0,0 C 1.96,-0.56 2.45,-4.06 0,-7.00 C -2.45,-4.06 -1.96,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(157.5)"/>
+<path d="M 0,0 C 1.96,-0.56 2.45,-4.06 0,-7.00 C -2.45,-4.06 -1.96,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(202.5)"/>
+<path d="M 0,0 C 1.96,-0.56 2.45,-4.06 0,-7.00 C -2.45,-4.06 -1.96,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(247.5)"/>
+<path d="M 0,0 C 1.96,-0.56 2.45,-4.06 0,-7.00 C -2.45,-4.06 -1.96,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(292.5)"/>
+<path d="M 0,0 C 1.96,-0.56 2.45,-4.06 0,-7.00 C -2.45,-4.06 -1.96,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(337.5)"/>
+  <circle r="2.8" fill="#D4C890" stroke="#B8A868" stroke-width="0.4"/>
+  <circle r="1.2" fill="#E0D4A0"/>
 </symbol>
-  <symbol id="daisy" viewBox="-20 -20 40 40" overflow="visible">
-  <defs>
-    <radialGradient id="rg-dy" cx="0" cy="0" r="18" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#C0B090"/>
-      <stop offset="0.5" stop-color="#E8D8B8"/>
-      <stop offset="1" stop-color="#FAF0DC"/>
-    </radialGradient>
-  </defs>
-  <path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(0.0)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(22.5)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(45.0)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(67.5)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(90.0)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(112.5)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(135.0)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(157.5)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(180.0)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(202.5)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(225.0)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(247.5)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(270.0)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(292.5)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(315.0)"/>
-<path d="M 0,0 C 3.67,-1.20 4.99,-9.30 0,-15.00 C -4.99,-9.30 -3.67,-1.20 0,0 Z" fill="url(#rg-dy)" stroke="none" transform="rotate(337.5)"/>
-  <path d="M 0,0 C 2.39,-0.72 3.25,-5.58 0,-9.00 C -3.25,-5.58 -2.39,-0.72 0,0 Z" fill="#EDE0C0" stroke="none" transform="rotate(18.0)"/>
-<path d="M 0,0 C 2.39,-0.72 3.25,-5.58 0,-9.00 C -3.25,-5.58 -2.39,-0.72 0,0 Z" fill="#EDE0C0" stroke="none" transform="rotate(54.0)"/>
-<path d="M 0,0 C 2.39,-0.72 3.25,-5.58 0,-9.00 C -3.25,-5.58 -2.39,-0.72 0,0 Z" fill="#EDE0C0" stroke="none" transform="rotate(90.0)"/>
-<path d="M 0,0 C 2.39,-0.72 3.25,-5.58 0,-9.00 C -3.25,-5.58 -2.39,-0.72 0,0 Z" fill="#EDE0C0" stroke="none" transform="rotate(126.0)"/>
-<path d="M 0,0 C 2.39,-0.72 3.25,-5.58 0,-9.00 C -3.25,-5.58 -2.39,-0.72 0,0 Z" fill="#EDE0C0" stroke="none" transform="rotate(162.0)"/>
-<path d="M 0,0 C 2.39,-0.72 3.25,-5.58 0,-9.00 C -3.25,-5.58 -2.39,-0.72 0,0 Z" fill="#EDE0C0" stroke="none" transform="rotate(198.0)"/>
-<path d="M 0,0 C 2.39,-0.72 3.25,-5.58 0,-9.00 C -3.25,-5.58 -2.39,-0.72 0,0 Z" fill="#EDE0C0" stroke="none" transform="rotate(234.0)"/>
-<path d="M 0,0 C 2.39,-0.72 3.25,-5.58 0,-9.00 C -3.25,-5.58 -2.39,-0.72 0,0 Z" fill="#EDE0C0" stroke="none" transform="rotate(270.0)"/>
-<path d="M 0,0 C 2.39,-0.72 3.25,-5.58 0,-9.00 C -3.25,-5.58 -2.39,-0.72 0,0 Z" fill="#EDE0C0" stroke="none" transform="rotate(306.0)"/>
-<path d="M 0,0 C 2.39,-0.72 3.25,-5.58 0,-9.00 C -3.25,-5.58 -2.39,-0.72 0,0 Z" fill="#EDE0C0" stroke="none" transform="rotate(342.0)"/>
-  <circle r="4" fill="#D4A820"/>
-  <circle cx="2.80" cy="0.00" r="0.4" fill="#F8D860"/><circle cx="2.42" cy="1.40" r="0.4" fill="#F8D860"/><circle cx="1.40" cy="2.42" r="0.4" fill="#F8D860"/><circle cx="0.00" cy="2.80" r="0.4" fill="#F8D860"/><circle cx="-1.40" cy="2.42" r="0.4" fill="#F8D860"/><circle cx="-2.42" cy="1.40" r="0.4" fill="#F8D860"/><circle cx="-2.80" cy="0.00" r="0.4" fill="#F8D860"/><circle cx="-2.42" cy="-1.40" r="0.4" fill="#F8D860"/><circle cx="-1.40" cy="-2.42" r="0.4" fill="#F8D860"/><circle cx="-0.00" cy="-2.80" r="0.4" fill="#F8D860"/><circle cx="1.40" cy="-2.42" r="0.4" fill="#F8D860"/><circle cx="2.42" cy="-1.40" r="0.4" fill="#F8D860"/>
-  <circle r="1.5" fill="#A07818"/>
+  <symbol id="bud" viewBox="-5 -14 10 16" overflow="visible">
+  <line x1="0" y1="2" x2="0" y2="-6" stroke="#D4C890" stroke-width="0.6"/>
+  <path d="M 0,-6 C 3,-8 4,-12 0,-13 C -4,-12 -3,-8 0,-6 Z"
+        fill="#D4C890" fill-opacity="0.25" stroke="#D4C890" stroke-width="0.6"/>
+  <!-- two tiny sepals -->
+  <path d="M -1,-7 Q -4,-8 -3,-6" stroke="#D4C890" stroke-width="0.4" fill="none"/>
+  <path d="M  1,-7 Q  4,-8  3,-6" stroke="#D4C890" stroke-width="0.4" fill="none"/>
 </symbol>
-  <symbol id="tulip" viewBox="-16 -36 32 50" overflow="visible">
-  <defs>
-    <radialGradient id="rg-tl" cx="0" cy="-20" r="22" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ECD4D0"/>
-      <stop offset="0.6" stop-color="#D8A8A0"/>
-      <stop offset="1" stop-color="#C08080"/>
-    </radialGradient>
-  </defs>
-  <!-- Left petal -->
-  <path d="M -1,0 C -9,-4 -15,-20 -11,-30 C -9,-33 -5,-30 -3,-22 C -2,-15 -1,-8 0,0 Z"
-        fill="url(#rg-tl)" stroke="#B07070" stroke-width="0.25"/>
-  <!-- Right petal (mirror) -->
-  <path d="M 1,0 C 9,-4 15,-20 11,-30 C 9,-33 5,-30 3,-22 C 2,-15 1,-8 0,0 Z"
-        fill="url(#rg-tl)" stroke="#B07070" stroke-width="0.25"/>
-  <!-- Middle petal (tallest) -->
-  <path d="M -3,0 C -9,-6 -9,-24 0,-32 C 9,-24 9,-6 3,0 Z"
-        fill="#EAC0B8" stroke="#B07878" stroke-width="0.25"/>
-  <!-- Stem -->
-  <line x1="0" y1="0" x2="0" y2="14" stroke="#5A8050" stroke-width="1.2" stroke-linecap="round"/>
-  <!-- Leaves -->
-  <path d="M 0,4 Q -10,6 -12,12 Q -6,11 0,7 Z" fill="#6A9060"/>
-  <path d="M 0,8 Q 9,9 11,15 Q 5,14 0,10 Z" fill="#5A8050"/>
-</symbol>
-  <symbol id="blossom" viewBox="-10 -10 20 20" overflow="visible">
-  <defs>
-    <radialGradient id="rg-bl" cx="0" cy="0" r="9" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#B08830"/>
-      <stop offset="1" stop-color="#EDD898"/>
-    </radialGradient>
-  </defs>
-  <path d="M 0,0 C 2,-1 3,-6 0,-8 C -3,-6 -2,-1 0,0 Z" fill="url(#rg-bl)" transform="rotate(0)"/>
-  <path d="M 0,0 C 2,-1 3,-6 0,-8 C -3,-6 -2,-1 0,0 Z" fill="url(#rg-bl)" transform="rotate(72)"/>
-  <path d="M 0,0 C 2,-1 3,-6 0,-8 C -3,-6 -2,-1 0,0 Z" fill="url(#rg-bl)" transform="rotate(144)"/>
-  <path d="M 0,0 C 2,-1 3,-6 0,-8 C -3,-6 -2,-1 0,0 Z" fill="url(#rg-bl)" transform="rotate(216)"/>
-  <path d="M 0,0 C 2,-1 3,-6 0,-8 C -3,-6 -2,-1 0,0 Z" fill="url(#rg-bl)" transform="rotate(288)"/>
-  <circle r="2" fill="#E0A840"/>
-</symbol>
-  <symbol id="blossom-c" viewBox="-10 -10 20 20" overflow="visible">
-  <path d="M 0,0 C 2,-1 3,-6 0,-8 C -3,-6 -2,-1 0,0 Z" fill="#F0E0C0" transform="rotate(0)"/>
-  <path d="M 0,0 C 2,-1 3,-6 0,-8 C -3,-6 -2,-1 0,0 Z" fill="#F0E0C0" transform="rotate(72)"/>
-  <path d="M 0,0 C 2,-1 3,-6 0,-8 C -3,-6 -2,-1 0,0 Z" fill="#EDD8B0" transform="rotate(144)"/>
-  <path d="M 0,0 C 2,-1 3,-6 0,-8 C -3,-6 -2,-1 0,0 Z" fill="#EDD8B0" transform="rotate(216)"/>
-  <path d="M 0,0 C 2,-1 3,-6 0,-8 C -3,-6 -2,-1 0,0 Z" fill="#F0E0C0" transform="rotate(288)"/>
-  <circle r="2" fill="#D4C080"/>
-</symbol>
-  <symbol id="berry" viewBox="-12 -10 24 16" overflow="visible">
-  <circle cx="0" cy="-6" r="3.5" fill="#C9A24B" opacity="0.9"/>
-  <circle cx="-5" cy="0" r="3" fill="#D4B060" opacity="0.85"/>
-  <circle cx="5" cy="0" r="3" fill="#B88830" opacity="0.85"/>
-  <circle cx="-2" cy="-2" r="2" fill="#E0C070" opacity="0.7"/>
-  <circle cx="2" cy="-1.5" r="1.8" fill="#C8A048" opacity="0.7"/>
-  <!-- stems -->
-  <path d="M 0,-2.5 Q 0,-4, 0,-6" stroke="#6A8A50" stroke-width="0.6" fill="none"/>
-  <path d="M -2,-0.5 Q -3,-2, -5,0" stroke="#6A8A50" stroke-width="0.6" fill="none"/>
-  <path d="M 2,-0.5 Q 3,-2, 5,0" stroke="#6A8A50" stroke-width="0.6" fill="none"/>
-</symbol>
-  <symbol id="sprig" viewBox="-14 -24 28 26" overflow="visible">
+  <symbol id="berries" viewBox="-14 -20 28 22" overflow="visible">
   <!-- main stem -->
-  <path d="M 0,2 Q 1,-10, 0,-22" stroke="#5A8050" stroke-width="0.9" fill="none"/>
+  <path d="M 0,2 Q 0,-4, 0,-10" stroke="#D4C890" stroke-width="0.65" fill="none"/>
+  <!-- side stems -->
+  <path d="M 0,-7 Q -5,-8, -8,-12" stroke="#D4C890" stroke-width="0.55" fill="none"/>
+  <path d="M 0,-7 Q  5,-8,  8,-12" stroke="#D4C890" stroke-width="0.55" fill="none"/>
+  <!-- berries -->
+  <circle cx="0"  cy="-13" r="2.8" fill="#D4C890" fill-opacity="0.7" stroke="#D4C890" stroke-width="0.5"/>
+  <circle cx="-8" cy="-13" r="2.2" fill="#D4C890" fill-opacity="0.6" stroke="#D4C890" stroke-width="0.5"/>
+  <circle cx="8"  cy="-13" r="2.2" fill="#D4C890" fill-opacity="0.6" stroke="#D4C890" stroke-width="0.5"/>
+  <!-- tiny highlight dots -->
+  <circle cx="-0.8" cy="-14.2" r="0.6" fill="#E0D4A0" opacity="0.8"/>
+  <circle cx="-8.8" cy="-14"   r="0.5" fill="#E0D4A0" opacity="0.7"/>
+  <circle cx="7.2"  cy="-14"   r="0.5" fill="#E0D4A0" opacity="0.7"/>
+</symbol>
+  <symbol id="branch" viewBox="-16 -26 32 28" overflow="visible">
+  <!-- curved main stem -->
+  <path d="M 0,2 Q 2,-8, 0,-24" stroke="#D4C890" stroke-width="0.65" fill="none"/>
   <!-- leaf pairs -->
-  <ellipse cx="-5" cy="-4" rx="5" ry="2.5" fill="#6A9060" transform="rotate(-30,-5,-4)"/>
-  <ellipse cx="5" cy="-4" rx="5" ry="2.5" fill="#5A8050" transform="rotate(30,5,-4)"/>
-  <ellipse cx="-5" cy="-10" rx="4.5" ry="2.2" fill="#6A9060" transform="rotate(-25,-5,-10)"/>
-  <ellipse cx="5" cy="-10" rx="4.5" ry="2.2" fill="#5A8050" transform="rotate(25,5,-10)"/>
-  <ellipse cx="-4" cy="-16" rx="4" ry="2" fill="#6A9060" transform="rotate(-20,-4,-16)"/>
-  <ellipse cx="4" cy="-16" rx="4" ry="2" fill="#5A8050" transform="rotate(20,4,-16)"/>
-  <ellipse cx="0" cy="-22" rx="3" ry="1.8" fill="#7AA070"/>
+  <path d="M 0,-5  Q -9,-7, -11,-13 Q -5,-9, 0,-5"
+        fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.55"/>
+  <path d="M 0,-5  Q  9,-7,  11,-13 Q  5,-9, 0,-5"
+        fill="#D4C890" fill-opacity="0.15" stroke="#D4C890" stroke-width="0.50"/>
+  <path d="M 0,-12 Q -10,-14, -12,-20 Q -5,-15, 0,-12"
+        fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.55"/>
+  <path d="M 0,-12 Q  10,-14,  12,-20 Q  5,-15, 0,-12"
+        fill="#D4C890" fill-opacity="0.15" stroke="#D4C890" stroke-width="0.50"/>
+  <!-- tip leaf -->
+  <path d="M 0,-20 Q 4,-22, 2,-26 Q -2,-22, 0,-20"
+        fill="#D4C890" fill-opacity="0.20" stroke="#D4C890" stroke-width="0.55"/>
+</symbol>
+  <symbol id="herb" viewBox="-8 -22 16 24" overflow="visible">
+  <!-- main stem -->
+  <path d="M 0,2 L 0,-20" stroke="#D4C890" stroke-width="0.60" fill="none"/>
+  <!-- pairs of small leaves -->
+  <path d="M 0,-5  Q -6,-6, -7,-9  Q -3,-7, 0,-5"  fill="#D4C890" fill-opacity="0.2" stroke="#D4C890" stroke-width="0.45"/>
+  <path d="M 0,-5  Q  6,-6,  7,-9  Q  3,-7, 0,-5"  fill="#D4C890" fill-opacity="0.15" stroke="#D4C890" stroke-width="0.40"/>
+  <path d="M 0,-10 Q -5,-11,-6,-14 Q -2,-12, 0,-10" fill="#D4C890" fill-opacity="0.2" stroke="#D4C890" stroke-width="0.45"/>
+  <path d="M 0,-10 Q  5,-11, 6,-14 Q  2,-12, 0,-10" fill="#D4C890" fill-opacity="0.15" stroke="#D4C890" stroke-width="0.40"/>
+  <path d="M 0,-15 Q -4,-16,-5,-19 Q -1,-17, 0,-15" fill="#D4C890" fill-opacity="0.2" stroke="#D4C890" stroke-width="0.40"/>
+  <path d="M 0,-15 Q  4,-16, 5,-19 Q  1,-17, 0,-15" fill="#D4C890" fill-opacity="0.15" stroke="#D4C890" stroke-width="0.35"/>
+  <!-- tip bud -->
+  <circle cx="0" cy="-20" r="1.5" fill="#D4C890"/>
+</symbol>
+  <symbol id="tiny" viewBox="-7 -7 14 14" overflow="visible">
+  <path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(0.0)"/>
+<path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(72.0)"/>
+<path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(144.0)"/>
+<path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(216.0)"/>
+<path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(288.0)"/>
+  <circle r="1.4" fill="#D4C890"/>
+</symbol>
+  <symbol id="tendril" viewBox="-10 -20 20 22" overflow="visible">
+  <path d="M 0,2 Q -8,0, -6,-6 Q -4,-12, 0,-14 Q 4,-16, 2,-20"
+        stroke="#D4C890" stroke-width="0.55" fill="none" stroke-linecap="round"/>
+  <!-- tiny leaves on curve -->
+  <path d="M -5,-3 Q -10,-2, -10,-6 Q -7,-4, -5,-3" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.40"/>
+  <path d="M -4,-10 Q -9,-11,-8,-15 Q -5,-12,-4,-10" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.40"/>
 </symbol>
   <symbol id="martini" viewBox="-17 -40 34 44" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <line x1="-14" y1="-36" x2="14" y2="-36"/>
-    <line x1="-14" y1="-36" x2="0" y2="-20"/>
-    <line x1="14" y1="-36" x2="0" y2="-20"/>
-    <line x1="0" y1="-20" x2="0" y2="-3"/>
-    <line x1="-10" y1="-3" x2="10" y2="-3"/>
-    <!-- olive -->
-    <circle cx="-4" cy="-30" r="2" stroke="#C0B8A4" stroke-width="0.5"/>
-    <circle cx="4" cy="-30" r="2" stroke="#C0B8A4" stroke-width="0.5"/>
-    <line x1="-4" y1="-28" x2="4" y2="-28" stroke="#C0B8A4" stroke-width="0.4"/>
+    <line x1="-14" y1="-36" x2="0"  y2="-20"/>
+    <line x1="14"  y1="-36" x2="0"  y2="-20"/>
+    <line x1="0"   y1="-20" x2="0"  y2="-3"/>
+    <line x1="-10" y1="-3"  x2="10" y2="-3"/>
+    <!-- olive on pick -->
+    <circle cx="0" cy="-30" r="2.2" stroke="#B8A868" stroke-width="0.55"/>
+    <line x1="0" y1="-27.8" x2="0" y2="-34" stroke="#B8A868" stroke-width="0.45"/>
   </g>
 </symbol>
   <symbol id="coupe" viewBox="-17 -36 34 40" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -15,-32 Q -10,-24 0,-22 Q 10,-24 15,-32"/>
     <line x1="-15" y1="-32" x2="15" y2="-32"/>
     <line x1="0" y1="-22" x2="0" y2="-4"/>
     <line x1="-9" y1="-4" x2="9" y2="-4"/>
   </g>
 </symbol>
-  <symbol id="wine-glass" viewBox="-12 -44 24 48" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M -10,-40 Q -11,-28 -6,-24 Q -3,-20 0,-20 Q 3,-20 6,-24 Q 11,-28 10,-40"/>
+  <symbol id="wine-glass" viewBox="-13 -44 26 48" overflow="visible">
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M -10,-40 Q -12,-28 -6,-23 Q -3,-20 0,-20 Q 3,-20 6,-23 Q 12,-28 10,-40"/>
     <line x1="-10" y1="-40" x2="10" y2="-40"/>
-    <!-- liquid line at 2/3 -->
-    <path d="M -7,-30 Q 0,-28 7,-30" stroke="#C0B8A4" stroke-width="0.5" opacity="0.7"/>
+    <path d="M -7.5,-30 Q 0,-28.5 7.5,-30" stroke="#B8A868" stroke-width="0.45" opacity="0.8"/>
     <line x1="0" y1="-20" x2="0" y2="-4"/>
     <line x1="-8" y1="-4" x2="8" y2="-4"/>
   </g>
 </symbol>
   <symbol id="nick-nora" viewBox="-14 -40 28 44" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M -11,-36 Q -13,-28 -8,-24 Q -4,-20 0,-20 Q 4,-20 8,-24 Q 13,-28 11,-36"/>
-    <line x1="-11" y1="-36" x2="11" y2="-36"/>
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M -10,-36 Q -12,-28 -7,-23 Q -3,-20 0,-20 Q 3,-20 7,-23 Q 12,-28 10,-36"/>
+    <line x1="-10" y1="-36" x2="10" y2="-36"/>
     <line x1="0" y1="-20" x2="0" y2="-4"/>
     <line x1="-8" y1="-4" x2="8" y2="-4"/>
   </g>
 </symbol>
-  <symbol id="highball" viewBox="-10 -42 32 46" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- glass body -->
+  <symbol id="highball" viewBox="-11 -42 32 46" overflow="visible">
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -8,-38 L -9,2 L 9,2 L 8,-38 Z"/>
-    <!-- liquid -->
-    <path d="M -8.5,-20 L -8.8,2" stroke="#C0B8A4" stroke-width="0.4" opacity="0.0"/>
     <!-- straw -->
-    <line x1="4" y1="-40" x2="2" y2="2" stroke="#DAD2BE" stroke-width="0.7" opacity="0.9"/>
-    <!-- lime wheel on rim -->
-    <circle cx="-3" cy="-36" r="4" stroke="#C0B8A4" stroke-width="0.5" opacity="0.8"/>
-    <line x1="-3" y1="-40" x2="-3" y2="-32" stroke="#C0B8A4" stroke-width="0.4" opacity="0.6"/>
-    <line x1="-7" y1="-36" x2="1" y2="-36" stroke="#C0B8A4" stroke-width="0.4" opacity="0.6"/>
-    <line x1="-6" y1="-39" x2="0" y2="-33" stroke="#C0B8A4" stroke-width="0.3" opacity="0.5"/>
-    <line x1="-6" y1="-33" x2="0" y2="-39" stroke="#C0B8A4" stroke-width="0.3" opacity="0.5"/>
+    <line x1="4" y1="-40" x2="2" y2="2" stroke="#D4C890" stroke-width="0.75" opacity="0.9"/>
+    <!-- lime wheel -->
+    <circle cx="-2" cy="-36" r="4" stroke="#B8A868" stroke-width="0.55" opacity="0.85"/>
+    <line x1="-2" y1="-40" x2="-2" y2="-32" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
+    <line x1="-6" y1="-36" x2="2"  y2="-36" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
+    <line x1="-5" y1="-39" x2="1"  y2="-33" stroke="#B8A868" stroke-width="0.30" opacity="0.55"/>
+    <line x1="-5" y1="-33" x2="1"  y2="-39" stroke="#B8A868" stroke-width="0.30" opacity="0.55"/>
   </g>
 </symbol>
   <symbol id="rocks" viewBox="-12 -28 24 32" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -10,-24 L -11,2 L 11,2 L 10,-24 Z"/>
-    <!-- ice cubes -->
-    <rect x="-7" y="-20" width="6" height="5" rx="0.5" stroke="#C0B8A4" stroke-width="0.5" opacity="0.7"/>
-    <rect x="1" y="-18" width="6" height="5" rx="0.5" stroke="#C0B8A4" stroke-width="0.5" opacity="0.7"/>
-    <rect x="-4" y="-13" width="5" height="4" rx="0.5" stroke="#C0B8A4" stroke-width="0.4" opacity="0.6"/>
-    <!-- liquid surface -->
-    <path d="M -9,-9 Q 0,-8 9,-9" stroke="#C0B8A4" stroke-width="0.4" opacity="0.6"/>
+    <rect x="-7" y="-20" width="6" height="5" rx="0.5" stroke="#B8A868" stroke-width="0.50" opacity="0.75"/>
+    <rect x="1"  y="-18" width="6" height="5" rx="0.5" stroke="#B8A868" stroke-width="0.50" opacity="0.75"/>
+    <rect x="-4" y="-13" width="5" height="4" rx="0.5" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
+    <path d="M -9,-9 Q 0,-8 9,-9" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
   </g>
 </symbol>
   <symbol id="flute" viewBox="-8 -48 16 52" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -5,-44 Q -7,-24 -4,-18 Q -2,-14 0,-14 Q 2,-14 4,-18 Q 7,-24 5,-44 Z"/>
     <line x1="-5" y1="-44" x2="5" y2="-44"/>
     <line x1="0" y1="-14" x2="0" y2="-2"/>
     <line x1="-6" y1="-2" x2="6" y2="-2"/>
-    <!-- bubbles -->
-    <circle cx="-2" cy="-30" r="0.8" stroke="#C0B8A4" stroke-width="0.4" opacity="0.8"/>
-    <circle cx="2" cy="-36" r="0.8" stroke="#C0B8A4" stroke-width="0.4" opacity="0.8"/>
-    <circle cx="0" cy="-24" r="0.6" stroke="#C0B8A4" stroke-width="0.3" opacity="0.7"/>
-    <circle cx="-1" cy="-42" r="0.6" stroke="#C0B8A4" stroke-width="0.3" opacity="0.7"/>
-    <circle cx="2" cy="-20" r="0.5" stroke="#C0B8A4" stroke-width="0.3" opacity="0.6"/>
+    <circle cx="-2" cy="-30" r="0.8" stroke="#B8A868" stroke-width="0.40" opacity="0.85"/>
+    <circle cx="2"  cy="-36" r="0.8" stroke="#B8A868" stroke-width="0.40" opacity="0.85"/>
+    <circle cx="0"  cy="-24" r="0.6" stroke="#B8A868" stroke-width="0.30" opacity="0.75"/>
+    <circle cx="-1" cy="-42" r="0.6" stroke="#B8A868" stroke-width="0.30" opacity="0.75"/>
   </g>
 </symbol>
   <symbol id="shaker" viewBox="-12 -44 24 48" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- tin body -->
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -9,-14 Q -10,-4 -8,2 L 8,2 Q 10,-4 9,-14 Z"/>
-    <!-- cap -->
     <path d="M -9,-14 Q -8,-24 -5,-32 L 5,-32 Q 8,-24 9,-14 Z"/>
-    <!-- top cap -->
     <path d="M -5,-32 Q -3,-40 0,-42 Q 3,-40 5,-32 Z"/>
-    <!-- strainer band -->
-    <line x1="-9" y1="-14" x2="9" y2="-14" stroke-width="1.2"/>
-    <!-- small strainer holes line -->
-    <path d="M -6,-16 Q 0,-17 6,-16" stroke="#C0B8A4" stroke-width="0.4" opacity="0.7"/>
+    <line x1="-9" y1="-14" x2="9" y2="-14" stroke-width="1.1"/>
+    <path d="M -6,-16 Q 0,-17 6,-16" stroke="#B8A868" stroke-width="0.40" opacity="0.75"/>
   </g>
 </symbol>
   <symbol id="jigger" viewBox="-10 -28 20 30" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- large cone (top) -->
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -8,-24 L -1.5,-12 L 1.5,-12 L 8,-24 Z"/>
     <line x1="-8" y1="-24" x2="8" y2="-24"/>
-    <!-- small cone (bottom) -->
     <path d="M -1.5,-12 L -5,0 L 5,0 L 1.5,-12 Z"/>
     <line x1="-5" y1="0" x2="5" y2="0"/>
   </g>
 </symbol>
   <symbol id="strainer" viewBox="-22 -12 44 14" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- disc -->
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="-5" cy="0" r="9"/>
-    <!-- spring/coil -->
     <path d="M -14,0 Q -12,-4 -10,0 Q -8,4 -6,0 Q -4,-4 -2,0 Q 0,4 2,0 Q 4,-4 6,0"
-          stroke="#C0B8A4" stroke-width="0.7" opacity="0.9"/>
-    <!-- handle -->
-    <line x1="4" y1="0" x2="21" y2="-3"/>
-    <line x1="4" y1="0" x2="21" y2="3"/>
+          stroke="#B8A868" stroke-width="0.65" opacity="0.85"/>
+    <line x1="4"  y1="0"  x2="21" y2="-3"/>
+    <line x1="4"  y1="0"  x2="21" y2="3"/>
     <line x1="21" y1="-3" x2="21" y2="3" stroke-linecap="round"/>
   </g>
 </symbol>
   <symbol id="citrus" viewBox="-10 -10 20 20" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round">
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round">
     <circle cx="0" cy="0" r="8"/>
     <circle cx="0" cy="0" r="3"/>
-    <line x1="0" y1="-8" x2="0" y2="8" stroke-width="0.5"/>
-    <line x1="-8" y1="0" x2="8" y2="0" stroke-width="0.5"/>
-    <line x1="-5.6" y1="-5.6" x2="5.6" y2="5.6" stroke-width="0.4"/>
-    <line x1="5.6" y1="-5.6" x2="-5.6" y2="5.6" stroke-width="0.4"/>
+    <line x1="0"    y1="-8"   x2="0"   y2="8"   stroke-width="0.45"/>
+    <line x1="-8"   y1="0"    x2="8"   y2="0"   stroke-width="0.45"/>
+    <line x1="-5.6" y1="-5.6" x2="5.6" y2="5.6" stroke-width="0.35"/>
+    <line x1="5.6"  y1="-5.6" x2="-5.6" y2="5.6" stroke-width="0.35"/>
   </g>
 </symbol>
-  <symbol id="icon-hb" viewBox="-10 -42 32 46" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- glass body -->
+  <symbol id="icon-hb" viewBox="-11 -42 32 46" overflow="visible">
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -8,-38 L -9,2 L 9,2 L 8,-38 Z"/>
-    <!-- liquid -->
-    <path d="M -8.5,-20 L -8.8,2" stroke="#C0B8A4" stroke-width="0.4" opacity="0.0"/>
     <!-- straw -->
-    <line x1="4" y1="-40" x2="2" y2="2" stroke="#DAD2BE" stroke-width="0.7" opacity="0.9"/>
-    <!-- lime wheel on rim -->
-    <circle cx="-3" cy="-36" r="4" stroke="#C0B8A4" stroke-width="0.5" opacity="0.8"/>
-    <line x1="-3" y1="-40" x2="-3" y2="-32" stroke="#C0B8A4" stroke-width="0.4" opacity="0.6"/>
-    <line x1="-7" y1="-36" x2="1" y2="-36" stroke="#C0B8A4" stroke-width="0.4" opacity="0.6"/>
-    <line x1="-6" y1="-39" x2="0" y2="-33" stroke="#C0B8A4" stroke-width="0.3" opacity="0.5"/>
-    <line x1="-6" y1="-33" x2="0" y2="-39" stroke="#C0B8A4" stroke-width="0.3" opacity="0.5"/>
+    <line x1="4" y1="-40" x2="2" y2="2" stroke="#D4C890" stroke-width="0.75" opacity="0.9"/>
+    <!-- lime wheel -->
+    <circle cx="-2" cy="-36" r="4" stroke="#B8A868" stroke-width="0.55" opacity="0.85"/>
+    <line x1="-2" y1="-40" x2="-2" y2="-32" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
+    <line x1="-6" y1="-36" x2="2"  y2="-36" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
+    <line x1="-5" y1="-39" x2="1"  y2="-33" stroke="#B8A868" stroke-width="0.30" opacity="0.55"/>
+    <line x1="-5" y1="-33" x2="1"  y2="-39" stroke="#B8A868" stroke-width="0.30" opacity="0.55"/>
   </g>
 </symbol>
   <symbol id="icon-rk" viewBox="-12 -28 24 32" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -10,-24 L -11,2 L 11,2 L 10,-24 Z"/>
-    <!-- ice cubes -->
-    <rect x="-7" y="-20" width="6" height="5" rx="0.5" stroke="#C0B8A4" stroke-width="0.5" opacity="0.7"/>
-    <rect x="1" y="-18" width="6" height="5" rx="0.5" stroke="#C0B8A4" stroke-width="0.5" opacity="0.7"/>
-    <rect x="-4" y="-13" width="5" height="4" rx="0.5" stroke="#C0B8A4" stroke-width="0.4" opacity="0.6"/>
-    <!-- liquid surface -->
-    <path d="M -9,-9 Q 0,-8 9,-9" stroke="#C0B8A4" stroke-width="0.4" opacity="0.6"/>
+    <rect x="-7" y="-20" width="6" height="5" rx="0.5" stroke="#B8A868" stroke-width="0.50" opacity="0.75"/>
+    <rect x="1"  y="-18" width="6" height="5" rx="0.5" stroke="#B8A868" stroke-width="0.50" opacity="0.75"/>
+    <rect x="-4" y="-13" width="5" height="4" rx="0.5" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
+    <path d="M -9,-9 Q 0,-8 9,-9" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
   </g>
 </symbol>
   <symbol id="icon-fl" viewBox="-8 -48 16 52" overflow="visible">
-  <g filter="url(#sketch)" stroke="#DAD2BE" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -5,-44 Q -7,-24 -4,-18 Q -2,-14 0,-14 Q 2,-14 4,-18 Q 7,-24 5,-44 Z"/>
     <line x1="-5" y1="-44" x2="5" y2="-44"/>
     <line x1="0" y1="-14" x2="0" y2="-2"/>
     <line x1="-6" y1="-2" x2="6" y2="-2"/>
-    <!-- bubbles -->
-    <circle cx="-2" cy="-30" r="0.8" stroke="#C0B8A4" stroke-width="0.4" opacity="0.8"/>
-    <circle cx="2" cy="-36" r="0.8" stroke="#C0B8A4" stroke-width="0.4" opacity="0.8"/>
-    <circle cx="0" cy="-24" r="0.6" stroke="#C0B8A4" stroke-width="0.3" opacity="0.7"/>
-    <circle cx="-1" cy="-42" r="0.6" stroke="#C0B8A4" stroke-width="0.3" opacity="0.7"/>
-    <circle cx="2" cy="-20" r="0.5" stroke="#C0B8A4" stroke-width="0.3" opacity="0.6"/>
+    <circle cx="-2" cy="-30" r="0.8" stroke="#B8A868" stroke-width="0.40" opacity="0.85"/>
+    <circle cx="2"  cy="-36" r="0.8" stroke="#B8A868" stroke-width="0.40" opacity="0.85"/>
+    <circle cx="0"  cy="-24" r="0.6" stroke="#B8A868" stroke-width="0.30" opacity="0.75"/>
+    <circle cx="-1" cy="-42" r="0.6" stroke="#B8A868" stroke-width="0.30" opacity="0.75"/>
   </g>
 </symbol>
 </defs>
 
-  <!-- ── Art Deco Frame ── -->
-  <rect x="6.5" y="6.5" width="135" height="197" fill="none" stroke="#C9A24B" stroke-width="0.85"/>
-  <rect x="8.2" y="8.2" width="131.6" height="193.6" fill="none" stroke="#C9A24B" stroke-width="0.35"/>
+<!-- ── Art Deco Frame ── -->
+<rect x="6.5" y="6.5" width="135" height="197" fill="none" stroke="#D4C890" stroke-width="0.85"/>
+<rect x="8.2" y="8.2" width="131.6" height="193.6" fill="none" stroke="#D4C890" stroke-width="0.35"/>
 
-  <!-- Corner ornaments -->
-  <g stroke="#C9A24B" fill="none">
-    <!-- TL -->
-    <polyline points="6.5,20 6.5,14 10,14 10,10 14,10 14,6.5 20,6.5" stroke-width="0.5"/>
-    <path d="M 6.5,17 Q 11.5,11.5 17,6.5" stroke-width="0.35" opacity="0.8"/>
-    <path d="M 6.5,14 Q 10,10 14,6.5" stroke-width="0.25" opacity="0.55"/>
-    <polygon points="10,14 11.2,12 12.4,14 11.2,16" fill="#C9A24B" opacity="0.9"/>
-    <polygon points="14,10 15.2,8 16.4,10 15.2,12" fill="#C9A24B" opacity="0.9"/>
-    <!-- TR (reflected) -->
-    <polyline points="141.5,20 141.5,14 138,14 138,10 134,10 134,6.5 128,6.5" stroke-width="0.5"/>
-    <path d="M 141.5,17 Q 136.5,11.5 131,6.5" stroke-width="0.35" opacity="0.8"/>
-    <polygon points="138,14 136.8,12 135.6,14 136.8,16" fill="#C9A24B" opacity="0.9"/>
-    <polygon points="134,10 132.8,8 131.6,10 132.8,12" fill="#C9A24B" opacity="0.9"/>
-    <!-- BL (reflected) -->
-    <polyline points="6.5,190 6.5,196 10,196 10,200 14,200 14,203.5 20,203.5" stroke-width="0.5"/>
-    <path d="M 6.5,193 Q 11.5,198.5 17,203.5" stroke-width="0.35" opacity="0.8"/>
-    <polygon points="10,196 11.2,198 12.4,196 11.2,194" fill="#C9A24B" opacity="0.9"/>
-    <polygon points="14,200 15.2,202 16.4,200 15.2,198" fill="#C9A24B" opacity="0.9"/>
-    <!-- BR -->
-    <polyline points="141.5,190 141.5,196 138,196 138,200 134,200 134,203.5 128,203.5" stroke-width="0.5"/>
-    <path d="M 141.5,193 Q 136.5,198.5 131,203.5" stroke-width="0.35" opacity="0.8"/>
-    <polygon points="138,196 136.8,198 135.6,196 136.8,194" fill="#C9A24B" opacity="0.9"/>
-    <polygon points="134,200 132.8,202 131.6,200 132.8,198" fill="#C9A24B" opacity="0.9"/>
-  </g>
+<!-- ── Corner ornaments ── -->
+<g stroke="#D4C890" fill="none">
+  <!-- TL -->
+  <polyline points="6.5,20 6.5,14 10,14 10,10 14,10 14,6.5 20,6.5" stroke-width="0.5"/>
+  <path d="M 6.5,17 Q 11.5,11.5 17,6.5"  stroke-width="0.35" opacity="0.8"/>
+  <path d="M 6.5,14 Q 10,10 14,6.5"       stroke-width="0.25" opacity="0.55"/>
+  <polygon points="10,14 11.2,12 12.4,14 11.2,16" fill="#D4C890" opacity="0.9"/>
+  <polygon points="14,10 15.2,8  16.4,10 15.2,12" fill="#D4C890" opacity="0.9"/>
+  <!-- TR -->
+  <polyline points="141.5,20 141.5,14 138,14 138,10 134,10 134,6.5 128,6.5" stroke-width="0.5"/>
+  <path d="M 141.5,17 Q 136.5,11.5 131,6.5" stroke-width="0.35" opacity="0.8"/>
+  <polygon points="138,14 136.8,12 135.6,14 136.8,16" fill="#D4C890" opacity="0.9"/>
+  <polygon points="134,10 132.8,8  131.6,10 132.8,12" fill="#D4C890" opacity="0.9"/>
+  <!-- BL -->
+  <polyline points="6.5,190 6.5,196 10,196 10,200 14,200 14,203.5 20,203.5" stroke-width="0.5"/>
+  <path d="M 6.5,193 Q 11.5,198.5 17,203.5" stroke-width="0.35" opacity="0.8"/>
+  <polygon points="10,196 11.2,198 12.4,196 11.2,194" fill="#D4C890" opacity="0.9"/>
+  <polygon points="14,200 15.2,202 16.4,200 15.2,198" fill="#D4C890" opacity="0.9"/>
+  <!-- BR -->
+  <polyline points="141.5,190 141.5,196 138,196 138,200 134,200 134,203.5 128,203.5" stroke-width="0.5"/>
+  <path d="M 141.5,193 Q 136.5,198.5 131,203.5" stroke-width="0.35" opacity="0.8"/>
+  <polygon points="138,196 136.8,198 135.6,196 136.8,194" fill="#D4C890" opacity="0.9"/>
+  <polygon points="134,200 132.8,202 131.6,200 132.8,198" fill="#D4C890" opacity="0.9"/>
+</g>
 
-  <!-- ══ TOP-LEFT corner cluster ══ -->
-  <use href="#rose" x="-1.00" y="3.00" width="34" height="34" />
-  <use href="#mum" x="18.00" y="-1.00" width="24" height="24" />
-  <use href="#blossom" x="1.00" y="3.00" width="14" height="14" />
-  <use href="#blossom-c" x="24.00" y="24.00" width="12" height="12" />
-  <use href="#blossom" x="32.00" y="13.00" width="10" height="10" />
-  <use href="#sprig" x="-2.00" y="6.00" width="22" height="22" transform="rotate(15,9,28)"/>
-  <use href="#sprig" x="15.00" y="-11.00" width="18" height="18" transform="rotate(-20,24,7)"/>
-  <use href="#berry" x="29.00" y="23.00" width="14" height="14" />
-  <g transform="translate(11,13) rotate(-12) scale(0.55)">
-    <use href="#martini" x="-17" y="-40" width="34" height="44"/>
-  </g>
-  <g transform="translate(32,25) rotate(8) scale(0.5)">
-    <use href="#jigger" x="-10" y="-28" width="20" height="30"/>
-  </g>
+<!-- ════════════════════════════════
+     TOP-LEFT corner cluster
+     ════════════════════════════════ -->
+<!-- flowers -->
+<g filter="url(#sketch-b)" ><use href="#wf8" x="2.00" y="6.00" width="24" height="24"/></g>
+<g filter="url(#sketch-b)" ><use href="#wf5b" x="19.00" y="1.00" width="18" height="18"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="2.00" y="3.00" width="12" height="12"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="31.00" y="17.00" width="10" height="10"/></g>
+<g filter="url(#sketch-b)" ><use href="#bud" x="26.00" y="22.00" width="12" height="12"/></g>
+<!-- botanicals -->
+<g filter="url(#sketch-b)" transform="rotate(-15,10,28)"><use href="#branch" x="0.00" y="14.00" width="20" height="28"/></g>
+<g filter="url(#sketch-b)" transform="rotate(10,30,26)"><use href="#berries" x="21.00" y="16.00" width="18" height="20"/></g>
+<g filter="url(#sketch-b)" transform="rotate(20,22,8)"><use href="#herb" x="16.00" y="-2.00" width="12" height="20"/></g>
+<g filter="url(#sketch-b)" transform="rotate(5,8,20)"><use href="#tendril" x="0.00" y="9.00" width="16" height="22"/></g>
+<!-- glassware (sketch) -->
+<g transform="translate(12,14) rotate(-12) scale(0.52)">
+  <use href="#martini" x="-17" y="-40" width="34" height="44"/>
+</g>
+<g transform="translate(34,18) rotate(6) scale(0.48)">
+  <use href="#jigger" x="-10" y="-28" width="20" height="30"/>
+</g>
 
-  <!-- ══ TOP-RIGHT corner cluster ══ -->
-  <use href="#daisy" x="116.00" y="4.00" width="32" height="32" />
-  <use href="#cosmos" x="106.00" y="-3.00" width="26" height="26" />
-  <use href="#blossom-c" x="133.00" y="3.00" width="14" height="14" />
-  <use href="#blossom" x="113.00" y="24.00" width="12" height="12" />
-  <use href="#blossom-c" x="104.00" y="15.00" width="10" height="10" />
-  <use href="#sprig" x="128.00" y="6.00" width="22" height="22" transform="rotate(-15,139,28)"/>
-  <use href="#sprig" x="116.00" y="-11.00" width="18" height="18" transform="rotate(20,125,7)"/>
-  <use href="#berry" x="103.00" y="23.00" width="14" height="14" />
-  <g transform="translate(137,13) rotate(10) scale(0.52)">
-    <use href="#coupe" x="-17" y="-36" width="34" height="40"/>
-  </g>
-  <g transform="translate(120,26) rotate(-5) scale(0.7)">
-    <use href="#citrus" x="-10" y="-10" width="20" height="20"/>
-  </g>
+<!-- ════════════════════════════════
+     TOP-RIGHT corner cluster
+     ════════════════════════════════ -->
+<g filter="url(#sketch-b)" ><use href="#wf5" x="123.00" y="7.00" width="22" height="22"/></g>
+<g filter="url(#sketch-b)" ><use href="#wf8" x="108.00" y="-2.00" width="24" height="24"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="134.00" y="3.00" width="12" height="12"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="107.00" y="17.00" width="10" height="10"/></g>
+<g filter="url(#sketch-b)" ><use href="#bud" x="110.00" y="22.00" width="12" height="12"/></g>
+<g filter="url(#sketch-b)" transform="rotate(15,138,28)"><use href="#branch" x="128.00" y="14.00" width="20" height="28"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-10,118,26)"><use href="#berries" x="109.00" y="16.00" width="18" height="20"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-20,126,8)"><use href="#herb" x="120.00" y="-2.00" width="12" height="20"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-5,140,20)"><use href="#tendril" x="132.00" y="9.00" width="16" height="22"/></g>
+<!-- glassware -->
+<g transform="translate(136,14) rotate(12) scale(0.52)">
+  <use href="#coupe" x="-17" y="-36" width="34" height="40"/>
+</g>
+<g transform="translate(116,24) rotate(-5) scale(0.62)">
+  <use href="#citrus" x="-10" y="-10" width="20" height="20"/>
+</g>
 
-  <!-- ══ BOTTOM-LEFT corner cluster ══ -->
-  <use href="#tulip" x="1.00" y="176.00" width="22" height="34" />
-  <use href="#mum" x="15.00" y="172.00" width="26" height="26" />
-  <use href="#berry" x="3.00" y="174.00" width="14" height="14" />
-  <use href="#berry" x="30.00" y="194.00" width="12" height="12" />
-  <use href="#blossom" x="31.00" y="186.00" width="12" height="12" />
-  <use href="#blossom-c" x="17.00" y="200.00" width="10" height="10" />
-  <use href="#sprig" x="-1.00" y="184.00" width="18" height="18" transform="rotate(-10,8,202)"/>
-  <use href="#sprig" x="17.00" y="160.00" width="18" height="18" transform="rotate(20,26,178)"/>
-  <g transform="translate(18,184) rotate(-8) scale(0.52)">
-    <use href="#wine-glass" x="-12" y="-44" width="24" height="48"/>
-  </g>
-  <g transform="translate(33,197) rotate(15) scale(0.55)">
-    <use href="#strainer" x="-22" y="-12" width="44" height="14"/>
-  </g>
+<!-- ════════════════════════════════
+     BOTTOM-LEFT corner cluster
+     ════════════════════════════════ -->
+<g filter="url(#sketch-b)" ><use href="#wf5b" x="3.00" y="183.00" width="22" height="22"/></g>
+<g filter="url(#sketch-b)" ><use href="#wf8" x="16.00" y="174.00" width="24" height="24"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="2.00" y="196.00" width="12" height="12"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="31.00" y="187.00" width="10" height="10"/></g>
+<g filter="url(#sketch-b)" ><use href="#bud" x="26.00" y="177.00" width="12" height="12"/></g>
+<g filter="url(#sketch-b)" transform="rotate(10,10,184)"><use href="#branch" x="0.00" y="170.00" width="20" height="28"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-8,30,199)"><use href="#berries" x="21.00" y="189.00" width="18" height="20"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-20,22,204)"><use href="#herb" x="16.00" y="194.00" width="12" height="20"/></g>
+<g filter="url(#sketch-b)" transform="rotate(10,8,190)"><use href="#tendril" x="0.00" y="179.00" width="16" height="22"/></g>
+<!-- glassware -->
+<g transform="translate(18,185) rotate(-8) scale(0.50)">
+  <use href="#wine-glass" x="-13" y="-44" width="26" height="48"/>
+</g>
+<g transform="translate(34,198) rotate(14) scale(0.52)">
+  <use href="#strainer" x="-22" y="-12" width="44" height="14"/>
+</g>
 
-  <!-- ══ BOTTOM-RIGHT corner cluster ══ -->
-  <use href="#rose" x="113.00" y="173.00" width="36" height="36" />
-  <use href="#daisy" x="104.00" y="168.00" width="28" height="28" />
-  <use href="#blossom-c" x="133.00" y="193.00" width="14" height="14" />
-  <use href="#blossom" x="104.00" y="188.00" width="12" height="12" />
-  <use href="#blossom-c" x="137.00" y="177.00" width="10" height="10" />
-  <use href="#sprig" x="130.00" y="158.00" width="20" height="20" transform="rotate(15,140,178)"/>
-  <use href="#sprig" x="106.00" y="185.00" width="18" height="18" transform="rotate(-20,115,203)"/>
-  <use href="#berry" x="101.00" y="174.00" width="14" height="14" />
-  <g transform="translate(121,184) rotate(6) scale(0.5)">
-    <use href="#shaker" x="-12" y="-44" width="24" height="48"/>
-  </g>
-  <g transform="translate(138,197) rotate(-10) scale(0.52)">
-    <use href="#nick-nora" x="-14" y="-40" width="28" height="44"/>
-  </g>
+<!-- ════════════════════════════════
+     BOTTOM-RIGHT corner cluster
+     ════════════════════════════════ -->
+<g filter="url(#sketch-b)" ><use href="#wf8" x="122.00" y="182.00" width="24" height="24"/></g>
+<g filter="url(#sketch-b)" ><use href="#wf5" x="108.00" y="175.00" width="22" height="22"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="134.00" y="196.00" width="12" height="12"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="107.00" y="187.00" width="10" height="10"/></g>
+<g filter="url(#sketch-b)" ><use href="#bud" x="110.00" y="177.00" width="12" height="12"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-10,138,184)"><use href="#branch" x="128.00" y="170.00" width="20" height="28"/></g>
+<g filter="url(#sketch-b)" transform="rotate(8,118,199)"><use href="#berries" x="109.00" y="189.00" width="18" height="20"/></g>
+<g filter="url(#sketch-b)" transform="rotate(20,126,204)"><use href="#herb" x="120.00" y="194.00" width="12" height="20"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-10,140,190)"><use href="#tendril" x="132.00" y="179.00" width="16" height="22"/></g>
+<!-- glassware -->
+<g transform="translate(122,184) rotate(6) scale(0.48)">
+  <use href="#shaker" x="-12" y="-44" width="24" height="48"/>
+</g>
+<g transform="translate(138,197) rotate(-10) scale(0.50)">
+  <use href="#nick-nora" x="-14" y="-40" width="28" height="44"/>
+</g>
 
-  <!-- ══ LEFT garland ══ -->
-  <use href="#sprig" x="3.00" y="30.00" width="16" height="16" transform="rotate(8,11,46)"/>   <use href="#blossom-c" x="8.00" y="53.00" width="10" height="10" />
-  <use href="#sprig" x="1.00" y="52.00" width="16" height="16" transform="rotate(-5,9,68)"/>   <use href="#blossom" x="8.00" y="75.00" width="10" height="10" />
-  <use href="#berry" x="4.00" y="86.00" width="12" height="12" />
-  <use href="#sprig" x="4.00" y="86.00" width="16" height="16" transform="rotate(10,12,102)"/> <use href="#blossom-c" x="6.00" y="109.00" width="10" height="10" />
-  <use href="#sprig" x="2.00" y="108.00" width="16" height="16" transform="rotate(-8,10,124)"/>  <use href="#blossom" x="9.00" y="131.00" width="10" height="10" />
-  <use href="#sprig" x="1.00" y="132.00" width="16" height="16" transform="rotate(5,9,148)"/> <use href="#blossom-c" x="7.00" y="155.00" width="10" height="10" />
-  <use href="#sprig" x="3.00" y="154.00" width="16" height="16" transform="rotate(-10,11,170)"/>
+<!-- ════════════════════════════════
+     LEFT garland
+     ════════════════════════════════ -->
+<g filter="url(#sketch-b)" transform="rotate(8,10,46)"><use href="#branch" x="2.00" y="34.00" width="16" height="24"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="7.50" y="60.00" width="11" height="0"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-5,10,72)"><use href="#berries" x="3.00" y="63.00" width="14" height="18"/></g>
+<g filter="url(#sketch-b)" transform="rotate(5,13,85)"><use href="#wf5" x="4.50" y="85.00" width="17" height="0"/></g>
+<g filter="url(#sketch-b)" transform="rotate(10,9,98)"><use href="#herb" x="3.50" y="89.00" width="11" height="18"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="8.00" y="110.00" width="10" height="0"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-8,10,122)"><use href="#branch" x="2.00" y="110.00" width="16" height="24"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-5,13,136)"><use href="#wf5b" x="5.00" y="136.00" width="16" height="0"/></g>
+<g filter="url(#sketch-b)" transform="rotate(5,9,148)"><use href="#tendril" x="2.00" y="138.00" width="14" height="20"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="8.00" y="160.00" width="10" height="0"/></g>
+<g filter="url(#sketch-b)" transform="rotate(10,10,170)"><use href="#berries" x="3.00" y="161.00" width="14" height="18"/></g>
 
-  <!-- ══ RIGHT garland ══ -->
-  <use href="#sprig" x="129.00" y="28.00" width="16" height="16" transform="rotate(-8,137,44)"/>  <use href="#blossom" x="129.00" y="51.00" width="10" height="10" />
-  <use href="#sprig" x="131.00" y="50.00" width="16" height="16" transform="rotate(6,139,66)"/>  <use href="#blossom-c" x="130.00" y="73.00" width="10" height="10" />
-  <use href="#sprig" x="130.00" y="74.00" width="16" height="16" transform="rotate(-6,138,90)"/>
-  <use href="#berry" x="131.00" y="96.00" width="12" height="12" />
-  <use href="#sprig" x="128.00" y="96.00" width="16" height="16" transform="rotate(9,136,112)"/>  <use href="#blossom" x="134.00" y="119.00" width="10" height="10" />
-  <use href="#sprig" x="129.00" y="118.00" width="16" height="16" transform="rotate(-5,137,134)"/>  <use href="#blossom-c" x="129.00" y="141.00" width="10" height="10" />
-  <use href="#sprig" x="130.00" y="142.00" width="16" height="16" transform="rotate(7,138,158)"/>  <use href="#blossom" x="131.00" y="165.00" width="10" height="10" />
+<!-- ════════════════════════════════
+     RIGHT garland
+     ════════════════════════════════ -->
+<g filter="url(#sketch-b)" transform="rotate(-8,138,46)"><use href="#branch" x="130.00" y="34.00" width="16" height="24"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="129.50" y="60.00" width="11" height="0"/></g>
+<g filter="url(#sketch-b)" transform="rotate(5,138,72)"><use href="#berries" x="131.00" y="63.00" width="14" height="18"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-5,135,86)"><use href="#wf8" x="126.50" y="86.00" width="17" height="0"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-10,139,99)"><use href="#herb" x="133.50" y="90.00" width="11" height="18"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="130.00" y="111.00" width="10" height="0"/></g>
+<g filter="url(#sketch-b)" transform="rotate(8,138,123)"><use href="#branch" x="130.00" y="111.00" width="16" height="24"/></g>
+<g filter="url(#sketch-b)" transform="rotate(5,135,137)"><use href="#wf5" x="127.00" y="137.00" width="16" height="0"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-5,139,149)"><use href="#tendril" x="132.00" y="139.00" width="14" height="20"/></g>
+<g filter="url(#sketch-b)" ><use href="#tiny" x="130.00" y="161.00" width="10" height="0"/></g>
+<g filter="url(#sketch-b)" transform="rotate(-10,138,171)"><use href="#berries" x="131.00" y="162.00" width="14" height="18"/></g>
 </svg>
 
-  <!-- Content layer -->
   <div class="content">
 
-    <!-- Masthead -->
     <div class="venue-name">Your Venue Name</div>
     <h1 class="cocktails-title">Cocktails</h1>
     <div class="sig-row">
@@ -691,12 +537,10 @@ html, body {
       <div class="sig-line"></div>
     </div>
 
-    <!-- Three cocktails -->
     <div class="cocktails">
 
-      <!-- Hibiscus Veil -->
       <div class="cocktail">
-        <svg width="9mm" height="13mm" viewBox="-10 -42 32 46" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 2mm;"><use href="#icon-hb" x="-10" y="-42" width="32" height="46"/></svg>
+        <svg width="9mm" height="13mm" viewBox="-11 -42 32 46" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 2mm;"><use href="#icon-hb" x="-11" y="-42" width="32" height="46"/></svg>
         <h2 class="drink-name">Hibiscus Veil</h2>
         <p class="tasting-note">A blush-pink long drink — floral and bittersweet,<br>veiled in cool botanical effervescence.</p>
         <p class="ingredients">
@@ -705,14 +549,12 @@ html, body {
         </p>
       </div>
 
-      <!-- Divider -->
       <div class="divider">
         <div class="div-line"></div>
         <div class="div-diamonds"><span>◆</span><span>◆</span><span>◆</span></div>
         <div class="div-line"></div>
       </div>
 
-      <!-- Golden Sour -->
       <div class="cocktail">
         <svg width="9mm" height="11mm" viewBox="-12 -28 24 32" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 2mm;"><use href="#icon-rk" x="-12" y="-28" width="24" height="32"/></svg>
         <h2 class="drink-name">Golden Sour</h2>
@@ -723,14 +565,12 @@ html, body {
         </p>
       </div>
 
-      <!-- Divider -->
       <div class="divider">
         <div class="div-line"></div>
         <div class="div-diamonds"><span>◆</span><span>◆</span><span>◆</span></div>
         <div class="div-line"></div>
       </div>
 
-      <!-- Elderbloom Spritz -->
       <div class="cocktail">
         <svg width="7mm" height="14mm" viewBox="-8 -48 16 52" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 2mm;"><use href="#icon-fl" x="-8" y="-48" width="16" height="52"/></svg>
         <h2 class="drink-name">Elderbloom Spritz</h2>
@@ -741,9 +581,8 @@ html, body {
         </p>
       </div>
 
-    </div><!-- /.cocktails -->
+    </div>
 
-    <!-- Footer -->
     <div class="footer">
       <div class="footer-rule">
         <div class="footer-line"></div>
@@ -753,7 +592,7 @@ html, body {
       <p class="footer-text">Crafted to Order</p>
     </div>
 
-  </div><!-- /.content -->
-</div><!-- /.page -->
+  </div>
+</div>
 </body>
 </html>
