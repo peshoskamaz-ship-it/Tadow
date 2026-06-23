@@ -32,8 +32,8 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
 .page {
   position: relative;
   width: 148mm; height: 210mm;
-  background: radial-gradient(ellipse 80% 90% at 50% 38%,
-    #1E4A39 0%, #1A4233 28%, #123026 58%, #0B1E17 100%);
+  background: radial-gradient(ellipse 85% 90% at 50% 38%,
+    #1E1C22 0%, #141318 42%, #0D0C10 72%, #080709 100%);
 }
 
 .deco {
@@ -46,28 +46,41 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
   position: absolute; top: 0; left: 0;
   width: 148mm; height: 210mm;
   display: flex; flex-direction: column; align-items: center;
-  padding: 19mm 17mm 15mm;
+  padding: 18mm 16mm 13mm;
 }
 
 /* ── Masthead ── */
-.venue-name {
+.monogram {
   font-family: 'Poppins', sans-serif; font-weight: 300;
-  font-size: 5.5px; letter-spacing: 0.30em; color: #C0B080;
-  text-transform: uppercase; margin-bottom: 3mm; text-align: center;
+  font-size: 5.5px; letter-spacing: 0.38em; color: #D4C890;
+  text-transform: uppercase; margin-bottom: 1.2mm; text-align: center;
 }
-.cocktails-title {
-  font-family: 'Lora', serif; font-weight: 700; font-size: 27px;
-  color: #D9B259; text-align: center; line-height: 1.05;
-  margin-bottom: 3.5mm; letter-spacing: 0.04em;
+.brand-name {
+  font-family: 'Lora', serif; font-weight: 700; font-size: 38px;
+  color: #EEEAE0; text-align: center; line-height: 1.0;
+  margin-bottom: 1.5mm; letter-spacing: 0.14em;
+}
+.est-rule {
+  display: flex; align-items: center; gap: 0; width: 75%; margin-bottom: 1.5mm;
+}
+.est-line { flex: 1; height: 0.35px; background: #D4C890; opacity: 0.55; }
+.est-text {
+  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-size: 4.5px; letter-spacing: 0.32em; color: #B8A868;
+  padding: 0 6px; white-space: nowrap;
+}
+.menu-script {
+  font-family: 'Lora', serif; font-weight: 400; font-style: italic;
+  font-size: 13.5px; color: #D4C890; text-align: center;
+  margin-bottom: 4.5mm; letter-spacing: 0.02em;
 }
 .sig-row {
-  display: flex; align-items: center; width: 100%; margin-bottom: 5mm;
+  display: flex; align-items: center; width: 100%; margin-bottom: 4mm;
 }
-.sig-line { flex: 1; height: 0.4px; background: #C9A24B; }
-.sig-text {
-  font-family: 'Poppins', sans-serif; font-weight: 300;
-  font-size: 5px; letter-spacing: 0.28em; color: #C9A24B;
-  padding: 0 5px; white-space: nowrap;
+.sig-line { flex: 1; height: 0.35px; background: #D4C890; opacity: 0.55; }
+.sig-dot {
+  width: 3px; height: 3px; background: #D4C890;
+  border-radius: 50%; margin: 0 7px; opacity: 0.75;
 }
 
 /* ── Cocktail cards ── */
@@ -77,42 +90,42 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
 }
 .cocktail { text-align: center; width: 100%; }
 .drink-name {
-  font-family: 'Lora', serif; font-weight: 700; font-size: 16.5px;
-  color: #D4AB52; margin-bottom: 2.2mm; letter-spacing: 0.025em;
+  font-family: 'Lora', serif; font-weight: 700; font-size: 16px;
+  color: #ECEAE0; margin-bottom: 2mm; letter-spacing: 0.03em;
 }
 .tasting-note {
   font-family: 'Lora', serif; font-weight: 400; font-style: italic;
-  font-size: 9.5px; color: #ECE2C4; line-height: 1.45;
-  margin-bottom: 2.5mm; padding: 0 2mm;
+  font-size: 9px; color: #B8B0A0; line-height: 1.5;
+  margin-bottom: 2mm; padding: 0 2mm;
 }
 .ingredients {
   font-family: 'Poppins', sans-serif; font-weight: 300;
-  font-size: 6px; letter-spacing: 0.18em; color: #8FB199;
-  text-transform: uppercase; line-height: 1.6;
+  font-size: 5.5px; letter-spacing: 0.18em; color: #968C6C;
+  text-transform: uppercase; line-height: 1.65;
 }
-.diamond { color: #C9A24B; }
+.diamond { color: #D4C890; }
 
-/* ── Divider between cocktails ── */
+/* ── Dividers ── */
 .divider {
-  display: flex; align-items: center; width: 88%;
+  display: flex; align-items: center; width: 84%;
 }
-.div-line { flex: 1; height: 0.4px; background: #C9A24B; opacity: 0.8; }
-.div-diamonds {
-  display: flex; gap: 5px; padding: 0 6px;
-  font-size: 6px; color: #C9A24B; line-height: 1;
+.div-line { flex: 1; height: 0.3px; background: #D4C890; opacity: 0.50; }
+.div-center {
+  display: flex; gap: 4px; padding: 0 5px;
+  font-size: 5px; color: #D4C890; line-height: 1; opacity: 0.75;
 }
 
 /* ── Footer ── */
-.footer { text-align: center; margin-top: 3mm; }
+.footer { text-align: center; margin-top: 2mm; }
 .footer-rule {
-  display: flex; align-items: center; gap: 0; margin-bottom: 2mm;
+  display: flex; align-items: center; margin-bottom: 1.5mm;
 }
-.footer-line { flex: 1; height: 0.4px; background: #C9A24B; opacity: 0.7; }
-.footer-diamond { font-size: 5px; color: #C9A24B; padding: 0 5px; }
+.footer-line { flex: 1; height: 0.3px; background: #D4C890; opacity: 0.45; }
+.footer-diamond { font-size: 5px; color: #B8A868; padding: 0 5px; opacity: 0.8; }
 .footer-text {
   font-family: 'Poppins', sans-serif; font-weight: 300;
-  font-size: 5.5px; letter-spacing: 0.30em; color: #C0B890;
-  text-transform: uppercase;
+  font-size: 4.5px; letter-spacing: 0.35em; color: #B8A868;
+  text-transform: uppercase; opacity: 0.85;
 }
 </style>
 </head>
@@ -122,12 +135,10 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
   <svg class="deco" viewBox="0 0 148 210" xmlns="http://www.w3.org/2000/svg">
 <defs>
   
-  <!-- heavier sketch for glassware -->
   <filter id="sketch" x="-30%" y="-30%" width="160%" height="160%">
     <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
     <feDisplacementMap in="SourceGraphic" in2="n" scale="2.3" xChannelSelector="R" yChannelSelector="G"/>
   </filter>
-  <!-- lighter wobble for botanicals -->
   <filter id="sketch-b" x="-20%" y="-20%" width="140%" height="140%">
     <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="n"/>
     <feDisplacementMap in="SourceGraphic" in2="n" scale="0.9" xChannelSelector="R" yChannelSelector="G"/>
@@ -140,8 +151,7 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
 <path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(288.0)"/>
   <circle r="2.2" fill="#D4C890"/>
   <circle r="1" fill="#E0D4A0"/>
-</symbol>
-  <symbol id="wf5b" viewBox="-12 -12 24 24" overflow="visible">
+</symbol> <symbol id="wf5b" viewBox="-12 -12 24 24" overflow="visible">
   <path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(0.0)"/>
 <path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(72.0)"/>
 <path d="M 0,0 C 3.60,-0.80 4.50,-5.80 0,-10.00 C -4.50,-5.80 -3.60,-0.80 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(144.0)"/>
@@ -153,8 +163,7 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
 <path d="M 0,0 C 2.24,-0.56 2.80,-4.06 0,-7.00 C -2.80,-4.06 -2.24,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(252.0)"/>
 <path d="M 0,0 C 2.24,-0.56 2.80,-4.06 0,-7.00 C -2.80,-4.06 -2.24,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(324.0)"/>
   <circle r="2" fill="#D4C890"/>
-</symbol>
-  <symbol id="wf8" viewBox="-14 -14 28 28" overflow="visible">
+</symbol> <symbol id="wf8" viewBox="-14 -14 28 28" overflow="visible">
   <path d="M 0,0 C 3.34,-0.88 4.18,-6.38 0,-11.00 C -4.18,-6.38 -3.34,-0.88 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(0.0)"/>
 <path d="M 0,0 C 3.34,-0.88 4.18,-6.38 0,-11.00 C -4.18,-6.38 -3.34,-0.88 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(45.0)"/>
 <path d="M 0,0 C 3.34,-0.88 4.18,-6.38 0,-11.00 C -4.18,-6.38 -3.34,-0.88 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(90.0)"/>
@@ -173,34 +182,24 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
 <path d="M 0,0 C 1.96,-0.56 2.45,-4.06 0,-7.00 C -2.45,-4.06 -1.96,-0.56 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(337.5)"/>
   <circle r="2.8" fill="#D4C890" stroke="#B8A868" stroke-width="0.4"/>
   <circle r="1.2" fill="#E0D4A0"/>
-</symbol>
-  <symbol id="bud" viewBox="-5 -14 10 16" overflow="visible">
+</symbol> <symbol id="bud" viewBox="-5 -14 10 16" overflow="visible">
   <line x1="0" y1="2" x2="0" y2="-6" stroke="#D4C890" stroke-width="0.6"/>
   <path d="M 0,-6 C 3,-8 4,-12 0,-13 C -4,-12 -3,-8 0,-6 Z"
         fill="#D4C890" fill-opacity="0.25" stroke="#D4C890" stroke-width="0.6"/>
-  <!-- two tiny sepals -->
   <path d="M -1,-7 Q -4,-8 -3,-6" stroke="#D4C890" stroke-width="0.4" fill="none"/>
   <path d="M  1,-7 Q  4,-8  3,-6" stroke="#D4C890" stroke-width="0.4" fill="none"/>
-</symbol>
-  <symbol id="berries" viewBox="-14 -20 28 22" overflow="visible">
-  <!-- main stem -->
+</symbol> <symbol id="berries" viewBox="-14 -20 28 22" overflow="visible">
   <path d="M 0,2 Q 0,-4, 0,-10" stroke="#D4C890" stroke-width="0.65" fill="none"/>
-  <!-- side stems -->
   <path d="M 0,-7 Q -5,-8, -8,-12" stroke="#D4C890" stroke-width="0.55" fill="none"/>
   <path d="M 0,-7 Q  5,-8,  8,-12" stroke="#D4C890" stroke-width="0.55" fill="none"/>
-  <!-- berries -->
   <circle cx="0"  cy="-13" r="2.8" fill="#D4C890" fill-opacity="0.7" stroke="#D4C890" stroke-width="0.5"/>
   <circle cx="-8" cy="-13" r="2.2" fill="#D4C890" fill-opacity="0.6" stroke="#D4C890" stroke-width="0.5"/>
   <circle cx="8"  cy="-13" r="2.2" fill="#D4C890" fill-opacity="0.6" stroke="#D4C890" stroke-width="0.5"/>
-  <!-- tiny highlight dots -->
   <circle cx="-0.8" cy="-14.2" r="0.6" fill="#E0D4A0" opacity="0.8"/>
   <circle cx="-8.8" cy="-14"   r="0.5" fill="#E0D4A0" opacity="0.7"/>
   <circle cx="7.2"  cy="-14"   r="0.5" fill="#E0D4A0" opacity="0.7"/>
-</symbol>
-  <symbol id="branch" viewBox="-16 -26 32 28" overflow="visible">
-  <!-- curved main stem -->
+</symbol> <symbol id="branch" viewBox="-16 -26 32 28" overflow="visible">
   <path d="M 0,2 Q 2,-8, 0,-24" stroke="#D4C890" stroke-width="0.65" fill="none"/>
-  <!-- leaf pairs -->
   <path d="M 0,-5  Q -9,-7, -11,-13 Q -5,-9, 0,-5"
         fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.55"/>
   <path d="M 0,-5  Q  9,-7,  11,-13 Q  5,-9, 0,-5"
@@ -209,37 +208,64 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
         fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.55"/>
   <path d="M 0,-12 Q  10,-14,  12,-20 Q  5,-15, 0,-12"
         fill="#D4C890" fill-opacity="0.15" stroke="#D4C890" stroke-width="0.50"/>
-  <!-- tip leaf -->
   <path d="M 0,-20 Q 4,-22, 2,-26 Q -2,-22, 0,-20"
         fill="#D4C890" fill-opacity="0.20" stroke="#D4C890" stroke-width="0.55"/>
-</symbol>
-  <symbol id="herb" viewBox="-8 -22 16 24" overflow="visible">
-  <!-- main stem -->
+</symbol> <symbol id="herb" viewBox="-8 -22 16 24" overflow="visible">
   <path d="M 0,2 L 0,-20" stroke="#D4C890" stroke-width="0.60" fill="none"/>
-  <!-- pairs of small leaves -->
   <path d="M 0,-5  Q -6,-6, -7,-9  Q -3,-7, 0,-5"  fill="#D4C890" fill-opacity="0.2" stroke="#D4C890" stroke-width="0.45"/>
   <path d="M 0,-5  Q  6,-6,  7,-9  Q  3,-7, 0,-5"  fill="#D4C890" fill-opacity="0.15" stroke="#D4C890" stroke-width="0.40"/>
   <path d="M 0,-10 Q -5,-11,-6,-14 Q -2,-12, 0,-10" fill="#D4C890" fill-opacity="0.2" stroke="#D4C890" stroke-width="0.45"/>
   <path d="M 0,-10 Q  5,-11, 6,-14 Q  2,-12, 0,-10" fill="#D4C890" fill-opacity="0.15" stroke="#D4C890" stroke-width="0.40"/>
   <path d="M 0,-15 Q -4,-16,-5,-19 Q -1,-17, 0,-15" fill="#D4C890" fill-opacity="0.2" stroke="#D4C890" stroke-width="0.40"/>
   <path d="M 0,-15 Q  4,-16, 5,-19 Q  1,-17, 0,-15" fill="#D4C890" fill-opacity="0.15" stroke="#D4C890" stroke-width="0.35"/>
-  <!-- tip bud -->
   <circle cx="0" cy="-20" r="1.5" fill="#D4C890"/>
-</symbol>
-  <symbol id="tiny" viewBox="-7 -7 14 14" overflow="visible">
+</symbol> <symbol id="tiny" viewBox="-7 -7 14 14" overflow="visible">
   <path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(0.0)"/>
 <path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(72.0)"/>
 <path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(144.0)"/>
 <path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(216.0)"/>
 <path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.70" transform="rotate(288.0)"/>
   <circle r="1.4" fill="#D4C890"/>
-</symbol>
-  <symbol id="tendril" viewBox="-10 -20 20 22" overflow="visible">
+</symbol> <symbol id="tendril" viewBox="-10 -20 20 22" overflow="visible">
   <path d="M 0,2 Q -8,0, -6,-6 Q -4,-12, 0,-14 Q 4,-16, 2,-20"
         stroke="#D4C890" stroke-width="0.55" fill="none" stroke-linecap="round"/>
-  <!-- tiny leaves on curve -->
   <path d="M -5,-3 Q -10,-2, -10,-6 Q -7,-4, -5,-3" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.40"/>
   <path d="M -4,-10 Q -9,-11,-8,-15 Q -5,-12,-4,-10" fill="#D4C890" fill-opacity="0.18" stroke="#D4C890" stroke-width="0.40"/>
+</symbol>
+  <symbol id="pink-wf5" viewBox="-12 -12 24 24" overflow="visible">
+  <path d="M 0,0 C 3.24,-0.72 4.05,-5.22 0,-9.00 C -4.05,-5.22 -3.24,-0.72 0,0 Z" fill="#D4829A" fill-opacity="0.50" stroke="#D4829A" stroke-width="0.60" transform="rotate(0.0)"/>
+<path d="M 0,0 C 3.24,-0.72 4.05,-5.22 0,-9.00 C -4.05,-5.22 -3.24,-0.72 0,0 Z" fill="#D4829A" fill-opacity="0.50" stroke="#D4829A" stroke-width="0.60" transform="rotate(72.0)"/>
+<path d="M 0,0 C 3.24,-0.72 4.05,-5.22 0,-9.00 C -4.05,-5.22 -3.24,-0.72 0,0 Z" fill="#D4829A" fill-opacity="0.50" stroke="#D4829A" stroke-width="0.60" transform="rotate(144.0)"/>
+<path d="M 0,0 C 3.24,-0.72 4.05,-5.22 0,-9.00 C -4.05,-5.22 -3.24,-0.72 0,0 Z" fill="#D4829A" fill-opacity="0.50" stroke="#D4829A" stroke-width="0.60" transform="rotate(216.0)"/>
+<path d="M 0,0 C 3.24,-0.72 4.05,-5.22 0,-9.00 C -4.05,-5.22 -3.24,-0.72 0,0 Z" fill="#D4829A" fill-opacity="0.50" stroke="#D4829A" stroke-width="0.60" transform="rotate(288.0)"/>
+  <circle r="2" fill="#D4829A"/>
+  <circle r="0.9" fill="#EBB8CA"/>
+</symbol> <symbol id="pink-tiny" viewBox="-7 -7 14 14" overflow="visible">
+  <path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4829A" fill-opacity="0.55" stroke="#D4829A" stroke-width="0.55" transform="rotate(0.0)"/>
+<path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4829A" fill-opacity="0.55" stroke="#D4829A" stroke-width="0.55" transform="rotate(72.0)"/>
+<path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4829A" fill-opacity="0.55" stroke="#D4829A" stroke-width="0.55" transform="rotate(144.0)"/>
+<path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4829A" fill-opacity="0.55" stroke="#D4829A" stroke-width="0.55" transform="rotate(216.0)"/>
+<path d="M 0,0 C 1.85,-0.44 2.31,-3.19 0,-5.50 C -2.31,-3.19 -1.85,-0.44 0,0 Z" fill="#D4829A" fill-opacity="0.55" stroke="#D4829A" stroke-width="0.55" transform="rotate(288.0)"/>
+  <circle r="1.3" fill="#D4829A"/>
+</symbol> <symbol id="pink-bloom" viewBox="-9 -22 18 24" overflow="visible">
+  <path d="M 0,2 Q 1,-3 0,-8" stroke="#D4829A" stroke-width="0.50" fill="none"/>
+  <path d="M 0,-5 Q -4,-5 -4.5,-8 Q -1,-6 0,-5" fill="#D4829A" fill-opacity="0.20" stroke="#D4829A" stroke-width="0.35"/>
+  <path d="M 0,-5 Q  4,-5  4.5,-8 Q  1,-6 0,-5" fill="#D4829A" fill-opacity="0.15" stroke="#D4829A" stroke-width="0.30"/>
+  <g transform="translate(0,-11)">
+    <path d="M 0,0 C 2.52,-0.56 3.15,-4.06 0,-7.00 C -3.15,-4.06 -2.52,-0.56 0,0 Z" fill="#D4829A" fill-opacity="0.50" stroke="#D4829A" stroke-width="0.58" transform="rotate(0.0)"/>
+<path d="M 0,0 C 2.52,-0.56 3.15,-4.06 0,-7.00 C -3.15,-4.06 -2.52,-0.56 0,0 Z" fill="#D4829A" fill-opacity="0.50" stroke="#D4829A" stroke-width="0.58" transform="rotate(72.0)"/>
+<path d="M 0,0 C 2.52,-0.56 3.15,-4.06 0,-7.00 C -3.15,-4.06 -2.52,-0.56 0,0 Z" fill="#D4829A" fill-opacity="0.50" stroke="#D4829A" stroke-width="0.58" transform="rotate(144.0)"/>
+<path d="M 0,0 C 2.52,-0.56 3.15,-4.06 0,-7.00 C -3.15,-4.06 -2.52,-0.56 0,0 Z" fill="#D4829A" fill-opacity="0.50" stroke="#D4829A" stroke-width="0.58" transform="rotate(216.0)"/>
+<path d="M 0,0 C 2.52,-0.56 3.15,-4.06 0,-7.00 C -3.15,-4.06 -2.52,-0.56 0,0 Z" fill="#D4829A" fill-opacity="0.50" stroke="#D4829A" stroke-width="0.58" transform="rotate(288.0)"/>
+    <circle r="1.8" fill="#D4829A"/>
+    <circle r="0.7" fill="#EBB8CA"/>
+  </g>
+</symbol> <symbol id="pink-heart" viewBox="-5 -6 10 11" overflow="visible">
+  <path d="M 0,4 C -0.5,2 -4.5,0.5 -4.5,-1.5
+           C -4.5,-4.2 -2,-5.5 0,-3.2
+           C 2,-5.5 4.5,-4.2 4.5,-1.5
+           C 4.5,0.5 0.5,2 0,4 Z"
+        fill="#D4829A" fill-opacity="0.72" stroke="#EBB8CA" stroke-width="0.28"/>
 </symbol>
   <symbol id="martini" viewBox="-17 -40 34 44" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -248,20 +274,17 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
     <line x1="14"  y1="-36" x2="0"  y2="-20"/>
     <line x1="0"   y1="-20" x2="0"  y2="-3"/>
     <line x1="-10" y1="-3"  x2="10" y2="-3"/>
-    <!-- olive on pick -->
     <circle cx="0" cy="-30" r="2.2" stroke="#B8A868" stroke-width="0.55"/>
     <line x1="0" y1="-27.8" x2="0" y2="-34" stroke="#B8A868" stroke-width="0.45"/>
   </g>
-</symbol>
-  <symbol id="coupe" viewBox="-17 -36 34 40" overflow="visible">
+</symbol> <symbol id="coupe" viewBox="-17 -36 34 40" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -15,-32 Q -10,-24 0,-22 Q 10,-24 15,-32"/>
     <line x1="-15" y1="-32" x2="15" y2="-32"/>
     <line x1="0" y1="-22" x2="0" y2="-4"/>
     <line x1="-9" y1="-4" x2="9" y2="-4"/>
   </g>
-</symbol>
-  <symbol id="wine-glass" viewBox="-13 -44 26 48" overflow="visible">
+</symbol> <symbol id="wine-glass" viewBox="-13 -44 26 48" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -10,-40 Q -12,-28 -6,-23 Q -3,-20 0,-20 Q 3,-20 6,-23 Q 12,-28 10,-40"/>
     <line x1="-10" y1="-40" x2="10" y2="-40"/>
@@ -269,29 +292,24 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
     <line x1="0" y1="-20" x2="0" y2="-4"/>
     <line x1="-8" y1="-4" x2="8" y2="-4"/>
   </g>
-</symbol>
-  <symbol id="nick-nora" viewBox="-14 -40 28 44" overflow="visible">
+</symbol> <symbol id="nick-nora" viewBox="-14 -40 28 44" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -10,-36 Q -12,-28 -7,-23 Q -3,-20 0,-20 Q 3,-20 7,-23 Q 12,-28 10,-36"/>
     <line x1="-10" y1="-36" x2="10" y2="-36"/>
     <line x1="0" y1="-20" x2="0" y2="-4"/>
     <line x1="-8" y1="-4" x2="8" y2="-4"/>
   </g>
-</symbol>
-  <symbol id="highball" viewBox="-11 -42 32 46" overflow="visible">
+</symbol> <symbol id="highball" viewBox="-11 -42 32 46" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -8,-38 L -9,2 L 9,2 L 8,-38 Z"/>
-    <!-- straw -->
     <line x1="4" y1="-40" x2="2" y2="2" stroke="#D4C890" stroke-width="0.75" opacity="0.9"/>
-    <!-- lime wheel -->
     <circle cx="-2" cy="-36" r="4" stroke="#B8A868" stroke-width="0.55" opacity="0.85"/>
     <line x1="-2" y1="-40" x2="-2" y2="-32" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
     <line x1="-6" y1="-36" x2="2"  y2="-36" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
     <line x1="-5" y1="-39" x2="1"  y2="-33" stroke="#B8A868" stroke-width="0.30" opacity="0.55"/>
     <line x1="-5" y1="-33" x2="1"  y2="-39" stroke="#B8A868" stroke-width="0.30" opacity="0.55"/>
   </g>
-</symbol>
-  <symbol id="rocks" viewBox="-12 -28 24 32" overflow="visible">
+</symbol> <symbol id="rocks" viewBox="-12 -28 24 32" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -10,-24 L -11,2 L 11,2 L 10,-24 Z"/>
     <rect x="-7" y="-20" width="6" height="5" rx="0.5" stroke="#B8A868" stroke-width="0.50" opacity="0.75"/>
@@ -299,8 +317,7 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
     <rect x="-4" y="-13" width="5" height="4" rx="0.5" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
     <path d="M -9,-9 Q 0,-8 9,-9" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
   </g>
-</symbol>
-  <symbol id="flute" viewBox="-8 -48 16 52" overflow="visible">
+</symbol> <symbol id="flute" viewBox="-8 -48 16 52" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -5,-44 Q -7,-24 -4,-18 Q -2,-14 0,-14 Q 2,-14 4,-18 Q 7,-24 5,-44 Z"/>
     <line x1="-5" y1="-44" x2="5" y2="-44"/>
@@ -320,16 +337,14 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
     <line x1="-9" y1="-14" x2="9" y2="-14" stroke-width="1.1"/>
     <path d="M -6,-16 Q 0,-17 6,-16" stroke="#B8A868" stroke-width="0.40" opacity="0.75"/>
   </g>
-</symbol>
-  <symbol id="jigger" viewBox="-10 -28 20 30" overflow="visible">
+</symbol> <symbol id="jigger" viewBox="-10 -28 20 30" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -8,-24 L -1.5,-12 L 1.5,-12 L 8,-24 Z"/>
     <line x1="-8" y1="-24" x2="8" y2="-24"/>
     <path d="M -1.5,-12 L -5,0 L 5,0 L 1.5,-12 Z"/>
     <line x1="-5" y1="0" x2="5" y2="0"/>
   </g>
-</symbol>
-  <symbol id="strainer" viewBox="-22 -12 44 14" overflow="visible">
+</symbol> <symbol id="strainer" viewBox="-22 -12 44 14" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="-5" cy="0" r="9"/>
     <path d="M -14,0 Q -12,-4 -10,0 Q -8,4 -6,0 Q -4,-4 -2,0 Q 0,4 2,0 Q 4,-4 6,0"
@@ -338,8 +353,7 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
     <line x1="4"  y1="0"  x2="21" y2="3"/>
     <line x1="21" y1="-3" x2="21" y2="3" stroke-linecap="round"/>
   </g>
-</symbol>
-  <symbol id="citrus" viewBox="-10 -10 20 20" overflow="visible">
+</symbol> <symbol id="citrus" viewBox="-10 -10 20 20" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round">
     <circle cx="0" cy="0" r="8"/>
     <circle cx="0" cy="0" r="3"/>
@@ -352,17 +366,14 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
   <symbol id="icon-hb" viewBox="-11 -42 32 46" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -8,-38 L -9,2 L 9,2 L 8,-38 Z"/>
-    <!-- straw -->
     <line x1="4" y1="-40" x2="2" y2="2" stroke="#D4C890" stroke-width="0.75" opacity="0.9"/>
-    <!-- lime wheel -->
     <circle cx="-2" cy="-36" r="4" stroke="#B8A868" stroke-width="0.55" opacity="0.85"/>
     <line x1="-2" y1="-40" x2="-2" y2="-32" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
     <line x1="-6" y1="-36" x2="2"  y2="-36" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
     <line x1="-5" y1="-39" x2="1"  y2="-33" stroke="#B8A868" stroke-width="0.30" opacity="0.55"/>
     <line x1="-5" y1="-33" x2="1"  y2="-39" stroke="#B8A868" stroke-width="0.30" opacity="0.55"/>
   </g>
-</symbol>
-  <symbol id="icon-rk" viewBox="-12 -28 24 32" overflow="visible">
+</symbol> <symbol id="icon-rk" viewBox="-12 -28 24 32" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -10,-24 L -11,2 L 11,2 L 10,-24 Z"/>
     <rect x="-7" y="-20" width="6" height="5" rx="0.5" stroke="#B8A868" stroke-width="0.50" opacity="0.75"/>
@@ -370,8 +381,7 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
     <rect x="-4" y="-13" width="5" height="4" rx="0.5" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
     <path d="M -9,-9 Q 0,-8 9,-9" stroke="#B8A868" stroke-width="0.40" opacity="0.65"/>
   </g>
-</symbol>
-  <symbol id="icon-fl" viewBox="-8 -48 16 52" overflow="visible">
+</symbol> <symbol id="icon-fl" viewBox="-8 -48 16 52" overflow="visible">
   <g filter="url(#sketch)" stroke="#D4C890" stroke-width="0.80" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -5,-44 Q -7,-24 -4,-18 Q -2,-14 0,-14 Q 2,-14 4,-18 Q 7,-24 5,-44 Z"/>
     <line x1="-5" y1="-44" x2="5" y2="-44"/>
@@ -385,155 +395,168 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
 </symbol>
 </defs>
 
-<!-- ── Art Deco Frame ── -->
-<rect x="6.5" y="6.5" width="135" height="197" fill="none" stroke="#D4C890" stroke-width="0.85"/>
-<rect x="8.2" y="8.2" width="131.6" height="193.6" fill="none" stroke="#D4C890" stroke-width="0.35"/>
+<!-- Art Deco frame -->
+<rect x="6.5" y="6.5" width="135" height="197" fill="none" stroke="#D4C890" stroke-width="0.75" opacity="0.65"/>
+<rect x="8.0" y="8.0" width="132" height="194" fill="none" stroke="#D4C890" stroke-width="0.28" opacity="0.40"/>
 
-<!-- ── Corner ornaments ── -->
-<g stroke="#D4C890" fill="none">
+<!-- Corner ornaments -->
+<g stroke="#D4C890" fill="none" opacity="0.80">
   <!-- TL -->
   <polyline points="6.5,20 6.5,14 10,14 10,10 14,10 14,6.5 20,6.5" stroke-width="0.5"/>
-  <path d="M 6.5,17 Q 11.5,11.5 17,6.5"  stroke-width="0.35" opacity="0.8"/>
-  <path d="M 6.5,14 Q 10,10 14,6.5"       stroke-width="0.25" opacity="0.55"/>
-  <polygon points="10,14 11.2,12 12.4,14 11.2,16" fill="#D4C890" opacity="0.9"/>
-  <polygon points="14,10 15.2,8  16.4,10 15.2,12" fill="#D4C890" opacity="0.9"/>
+  <path d="M 6.5,17 Q 11.5,11.5 17,6.5" stroke-width="0.28" opacity="0.6"/>
+  <polygon points="10,14 11.2,12 12.4,14 11.2,16" fill="#D4C890" opacity="0.85"/>
+  <polygon points="14,10 15.2,8  16.4,10 15.2,12" fill="#D4C890" opacity="0.85"/>
   <!-- TR -->
   <polyline points="141.5,20 141.5,14 138,14 138,10 134,10 134,6.5 128,6.5" stroke-width="0.5"/>
-  <path d="M 141.5,17 Q 136.5,11.5 131,6.5" stroke-width="0.35" opacity="0.8"/>
-  <polygon points="138,14 136.8,12 135.6,14 136.8,16" fill="#D4C890" opacity="0.9"/>
-  <polygon points="134,10 132.8,8  131.6,10 132.8,12" fill="#D4C890" opacity="0.9"/>
+  <path d="M 141.5,17 Q 136.5,11.5 131,6.5" stroke-width="0.28" opacity="0.6"/>
+  <polygon points="138,14 136.8,12 135.6,14 136.8,16" fill="#D4C890" opacity="0.85"/>
+  <polygon points="134,10 132.8,8  131.6,10 132.8,12" fill="#D4C890" opacity="0.85"/>
   <!-- BL -->
   <polyline points="6.5,190 6.5,196 10,196 10,200 14,200 14,203.5 20,203.5" stroke-width="0.5"/>
-  <path d="M 6.5,193 Q 11.5,198.5 17,203.5" stroke-width="0.35" opacity="0.8"/>
-  <polygon points="10,196 11.2,198 12.4,196 11.2,194" fill="#D4C890" opacity="0.9"/>
-  <polygon points="14,200 15.2,202 16.4,200 15.2,198" fill="#D4C890" opacity="0.9"/>
+  <path d="M 6.5,193 Q 11.5,198.5 17,203.5" stroke-width="0.28" opacity="0.6"/>
+  <polygon points="10,196 11.2,198 12.4,196 11.2,194" fill="#D4C890" opacity="0.85"/>
+  <polygon points="14,200 15.2,202 16.4,200 15.2,198" fill="#D4C890" opacity="0.85"/>
   <!-- BR -->
   <polyline points="141.5,190 141.5,196 138,196 138,200 134,200 134,203.5 128,203.5" stroke-width="0.5"/>
-  <path d="M 141.5,193 Q 136.5,198.5 131,203.5" stroke-width="0.35" opacity="0.8"/>
-  <polygon points="138,196 136.8,198 135.6,196 136.8,194" fill="#D4C890" opacity="0.9"/>
-  <polygon points="134,200 132.8,202 131.6,200 132.8,198" fill="#D4C890" opacity="0.9"/>
+  <path d="M 141.5,193 Q 136.5,198.5 131,203.5" stroke-width="0.28" opacity="0.6"/>
+  <polygon points="138,196 136.8,198 135.6,196 136.8,194" fill="#D4C890" opacity="0.85"/>
+  <polygon points="134,200 132.8,202 131.6,200 132.8,198" fill="#D4C890" opacity="0.85"/>
 </g>
 
-<!-- ════════════════════════════════
-     TOP-LEFT corner cluster
-     ════════════════════════════════ -->
-<!-- flowers -->
+<!-- ═══════════════════════════════
+     TOP-LEFT cluster
+     ═══════════════════════════════ -->
 <g filter="url(#sketch-b)" ><use href="#wf8" x="2.00" y="6.00" width="24" height="24"/></g>
 <g filter="url(#sketch-b)" ><use href="#wf5b" x="19.00" y="1.00" width="18" height="18"/></g>
 <g filter="url(#sketch-b)" ><use href="#tiny" x="2.00" y="3.00" width="12" height="12"/></g>
-<g filter="url(#sketch-b)" ><use href="#tiny" x="31.00" y="17.00" width="10" height="10"/></g>
 <g filter="url(#sketch-b)" ><use href="#bud" x="26.00" y="22.00" width="12" height="12"/></g>
-<!-- botanicals -->
 <g filter="url(#sketch-b)" transform="rotate(-15,10,28)"><use href="#branch" x="0.00" y="14.00" width="20" height="28"/></g>
 <g filter="url(#sketch-b)" transform="rotate(10,30,26)"><use href="#berries" x="21.00" y="16.00" width="18" height="20"/></g>
 <g filter="url(#sketch-b)" transform="rotate(20,22,8)"><use href="#herb" x="16.00" y="-2.00" width="12" height="20"/></g>
 <g filter="url(#sketch-b)" transform="rotate(5,8,20)"><use href="#tendril" x="0.00" y="9.00" width="16" height="22"/></g>
-<!-- glassware (sketch) -->
 <g transform="translate(12,14) rotate(-12) scale(0.52)">
   <use href="#martini" x="-17" y="-40" width="34" height="44"/>
 </g>
 <g transform="translate(34,18) rotate(6) scale(0.48)">
   <use href="#jigger" x="-10" y="-28" width="20" height="30"/>
 </g>
+<use href="#pink-wf5" x="13.50" y="0.50" width="13" height="13" />
+<use href="#pink-bloom" x="23.50" y="22.50" width="13" height="19" transform="rotate(-8,30,32)"/>
+<use href="#pink-tiny" x="2.50" y="26.50" width="9" height="9" />
+<use href="#pink-heart" x="32.50" y="9.50" width="7" height="7" />
 
-<!-- ════════════════════════════════
-     TOP-RIGHT corner cluster
-     ════════════════════════════════ -->
+<!-- ═══════════════════════════════
+     TOP-RIGHT cluster
+     ═══════════════════════════════ -->
 <g filter="url(#sketch-b)" ><use href="#wf5" x="123.00" y="7.00" width="22" height="22"/></g>
 <g filter="url(#sketch-b)" ><use href="#wf8" x="108.00" y="-2.00" width="24" height="24"/></g>
 <g filter="url(#sketch-b)" ><use href="#tiny" x="134.00" y="3.00" width="12" height="12"/></g>
-<g filter="url(#sketch-b)" ><use href="#tiny" x="107.00" y="17.00" width="10" height="10"/></g>
 <g filter="url(#sketch-b)" ><use href="#bud" x="110.00" y="22.00" width="12" height="12"/></g>
 <g filter="url(#sketch-b)" transform="rotate(15,138,28)"><use href="#branch" x="128.00" y="14.00" width="20" height="28"/></g>
 <g filter="url(#sketch-b)" transform="rotate(-10,118,26)"><use href="#berries" x="109.00" y="16.00" width="18" height="20"/></g>
 <g filter="url(#sketch-b)" transform="rotate(-20,126,8)"><use href="#herb" x="120.00" y="-2.00" width="12" height="20"/></g>
 <g filter="url(#sketch-b)" transform="rotate(-5,140,20)"><use href="#tendril" x="132.00" y="9.00" width="16" height="22"/></g>
-<!-- glassware -->
 <g transform="translate(136,14) rotate(12) scale(0.52)">
   <use href="#coupe" x="-17" y="-36" width="34" height="40"/>
 </g>
 <g transform="translate(116,24) rotate(-5) scale(0.62)">
   <use href="#citrus" x="-10" y="-10" width="20" height="20"/>
 </g>
+<use href="#pink-wf5" x="121.50" y="0.50" width="13" height="13" />
+<use href="#pink-bloom" x="111.50" y="22.50" width="13" height="19" transform="rotate(8,118,32)"/>
+<use href="#pink-tiny" x="136.50" y="26.50" width="9" height="9" />
+<use href="#pink-heart" x="108.50" y="9.50" width="7" height="7" />
 
-<!-- ════════════════════════════════
-     BOTTOM-LEFT corner cluster
-     ════════════════════════════════ -->
+<!-- ═══════════════════════════════
+     BOTTOM-LEFT cluster
+     ═══════════════════════════════ -->
 <g filter="url(#sketch-b)" ><use href="#wf5b" x="3.00" y="183.00" width="22" height="22"/></g>
 <g filter="url(#sketch-b)" ><use href="#wf8" x="16.00" y="174.00" width="24" height="24"/></g>
 <g filter="url(#sketch-b)" ><use href="#tiny" x="2.00" y="196.00" width="12" height="12"/></g>
-<g filter="url(#sketch-b)" ><use href="#tiny" x="31.00" y="187.00" width="10" height="10"/></g>
 <g filter="url(#sketch-b)" ><use href="#bud" x="26.00" y="177.00" width="12" height="12"/></g>
 <g filter="url(#sketch-b)" transform="rotate(10,10,184)"><use href="#branch" x="0.00" y="170.00" width="20" height="28"/></g>
 <g filter="url(#sketch-b)" transform="rotate(-8,30,199)"><use href="#berries" x="21.00" y="189.00" width="18" height="20"/></g>
 <g filter="url(#sketch-b)" transform="rotate(-20,22,204)"><use href="#herb" x="16.00" y="194.00" width="12" height="20"/></g>
 <g filter="url(#sketch-b)" transform="rotate(10,8,190)"><use href="#tendril" x="0.00" y="179.00" width="16" height="22"/></g>
-<!-- glassware -->
 <g transform="translate(18,185) rotate(-8) scale(0.50)">
   <use href="#wine-glass" x="-13" y="-44" width="26" height="48"/>
 </g>
 <g transform="translate(34,198) rotate(14) scale(0.52)">
   <use href="#strainer" x="-22" y="-12" width="44" height="14"/>
 </g>
+<use href="#pink-wf5" x="13.50" y="198.50" width="13" height="13" />
+<use href="#pink-bloom" x="23.50" y="169.50" width="13" height="19" transform="rotate(5,30,179)"/>
+<use href="#pink-tiny" x="2.50" y="176.50" width="9" height="9" />
+<use href="#pink-heart" x="32.50" y="194.50" width="7" height="7" />
 
-<!-- ════════════════════════════════
-     BOTTOM-RIGHT corner cluster
-     ════════════════════════════════ -->
+<!-- ═══════════════════════════════
+     BOTTOM-RIGHT cluster
+     ═══════════════════════════════ -->
 <g filter="url(#sketch-b)" ><use href="#wf8" x="122.00" y="182.00" width="24" height="24"/></g>
 <g filter="url(#sketch-b)" ><use href="#wf5" x="108.00" y="175.00" width="22" height="22"/></g>
 <g filter="url(#sketch-b)" ><use href="#tiny" x="134.00" y="196.00" width="12" height="12"/></g>
-<g filter="url(#sketch-b)" ><use href="#tiny" x="107.00" y="187.00" width="10" height="10"/></g>
 <g filter="url(#sketch-b)" ><use href="#bud" x="110.00" y="177.00" width="12" height="12"/></g>
 <g filter="url(#sketch-b)" transform="rotate(-10,138,184)"><use href="#branch" x="128.00" y="170.00" width="20" height="28"/></g>
 <g filter="url(#sketch-b)" transform="rotate(8,118,199)"><use href="#berries" x="109.00" y="189.00" width="18" height="20"/></g>
 <g filter="url(#sketch-b)" transform="rotate(20,126,204)"><use href="#herb" x="120.00" y="194.00" width="12" height="20"/></g>
 <g filter="url(#sketch-b)" transform="rotate(-10,140,190)"><use href="#tendril" x="132.00" y="179.00" width="16" height="22"/></g>
-<!-- glassware -->
 <g transform="translate(122,184) rotate(6) scale(0.48)">
   <use href="#shaker" x="-12" y="-44" width="24" height="48"/>
 </g>
 <g transform="translate(138,197) rotate(-10) scale(0.50)">
   <use href="#nick-nora" x="-14" y="-40" width="28" height="44"/>
 </g>
+<use href="#pink-wf5" x="121.50" y="198.50" width="13" height="13" />
+<use href="#pink-bloom" x="111.50" y="169.50" width="13" height="19" transform="rotate(-5,118,179)"/>
+<use href="#pink-tiny" x="136.50" y="176.50" width="9" height="9" />
+<use href="#pink-heart" x="108.50" y="194.50" width="7" height="7" />
 
-<!-- ════════════════════════════════
+<!-- ═══════════════════════════════
      LEFT garland
-     ════════════════════════════════ -->
+     ═══════════════════════════════ -->
 <g filter="url(#sketch-b)" transform="rotate(8,10,46)"><use href="#branch" x="2.00" y="34.00" width="16" height="24"/></g>
-<g filter="url(#sketch-b)" ><use href="#tiny" x="7.50" y="60.00" width="11" height="0"/></g>
+<use href="#pink-tiny" x="7.00" y="55.00" width="10" height="10" />
 <g filter="url(#sketch-b)" transform="rotate(-5,10,72)"><use href="#berries" x="3.00" y="63.00" width="14" height="18"/></g>
-<g filter="url(#sketch-b)" transform="rotate(5,13,85)"><use href="#wf5" x="4.50" y="85.00" width="17" height="0"/></g>
+<use href="#pink-wf5" x="5.50" y="78.50" width="13" height="13" />
 <g filter="url(#sketch-b)" transform="rotate(10,9,98)"><use href="#herb" x="3.50" y="89.00" width="11" height="18"/></g>
-<g filter="url(#sketch-b)" ><use href="#tiny" x="8.00" y="110.00" width="10" height="0"/></g>
+<use href="#pink-tiny" x="8.00" y="105.00" width="10" height="10" />
 <g filter="url(#sketch-b)" transform="rotate(-8,10,122)"><use href="#branch" x="2.00" y="110.00" width="16" height="24"/></g>
-<g filter="url(#sketch-b)" transform="rotate(-5,13,136)"><use href="#wf5b" x="5.00" y="136.00" width="16" height="0"/></g>
-<g filter="url(#sketch-b)" transform="rotate(5,9,148)"><use href="#tendril" x="2.00" y="138.00" width="14" height="20"/></g>
-<g filter="url(#sketch-b)" ><use href="#tiny" x="8.00" y="160.00" width="10" height="0"/></g>
+<use href="#pink-bloom" x="6.00" y="124.50" width="12" height="17" transform="rotate(5,12,133)"/>
+<g filter="url(#sketch-b)" transform="rotate(5,9,147)"><use href="#tendril" x="2.00" y="137.00" width="14" height="20"/></g>
+<use href="#pink-heart" x="9.50" y="154.50" width="7" height="7" />
 <g filter="url(#sketch-b)" transform="rotate(10,10,170)"><use href="#berries" x="3.00" y="161.00" width="14" height="18"/></g>
+<use href="#pink-tiny" x="7.00" y="177.00" width="10" height="10" />
 
-<!-- ════════════════════════════════
+<!-- ═══════════════════════════════
      RIGHT garland
-     ════════════════════════════════ -->
+     ═══════════════════════════════ -->
 <g filter="url(#sketch-b)" transform="rotate(-8,138,46)"><use href="#branch" x="130.00" y="34.00" width="16" height="24"/></g>
-<g filter="url(#sketch-b)" ><use href="#tiny" x="129.50" y="60.00" width="11" height="0"/></g>
+<use href="#pink-tiny" x="131.00" y="55.00" width="10" height="10" />
 <g filter="url(#sketch-b)" transform="rotate(5,138,72)"><use href="#berries" x="131.00" y="63.00" width="14" height="18"/></g>
-<g filter="url(#sketch-b)" transform="rotate(-5,135,86)"><use href="#wf8" x="126.50" y="86.00" width="17" height="0"/></g>
-<g filter="url(#sketch-b)" transform="rotate(-10,139,99)"><use href="#herb" x="133.50" y="90.00" width="11" height="18"/></g>
-<g filter="url(#sketch-b)" ><use href="#tiny" x="130.00" y="111.00" width="10" height="0"/></g>
-<g filter="url(#sketch-b)" transform="rotate(8,138,123)"><use href="#branch" x="130.00" y="111.00" width="16" height="24"/></g>
-<g filter="url(#sketch-b)" transform="rotate(5,135,137)"><use href="#wf5" x="127.00" y="137.00" width="16" height="0"/></g>
-<g filter="url(#sketch-b)" transform="rotate(-5,139,149)"><use href="#tendril" x="132.00" y="139.00" width="14" height="20"/></g>
-<g filter="url(#sketch-b)" ><use href="#tiny" x="130.00" y="161.00" width="10" height="0"/></g>
-<g filter="url(#sketch-b)" transform="rotate(-10,138,171)"><use href="#berries" x="131.00" y="162.00" width="14" height="18"/></g>
+<use href="#pink-wf5" x="129.50" y="78.50" width="13" height="13" />
+<g filter="url(#sketch-b)" transform="rotate(-10,139,98)"><use href="#herb" x="133.50" y="89.00" width="11" height="18"/></g>
+<use href="#pink-tiny" x="130.00" y="105.00" width="10" height="10" />
+<g filter="url(#sketch-b)" transform="rotate(8,138,122)"><use href="#branch" x="130.00" y="110.00" width="16" height="24"/></g>
+<use href="#pink-bloom" x="130.00" y="124.50" width="12" height="17" transform="rotate(-5,136,133)"/>
+<g filter="url(#sketch-b)" transform="rotate(-5,139,147)"><use href="#tendril" x="132.00" y="137.00" width="14" height="20"/></g>
+<use href="#pink-heart" x="131.50" y="154.50" width="7" height="7" />
+<g filter="url(#sketch-b)" transform="rotate(-10,138,170)"><use href="#berries" x="131.00" y="161.00" width="14" height="18"/></g>
+<use href="#pink-tiny" x="131.00" y="177.00" width="10" height="10" />
 </svg>
 
   <div class="content">
 
-    <div class="venue-name">Your Venue Name</div>
-    <h1 class="cocktails-title">Cocktails</h1>
+    <div class="monogram">A &nbsp;·&nbsp; EST · 2023</div>
+    <h1 class="brand-name">TADOW</h1>
+    <div class="est-rule">
+      <div class="est-line"></div>
+      <span class="est-text">Signature Cocktails</span>
+      <div class="est-line"></div>
+    </div>
+    <div class="menu-script">Cocktails Menu</div>
     <div class="sig-row">
       <div class="sig-line"></div>
-      <span class="sig-text">Signature Selection</span>
+      <div class="sig-dot"></div>
       <div class="sig-line"></div>
     </div>
 
@@ -545,13 +568,13 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
         <p class="tasting-note">A blush-pink long drink — floral and bittersweet,<br>veiled in cool botanical effervescence.</p>
         <p class="ingredients">
           Vodka <span class="diamond">◆</span> Rosato Aperitivo <span class="diamond">◆</span>
-          Fresh Lime <span class="diamond">◆</span> Thomas Henry Botanical Tonic
+          Fresh Lime <span class="diamond">◆</span> Botanical Tonic
         </p>
       </div>
 
       <div class="divider">
         <div class="div-line"></div>
-        <div class="div-diamonds"><span>◆</span><span>◆</span><span>◆</span></div>
+        <div class="div-center"><span>◆</span><span>◆</span><span>◆</span></div>
         <div class="div-line"></div>
       </div>
 
@@ -567,7 +590,7 @@ html, body { width: 148mm; height: 210mm; overflow: hidden; }
 
       <div class="divider">
         <div class="div-line"></div>
-        <div class="div-diamonds"><span>◆</span><span>◆</span><span>◆</span></div>
+        <div class="div-center"><span>◆</span><span>◆</span><span>◆</span></div>
         <div class="div-line"></div>
       </div>
 

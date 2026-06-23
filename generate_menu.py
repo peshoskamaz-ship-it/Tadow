@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Generate A5 cocktail menu HTML — botanical line-art decoration style."""
-import base64, math, os
+"""Generate A5 cocktail menu HTML — near-black background, gold + pink botanical style."""
+import base64, os
 
 def b64(path):
     with open(path, 'rb') as f:
@@ -13,46 +13,46 @@ pl = b64('/tmp/fonts/poppins-light.ttf')
 
 # ─── Colour tokens ─────────────────────────────────────────────────────────────
 G  = '#D4C890'   # main gold line
-G2 = '#E0D4A0'   # highlight
-G3 = '#B8A868'   # shadow
-SW = '0.70'      # default stroke-width
+G2 = '#E0D4A0'   # gold highlight
+G3 = '#B8A868'   # gold shadow
+P  = '#D4829A'   # pink (flowers, hearts)
+P2 = '#EBB8CA'   # pink highlight
+SW = '0.70'
 
-# ─── Petal helper (for line-art flowers) ───────────────────────────────────────
+# ─── Petal helper ──────────────────────────────────────────────────────────────
 def petal_path(r, wf=0.42):
     w = r * wf
     return (f"M 0,0 C {w*0.8:.2f},{-r*0.08:.2f} {w:.2f},{-r*0.58:.2f} 0,{-r:.2f} "
             f"C {-w:.2f},{-r*0.58:.2f} {-w*0.8:.2f},{-r*0.08:.2f} 0,0 Z")
 
-def petal_ring(n, r, wf, offset):
+def petal_ring(n, r, wf, offset, color=None, alpha='0.18', sw=None):
+    if color is None: color = G
+    if sw is None: sw = SW
     step = 360 / n
     out = []
     for i in range(n):
         a = offset + step * i
         out.append(
             f'<path d="{petal_path(r,wf)}" '
-            f'fill="{G}" fill-opacity="0.18" '
-            f'stroke="{G}" stroke-width="{SW}" '
+            f'fill="{color}" fill-opacity="{alpha}" '
+            f'stroke="{color}" stroke-width="{sw}" '
             f'transform="rotate({a:.1f})"/>'
         )
     return "\n".join(out)
 
-# ─── Botanical symbols (all line-art, same gold tone) ─────────────────────────
-
-# 5-petal wildflower, ~20mm
+# ─── Gold botanical symbols ────────────────────────────────────────────────────
 WF5 = f"""<symbol id="wf5" viewBox="-12 -12 24 24" overflow="visible">
   {petal_ring(5, 10, 0.45, 0)}
   <circle r="2.2" fill="{G}"/>
   <circle r="1" fill="{G2}"/>
 </symbol>"""
 
-# Thin 5-petal (offset ring — gives a slightly fuller bloom)
 WF5B = f"""<symbol id="wf5b" viewBox="-12 -12 24 24" overflow="visible">
   {petal_ring(5, 10, 0.45, 0)}
   {petal_ring(5, 7, 0.40, 36)}
   <circle r="2" fill="{G}"/>
 </symbol>"""
 
-# 8-petal daisy
 WF8 = f"""<symbol id="wf8" viewBox="-14 -14 28 28" overflow="visible">
   {petal_ring(8, 11, 0.38, 0)}
   {petal_ring(8, 7,  0.35, 22.5)}
@@ -60,38 +60,28 @@ WF8 = f"""<symbol id="wf8" viewBox="-14 -14 28 28" overflow="visible">
   <circle r="1.2" fill="{G2}"/>
 </symbol>"""
 
-# Small bud on short stem
 BUD = f"""<symbol id="bud" viewBox="-5 -14 10 16" overflow="visible">
   <line x1="0" y1="2" x2="0" y2="-6" stroke="{G}" stroke-width="0.6"/>
   <path d="M 0,-6 C 3,-8 4,-12 0,-13 C -4,-12 -3,-8 0,-6 Z"
         fill="{G}" fill-opacity="0.25" stroke="{G}" stroke-width="0.6"/>
-  <!-- two tiny sepals -->
   <path d="M -1,-7 Q -4,-8 -3,-6" stroke="{G}" stroke-width="0.4" fill="none"/>
   <path d="M  1,-7 Q  4,-8  3,-6" stroke="{G}" stroke-width="0.4" fill="none"/>
 </symbol>"""
 
-# Berry cluster (3 berries on branching stems)
 BERRIES = f"""<symbol id="berries" viewBox="-14 -20 28 22" overflow="visible">
-  <!-- main stem -->
   <path d="M 0,2 Q 0,-4, 0,-10" stroke="{G}" stroke-width="0.65" fill="none"/>
-  <!-- side stems -->
   <path d="M 0,-7 Q -5,-8, -8,-12" stroke="{G}" stroke-width="0.55" fill="none"/>
   <path d="M 0,-7 Q  5,-8,  8,-12" stroke="{G}" stroke-width="0.55" fill="none"/>
-  <!-- berries -->
   <circle cx="0"  cy="-13" r="2.8" fill="{G}" fill-opacity="0.7" stroke="{G}" stroke-width="0.5"/>
   <circle cx="-8" cy="-13" r="2.2" fill="{G}" fill-opacity="0.6" stroke="{G}" stroke-width="0.5"/>
   <circle cx="8"  cy="-13" r="2.2" fill="{G}" fill-opacity="0.6" stroke="{G}" stroke-width="0.5"/>
-  <!-- tiny highlight dots -->
   <circle cx="-0.8" cy="-14.2" r="0.6" fill="{G2}" opacity="0.8"/>
   <circle cx="-8.8" cy="-14"   r="0.5" fill="{G2}" opacity="0.7"/>
   <circle cx="7.2"  cy="-14"   r="0.5" fill="{G2}" opacity="0.7"/>
 </symbol>"""
 
-# Leaf branch — curved stem with paired leaves
 BRANCH = f"""<symbol id="branch" viewBox="-16 -26 32 28" overflow="visible">
-  <!-- curved main stem -->
   <path d="M 0,2 Q 2,-8, 0,-24" stroke="{G}" stroke-width="0.65" fill="none"/>
-  <!-- leaf pairs -->
   <path d="M 0,-5  Q -9,-7, -11,-13 Q -5,-9, 0,-5"
         fill="{G}" fill-opacity="0.18" stroke="{G}" stroke-width="0.55"/>
   <path d="M 0,-5  Q  9,-7,  11,-13 Q  5,-9, 0,-5"
@@ -100,56 +90,77 @@ BRANCH = f"""<symbol id="branch" viewBox="-16 -26 32 28" overflow="visible">
         fill="{G}" fill-opacity="0.18" stroke="{G}" stroke-width="0.55"/>
   <path d="M 0,-12 Q  10,-14,  12,-20 Q  5,-15, 0,-12"
         fill="{G}" fill-opacity="0.15" stroke="{G}" stroke-width="0.50"/>
-  <!-- tip leaf -->
   <path d="M 0,-20 Q 4,-22, 2,-26 Q -2,-22, 0,-20"
         fill="{G}" fill-opacity="0.20" stroke="{G}" stroke-width="0.55"/>
 </symbol>"""
 
-# Herb sprig — thin vertical stem with tiny buds/leaves
 HERB = f"""<symbol id="herb" viewBox="-8 -22 16 24" overflow="visible">
-  <!-- main stem -->
   <path d="M 0,2 L 0,-20" stroke="{G}" stroke-width="0.60" fill="none"/>
-  <!-- pairs of small leaves -->
   <path d="M 0,-5  Q -6,-6, -7,-9  Q -3,-7, 0,-5"  fill="{G}" fill-opacity="0.2" stroke="{G}" stroke-width="0.45"/>
   <path d="M 0,-5  Q  6,-6,  7,-9  Q  3,-7, 0,-5"  fill="{G}" fill-opacity="0.15" stroke="{G}" stroke-width="0.40"/>
   <path d="M 0,-10 Q -5,-11,-6,-14 Q -2,-12, 0,-10" fill="{G}" fill-opacity="0.2" stroke="{G}" stroke-width="0.45"/>
   <path d="M 0,-10 Q  5,-11, 6,-14 Q  2,-12, 0,-10" fill="{G}" fill-opacity="0.15" stroke="{G}" stroke-width="0.40"/>
   <path d="M 0,-15 Q -4,-16,-5,-19 Q -1,-17, 0,-15" fill="{G}" fill-opacity="0.2" stroke="{G}" stroke-width="0.40"/>
   <path d="M 0,-15 Q  4,-16, 5,-19 Q  1,-17, 0,-15" fill="{G}" fill-opacity="0.15" stroke="{G}" stroke-width="0.35"/>
-  <!-- tip bud -->
   <circle cx="0" cy="-20" r="1.5" fill="{G}"/>
 </symbol>"""
 
-# Tiny 3-petal blossom for scatter
 TINY = f"""<symbol id="tiny" viewBox="-7 -7 14 14" overflow="visible">
   {petal_ring(5, 5.5, 0.42, 0)}
   <circle r="1.4" fill="{G}"/>
 </symbol>"""
 
-# Small vine tendril
 TENDRIL = f"""<symbol id="tendril" viewBox="-10 -20 20 22" overflow="visible">
   <path d="M 0,2 Q -8,0, -6,-6 Q -4,-12, 0,-14 Q 4,-16, 2,-20"
         stroke="{G}" stroke-width="0.55" fill="none" stroke-linecap="round"/>
-  <!-- tiny leaves on curve -->
   <path d="M -5,-3 Q -10,-2, -10,-6 Q -7,-4, -5,-3" fill="{G}" fill-opacity="0.18" stroke="{G}" stroke-width="0.40"/>
   <path d="M -4,-10 Q -9,-11,-8,-15 Q -5,-12,-4,-10" fill="{G}" fill-opacity="0.18" stroke="{G}" stroke-width="0.40"/>
 </symbol>"""
 
+# ─── Pink botanical symbols ────────────────────────────────────────────────────
+PINK_WF5 = f"""<symbol id="pink-wf5" viewBox="-12 -12 24 24" overflow="visible">
+  {petal_ring(5, 9, 0.45, 0, P, '0.50', '0.60')}
+  <circle r="2" fill="{P}"/>
+  <circle r="0.9" fill="{P2}"/>
+</symbol>"""
+
+PINK_TINY = f"""<symbol id="pink-tiny" viewBox="-7 -7 14 14" overflow="visible">
+  {petal_ring(5, 5.5, 0.42, 0, P, '0.55', '0.55')}
+  <circle r="1.3" fill="{P}"/>
+</symbol>"""
+
+PINK_BLOOM = f"""<symbol id="pink-bloom" viewBox="-9 -22 18 24" overflow="visible">
+  <path d="M 0,2 Q 1,-3 0,-8" stroke="{P}" stroke-width="0.50" fill="none"/>
+  <path d="M 0,-5 Q -4,-5 -4.5,-8 Q -1,-6 0,-5" fill="{P}" fill-opacity="0.20" stroke="{P}" stroke-width="0.35"/>
+  <path d="M 0,-5 Q  4,-5  4.5,-8 Q  1,-6 0,-5" fill="{P}" fill-opacity="0.15" stroke="{P}" stroke-width="0.30"/>
+  <g transform="translate(0,-11)">
+    {petal_ring(5, 7, 0.45, 0, P, '0.50', '0.58')}
+    <circle r="1.8" fill="{P}"/>
+    <circle r="0.7" fill="{P2}"/>
+  </g>
+</symbol>"""
+
+PINK_HEART = f"""<symbol id="pink-heart" viewBox="-5 -6 10 11" overflow="visible">
+  <path d="M 0,4 C -0.5,2 -4.5,0.5 -4.5,-1.5
+           C -4.5,-4.2 -2,-5.5 0,-3.2
+           C 2,-5.5 4.5,-4.2 4.5,-1.5
+           C 4.5,0.5 0.5,2 0,4 Z"
+        fill="{P}" fill-opacity="0.72" stroke="{P2}" stroke-width="0.28"/>
+</symbol>"""
+
 # ─── Sketch filters ────────────────────────────────────────────────────────────
 FILTERS = f"""
-  <!-- heavier sketch for glassware -->
   <filter id="sketch" x="-30%" y="-30%" width="160%" height="160%">
     <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
     <feDisplacementMap in="SourceGraphic" in2="n" scale="2.3" xChannelSelector="R" yChannelSelector="G"/>
   </filter>
-  <!-- lighter wobble for botanicals -->
   <filter id="sketch-b" x="-20%" y="-20%" width="140%" height="140%">
     <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3" result="n"/>
     <feDisplacementMap in="SourceGraphic" in2="n" scale="0.9" xChannelSelector="R" yChannelSelector="G"/>
   </filter>"""
 
-# ─── Glassware (sketch outlines, same gold tone) ──────────────────────────────
-SK = G    # glass stroke = same gold
+# ─── Glassware ─────────────────────────────────────────────────────────────────
+SK  = G
 SKW = '0.80'
 
 MARTINI = f"""<symbol id="martini" viewBox="-17 -40 34 44" overflow="visible">
@@ -159,7 +170,6 @@ MARTINI = f"""<symbol id="martini" viewBox="-17 -40 34 44" overflow="visible">
     <line x1="14"  y1="-36" x2="0"  y2="-20"/>
     <line x1="0"   y1="-20" x2="0"  y2="-3"/>
     <line x1="-10" y1="-3"  x2="10" y2="-3"/>
-    <!-- olive on pick -->
     <circle cx="0" cy="-30" r="2.2" stroke="{G3}" stroke-width="0.55"/>
     <line x1="0" y1="-27.8" x2="0" y2="-34" stroke="{G3}" stroke-width="0.45"/>
   </g>
@@ -196,9 +206,7 @@ NICK_NORA = f"""<symbol id="nick-nora" viewBox="-14 -40 28 44" overflow="visible
 HIGHBALL = f"""<symbol id="highball" viewBox="-11 -42 32 46" overflow="visible">
   <g filter="url(#sketch)" stroke="{SK}" stroke-width="{SKW}" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <path d="M -8,-38 L -9,2 L 9,2 L 8,-38 Z"/>
-    <!-- straw -->
     <line x1="4" y1="-40" x2="2" y2="2" stroke="{SK}" stroke-width="0.75" opacity="0.9"/>
-    <!-- lime wheel -->
     <circle cx="-2" cy="-36" r="4" stroke="{G3}" stroke-width="0.55" opacity="0.85"/>
     <line x1="-2" y1="-40" x2="-2" y2="-32" stroke="{G3}" stroke-width="0.40" opacity="0.65"/>
     <line x1="-6" y1="-36" x2="2"  y2="-36" stroke="{G3}" stroke-width="0.40" opacity="0.65"/>
@@ -271,7 +279,6 @@ CITRUS = f"""<symbol id="citrus" viewBox="-10 -10 20 20" overflow="visible">
   </g>
 </symbol>"""
 
-# Per-cocktail icons (reuse glass symbols with unique ids)
 HIGHBALL_ICON = HIGHBALL.replace('id="highball"', 'id="icon-hb"')
 ROCKS_ICON    = ROCKS.replace('id="rocks"',    'id="icon-rk"')
 FLUTE_ICON    = FLUTE.replace('id="flute"',    'id="icon-fl"')
@@ -284,182 +291,176 @@ def use(sym, cx, cy, w, h=None, rot=0, extra=""):
             f'width="{w}" height="{h}" {tr} {extra}/>')
 
 def useb(sym, cx, cy, w, h=None, rot=0):
-    """Place botanical element (uses lighter sketch-b filter wrapper)"""
     if h is None: h = w
     tr = f'transform="rotate({rot},{cx},{cy})"' if rot else ""
     return (f'<g filter="url(#sketch-b)" {tr}>'
             f'<use href="#{sym}" x="{cx-w/2:.2f}" y="{cy-h/2:.2f}" width="{w}" height="{h}"/>'
             f'</g>')
 
+def usep(sym, cx, cy, w, h=None, rot=0):
+    if h is None: h = w
+    tr = f'transform="rotate({rot},{cx},{cy})"' if rot else ""
+    return (f'<use href="#{sym}" x="{cx-w/2:.2f}" y="{cy-h/2:.2f}" '
+            f'width="{w}" height="{h}" {tr}/>')
+
 # ─── Full decoration SVG ───────────────────────────────────────────────────────
 DECO = f"""<svg class="deco" viewBox="0 0 148 210" xmlns="http://www.w3.org/2000/svg">
 <defs>
   {FILTERS}
-  {WF5}
-  {WF5B}
-  {WF8}
-  {BUD}
-  {BERRIES}
-  {BRANCH}
-  {HERB}
-  {TINY}
-  {TENDRIL}
-  {MARTINI}
-  {COUPE}
-  {WINE_GLASS}
-  {NICK_NORA}
-  {HIGHBALL}
-  {ROCKS}
-  {FLUTE}
-  {SHAKER}
-  {JIGGER}
-  {STRAINER}
-  {CITRUS}
-  {HIGHBALL_ICON}
-  {ROCKS_ICON}
-  {FLUTE_ICON}
+  {WF5} {WF5B} {WF8} {BUD} {BERRIES} {BRANCH} {HERB} {TINY} {TENDRIL}
+  {PINK_WF5} {PINK_TINY} {PINK_BLOOM} {PINK_HEART}
+  {MARTINI} {COUPE} {WINE_GLASS} {NICK_NORA} {HIGHBALL} {ROCKS} {FLUTE}
+  {SHAKER} {JIGGER} {STRAINER} {CITRUS}
+  {HIGHBALL_ICON} {ROCKS_ICON} {FLUTE_ICON}
 </defs>
 
-<!-- ── Art Deco Frame ── -->
-<rect x="6.5" y="6.5" width="135" height="197" fill="none" stroke="{G}" stroke-width="0.85"/>
-<rect x="8.2" y="8.2" width="131.6" height="193.6" fill="none" stroke="{G}" stroke-width="0.35"/>
+<!-- Art Deco frame -->
+<rect x="6.5" y="6.5" width="135" height="197" fill="none" stroke="{G}" stroke-width="0.75" opacity="0.65"/>
+<rect x="8.0" y="8.0" width="132" height="194" fill="none" stroke="{G}" stroke-width="0.28" opacity="0.40"/>
 
-<!-- ── Corner ornaments ── -->
-<g stroke="{G}" fill="none">
+<!-- Corner ornaments -->
+<g stroke="{G}" fill="none" opacity="0.80">
   <!-- TL -->
   <polyline points="6.5,20 6.5,14 10,14 10,10 14,10 14,6.5 20,6.5" stroke-width="0.5"/>
-  <path d="M 6.5,17 Q 11.5,11.5 17,6.5"  stroke-width="0.35" opacity="0.8"/>
-  <path d="M 6.5,14 Q 10,10 14,6.5"       stroke-width="0.25" opacity="0.55"/>
-  <polygon points="10,14 11.2,12 12.4,14 11.2,16" fill="{G}" opacity="0.9"/>
-  <polygon points="14,10 15.2,8  16.4,10 15.2,12" fill="{G}" opacity="0.9"/>
+  <path d="M 6.5,17 Q 11.5,11.5 17,6.5" stroke-width="0.28" opacity="0.6"/>
+  <polygon points="10,14 11.2,12 12.4,14 11.2,16" fill="{G}" opacity="0.85"/>
+  <polygon points="14,10 15.2,8  16.4,10 15.2,12" fill="{G}" opacity="0.85"/>
   <!-- TR -->
   <polyline points="141.5,20 141.5,14 138,14 138,10 134,10 134,6.5 128,6.5" stroke-width="0.5"/>
-  <path d="M 141.5,17 Q 136.5,11.5 131,6.5" stroke-width="0.35" opacity="0.8"/>
-  <polygon points="138,14 136.8,12 135.6,14 136.8,16" fill="{G}" opacity="0.9"/>
-  <polygon points="134,10 132.8,8  131.6,10 132.8,12" fill="{G}" opacity="0.9"/>
+  <path d="M 141.5,17 Q 136.5,11.5 131,6.5" stroke-width="0.28" opacity="0.6"/>
+  <polygon points="138,14 136.8,12 135.6,14 136.8,16" fill="{G}" opacity="0.85"/>
+  <polygon points="134,10 132.8,8  131.6,10 132.8,12" fill="{G}" opacity="0.85"/>
   <!-- BL -->
   <polyline points="6.5,190 6.5,196 10,196 10,200 14,200 14,203.5 20,203.5" stroke-width="0.5"/>
-  <path d="M 6.5,193 Q 11.5,198.5 17,203.5" stroke-width="0.35" opacity="0.8"/>
-  <polygon points="10,196 11.2,198 12.4,196 11.2,194" fill="{G}" opacity="0.9"/>
-  <polygon points="14,200 15.2,202 16.4,200 15.2,198" fill="{G}" opacity="0.9"/>
+  <path d="M 6.5,193 Q 11.5,198.5 17,203.5" stroke-width="0.28" opacity="0.6"/>
+  <polygon points="10,196 11.2,198 12.4,196 11.2,194" fill="{G}" opacity="0.85"/>
+  <polygon points="14,200 15.2,202 16.4,200 15.2,198" fill="{G}" opacity="0.85"/>
   <!-- BR -->
   <polyline points="141.5,190 141.5,196 138,196 138,200 134,200 134,203.5 128,203.5" stroke-width="0.5"/>
-  <path d="M 141.5,193 Q 136.5,198.5 131,203.5" stroke-width="0.35" opacity="0.8"/>
-  <polygon points="138,196 136.8,198 135.6,196 136.8,194" fill="{G}" opacity="0.9"/>
-  <polygon points="134,200 132.8,202 131.6,200 132.8,198" fill="{G}" opacity="0.9"/>
+  <path d="M 141.5,193 Q 136.5,198.5 131,203.5" stroke-width="0.28" opacity="0.6"/>
+  <polygon points="138,196 136.8,198 135.6,196 136.8,194" fill="{G}" opacity="0.85"/>
+  <polygon points="134,200 132.8,202 131.6,200 132.8,198" fill="{G}" opacity="0.85"/>
 </g>
 
-<!-- ════════════════════════════════
-     TOP-LEFT corner cluster
-     ════════════════════════════════ -->
-<!-- flowers -->
+<!-- ═══════════════════════════════
+     TOP-LEFT cluster
+     ═══════════════════════════════ -->
 {useb('wf8',  14, 18, 24)}
 {useb('wf5b', 28, 10, 18)}
-{useb('tiny', 8,  9,  12)}
-{useb('tiny', 36, 22, 10)}
+{useb('tiny',  8,  9, 12)}
 {useb('bud',  32, 28, 12)}
-<!-- botanicals -->
 {useb('branch',  10, 28, 20, 28, -15)}
 {useb('berries', 30, 26, 18, 20,  10)}
 {useb('herb',    22,  8, 12, 20,  20)}
 {useb('tendril',  8, 20, 16, 22,   5)}
-<!-- glassware (sketch) -->
 <g transform="translate(12,14) rotate(-12) scale(0.52)">
   <use href="#martini" x="-17" y="-40" width="34" height="44"/>
 </g>
 <g transform="translate(34,18) rotate(6) scale(0.48)">
   <use href="#jigger" x="-10" y="-28" width="20" height="30"/>
 </g>
+{usep('pink-wf5',  20,  7, 13)}
+{usep('pink-bloom', 30, 32, 13, 19, -8)}
+{usep('pink-tiny',  7, 31,  9)}
+{usep('pink-heart', 36, 13,  7)}
 
-<!-- ════════════════════════════════
-     TOP-RIGHT corner cluster
-     ════════════════════════════════ -->
+<!-- ═══════════════════════════════
+     TOP-RIGHT cluster
+     ═══════════════════════════════ -->
 {useb('wf5',  134, 18, 22)}
 {useb('wf8',  120, 10, 24)}
 {useb('tiny', 140,  9, 12)}
-{useb('tiny', 112, 22, 10)}
 {useb('bud',  116, 28, 12)}
 {useb('branch',  138, 28, 20, 28, 15)}
 {useb('berries', 118, 26, 18, 20,-10)}
 {useb('herb',    126,  8, 12, 20,-20)}
 {useb('tendril', 140, 20, 16, 22, -5)}
-<!-- glassware -->
 <g transform="translate(136,14) rotate(12) scale(0.52)">
   <use href="#coupe" x="-17" y="-36" width="34" height="40"/>
 </g>
 <g transform="translate(116,24) rotate(-5) scale(0.62)">
   <use href="#citrus" x="-10" y="-10" width="20" height="20"/>
 </g>
+{usep('pink-wf5',  128,  7, 13)}
+{usep('pink-bloom', 118, 32, 13, 19, 8)}
+{usep('pink-tiny',  141, 31,  9)}
+{usep('pink-heart', 112, 13,  7)}
 
-<!-- ════════════════════════════════
-     BOTTOM-LEFT corner cluster
-     ════════════════════════════════ -->
+<!-- ═══════════════════════════════
+     BOTTOM-LEFT cluster
+     ═══════════════════════════════ -->
 {useb('wf5b', 14, 194, 22)}
 {useb('wf8',  28, 186, 24)}
 {useb('tiny',  8, 202, 12)}
-{useb('tiny', 36, 192, 10)}
 {useb('bud',  32, 183, 12)}
 {useb('branch',  10, 184, 20, 28, 10)}
 {useb('berries', 30, 199, 18, 20, -8)}
 {useb('herb',    22, 204, 12, 20,-20)}
 {useb('tendril',  8, 190, 16, 22, 10)}
-<!-- glassware -->
 <g transform="translate(18,185) rotate(-8) scale(0.50)">
   <use href="#wine-glass" x="-13" y="-44" width="26" height="48"/>
 </g>
 <g transform="translate(34,198) rotate(14) scale(0.52)">
   <use href="#strainer" x="-22" y="-12" width="44" height="14"/>
 </g>
+{usep('pink-wf5',  20, 205, 13)}
+{usep('pink-bloom', 30, 179, 13, 19, 5)}
+{usep('pink-tiny',  7, 181,  9)}
+{usep('pink-heart', 36, 198,  7)}
 
-<!-- ════════════════════════════════
-     BOTTOM-RIGHT corner cluster
-     ════════════════════════════════ -->
+<!-- ═══════════════════════════════
+     BOTTOM-RIGHT cluster
+     ═══════════════════════════════ -->
 {useb('wf8',  134, 194, 24)}
 {useb('wf5',  119, 186, 22)}
 {useb('tiny', 140, 202, 12)}
-{useb('tiny', 112, 192, 10)}
 {useb('bud',  116, 183, 12)}
 {useb('branch',  138, 184, 20, 28,-10)}
 {useb('berries', 118, 199, 18, 20,  8)}
 {useb('herb',    126, 204, 12, 20, 20)}
 {useb('tendril', 140, 190, 16, 22,-10)}
-<!-- glassware -->
 <g transform="translate(122,184) rotate(6) scale(0.48)">
   <use href="#shaker" x="-12" y="-44" width="24" height="48"/>
 </g>
 <g transform="translate(138,197) rotate(-10) scale(0.50)">
   <use href="#nick-nora" x="-14" y="-40" width="28" height="44"/>
 </g>
+{usep('pink-wf5',  128, 205, 13)}
+{usep('pink-bloom', 118, 179, 13, 19, -5)}
+{usep('pink-tiny',  141, 181,  9)}
+{usep('pink-heart', 112, 198,  7)}
 
-<!-- ════════════════════════════════
+<!-- ═══════════════════════════════
      LEFT garland
-     ════════════════════════════════ -->
+     ═══════════════════════════════ -->
 {useb('branch',   10,  46, 16, 24,  8)}
-{useb('tiny',     13,  60, 11,  0,  0)}
+{usep('pink-tiny', 12,  60, 10)}
 {useb('berries',  10,  72, 14, 18, -5)}
-{useb('wf5',      13,  85, 17,  0,  5)}
+{usep('pink-wf5', 12,  85, 13)}
 {useb('herb',      9,  98, 11, 18, 10)}
-{useb('tiny',     13, 110, 10,  0,  0)}
+{usep('pink-tiny', 13, 110, 10)}
 {useb('branch',   10, 122, 16, 24, -8)}
-{useb('wf5b',     13, 136, 16,  0, -5)}
-{useb('tendril',   9, 148, 14, 20,  5)}
-{useb('tiny',     13, 160, 10,  0,  0)}
+{usep('pink-bloom', 12, 133, 12, 17, 5)}
+{useb('tendril',   9, 147, 14, 20,  5)}
+{usep('pink-heart',13, 158,  7)}
 {useb('berries',  10, 170, 14, 18, 10)}
+{usep('pink-tiny', 12, 182, 10)}
 
-<!-- ════════════════════════════════
+<!-- ═══════════════════════════════
      RIGHT garland
-     ════════════════════════════════ -->
+     ═══════════════════════════════ -->
 {useb('branch',  138,  46, 16, 24, -8)}
-{useb('tiny',    135,  60, 11,  0,  0)}
+{usep('pink-tiny',136,  60, 10)}
 {useb('berries', 138,  72, 14, 18,  5)}
-{useb('wf8',     135,  86, 17,  0, -5)}
-{useb('herb',    139,  99, 11, 18,-10)}
-{useb('tiny',    135, 111, 10,  0,  0)}
-{useb('branch',  138, 123, 16, 24,  8)}
-{useb('wf5',     135, 137, 16,  0,  5)}
-{useb('tendril', 139, 149, 14, 20, -5)}
-{useb('tiny',    135, 161, 10,  0,  0)}
-{useb('berries', 138, 171, 14, 18,-10)}
+{usep('pink-wf5',136,  85, 13)}
+{useb('herb',    139,  98, 11, 18,-10)}
+{usep('pink-tiny',135, 110, 10)}
+{useb('branch',  138, 122, 16, 24,  8)}
+{usep('pink-bloom',136,133, 12, 17, -5)}
+{useb('tendril', 139, 147, 14, 20, -5)}
+{usep('pink-heart',135,158,  7)}
+{useb('berries', 138, 170, 14, 18,-10)}
+{usep('pink-tiny',136, 182, 10)}
 </svg>"""
 
 # ─── Per-cocktail icon SVGs ────────────────────────────────────────────────────
@@ -508,8 +509,8 @@ html, body {{ width: 148mm; height: 210mm; overflow: hidden; }}
 .page {{
   position: relative;
   width: 148mm; height: 210mm;
-  background: radial-gradient(ellipse 80% 90% at 50% 38%,
-    #1E4A39 0%, #1A4233 28%, #123026 58%, #0B1E17 100%);
+  background: radial-gradient(ellipse 85% 90% at 50% 38%,
+    #1E1C22 0%, #141318 42%, #0D0C10 72%, #080709 100%);
 }}
 
 .deco {{
@@ -522,28 +523,41 @@ html, body {{ width: 148mm; height: 210mm; overflow: hidden; }}
   position: absolute; top: 0; left: 0;
   width: 148mm; height: 210mm;
   display: flex; flex-direction: column; align-items: center;
-  padding: 19mm 17mm 15mm;
+  padding: 18mm 16mm 13mm;
 }}
 
 /* ── Masthead ── */
-.venue-name {{
+.monogram {{
   font-family: 'Poppins', sans-serif; font-weight: 300;
-  font-size: 5.5px; letter-spacing: 0.30em; color: #C0B080;
-  text-transform: uppercase; margin-bottom: 3mm; text-align: center;
+  font-size: 5.5px; letter-spacing: 0.38em; color: {G};
+  text-transform: uppercase; margin-bottom: 1.2mm; text-align: center;
 }}
-.cocktails-title {{
-  font-family: 'Lora', serif; font-weight: 700; font-size: 27px;
-  color: #D9B259; text-align: center; line-height: 1.05;
-  margin-bottom: 3.5mm; letter-spacing: 0.04em;
+.brand-name {{
+  font-family: 'Lora', serif; font-weight: 700; font-size: 38px;
+  color: #EEEAE0; text-align: center; line-height: 1.0;
+  margin-bottom: 1.5mm; letter-spacing: 0.14em;
+}}
+.est-rule {{
+  display: flex; align-items: center; gap: 0; width: 75%; margin-bottom: 1.5mm;
+}}
+.est-line {{ flex: 1; height: 0.35px; background: {G}; opacity: 0.55; }}
+.est-text {{
+  font-family: 'Poppins', sans-serif; font-weight: 300;
+  font-size: 4.5px; letter-spacing: 0.32em; color: {G3};
+  padding: 0 6px; white-space: nowrap;
+}}
+.menu-script {{
+  font-family: 'Lora', serif; font-weight: 400; font-style: italic;
+  font-size: 13.5px; color: {G}; text-align: center;
+  margin-bottom: 4.5mm; letter-spacing: 0.02em;
 }}
 .sig-row {{
-  display: flex; align-items: center; width: 100%; margin-bottom: 5mm;
+  display: flex; align-items: center; width: 100%; margin-bottom: 4mm;
 }}
-.sig-line {{ flex: 1; height: 0.4px; background: #C9A24B; }}
-.sig-text {{
-  font-family: 'Poppins', sans-serif; font-weight: 300;
-  font-size: 5px; letter-spacing: 0.28em; color: #C9A24B;
-  padding: 0 5px; white-space: nowrap;
+.sig-line {{ flex: 1; height: 0.35px; background: {G}; opacity: 0.55; }}
+.sig-dot {{
+  width: 3px; height: 3px; background: {G};
+  border-radius: 50%; margin: 0 7px; opacity: 0.75;
 }}
 
 /* ── Cocktail cards ── */
@@ -553,42 +567,42 @@ html, body {{ width: 148mm; height: 210mm; overflow: hidden; }}
 }}
 .cocktail {{ text-align: center; width: 100%; }}
 .drink-name {{
-  font-family: 'Lora', serif; font-weight: 700; font-size: 16.5px;
-  color: #D4AB52; margin-bottom: 2.2mm; letter-spacing: 0.025em;
+  font-family: 'Lora', serif; font-weight: 700; font-size: 16px;
+  color: #ECEAE0; margin-bottom: 2mm; letter-spacing: 0.03em;
 }}
 .tasting-note {{
   font-family: 'Lora', serif; font-weight: 400; font-style: italic;
-  font-size: 9.5px; color: #ECE2C4; line-height: 1.45;
-  margin-bottom: 2.5mm; padding: 0 2mm;
+  font-size: 9px; color: #B8B0A0; line-height: 1.5;
+  margin-bottom: 2mm; padding: 0 2mm;
 }}
 .ingredients {{
   font-family: 'Poppins', sans-serif; font-weight: 300;
-  font-size: 6px; letter-spacing: 0.18em; color: #8FB199;
-  text-transform: uppercase; line-height: 1.6;
+  font-size: 5.5px; letter-spacing: 0.18em; color: #968C6C;
+  text-transform: uppercase; line-height: 1.65;
 }}
-.diamond {{ color: #C9A24B; }}
+.diamond {{ color: {G}; }}
 
-/* ── Divider between cocktails ── */
+/* ── Dividers ── */
 .divider {{
-  display: flex; align-items: center; width: 88%;
+  display: flex; align-items: center; width: 84%;
 }}
-.div-line {{ flex: 1; height: 0.4px; background: #C9A24B; opacity: 0.8; }}
-.div-diamonds {{
-  display: flex; gap: 5px; padding: 0 6px;
-  font-size: 6px; color: #C9A24B; line-height: 1;
+.div-line {{ flex: 1; height: 0.3px; background: {G}; opacity: 0.50; }}
+.div-center {{
+  display: flex; gap: 4px; padding: 0 5px;
+  font-size: 5px; color: {G}; line-height: 1; opacity: 0.75;
 }}
 
 /* ── Footer ── */
-.footer {{ text-align: center; margin-top: 3mm; }}
+.footer {{ text-align: center; margin-top: 2mm; }}
 .footer-rule {{
-  display: flex; align-items: center; gap: 0; margin-bottom: 2mm;
+  display: flex; align-items: center; margin-bottom: 1.5mm;
 }}
-.footer-line {{ flex: 1; height: 0.4px; background: #C9A24B; opacity: 0.7; }}
-.footer-diamond {{ font-size: 5px; color: #C9A24B; padding: 0 5px; }}
+.footer-line {{ flex: 1; height: 0.3px; background: {G}; opacity: 0.45; }}
+.footer-diamond {{ font-size: 5px; color: {G3}; padding: 0 5px; opacity: 0.8; }}
 .footer-text {{
   font-family: 'Poppins', sans-serif; font-weight: 300;
-  font-size: 5.5px; letter-spacing: 0.30em; color: #C0B890;
-  text-transform: uppercase;
+  font-size: 4.5px; letter-spacing: 0.35em; color: {G3};
+  text-transform: uppercase; opacity: 0.85;
 }}
 </style>
 </head>
@@ -599,11 +613,17 @@ html, body {{ width: 148mm; height: 210mm; overflow: hidden; }}
 
   <div class="content">
 
-    <div class="venue-name">Your Venue Name</div>
-    <h1 class="cocktails-title">Cocktails</h1>
+    <div class="monogram">A &nbsp;·&nbsp; EST · 2023</div>
+    <h1 class="brand-name">TADOW</h1>
+    <div class="est-rule">
+      <div class="est-line"></div>
+      <span class="est-text">Signature Cocktails</span>
+      <div class="est-line"></div>
+    </div>
+    <div class="menu-script">Cocktails Menu</div>
     <div class="sig-row">
       <div class="sig-line"></div>
-      <span class="sig-text">Signature Selection</span>
+      <div class="sig-dot"></div>
       <div class="sig-line"></div>
     </div>
 
@@ -615,13 +635,13 @@ html, body {{ width: 148mm; height: 210mm; overflow: hidden; }}
         <p class="tasting-note">A blush-pink long drink — floral and bittersweet,<br>veiled in cool botanical effervescence.</p>
         <p class="ingredients">
           Vodka <span class="diamond">◆</span> Rosato Aperitivo <span class="diamond">◆</span>
-          Fresh Lime <span class="diamond">◆</span> Thomas Henry Botanical Tonic
+          Fresh Lime <span class="diamond">◆</span> Botanical Tonic
         </p>
       </div>
 
       <div class="divider">
         <div class="div-line"></div>
-        <div class="div-diamonds"><span>◆</span><span>◆</span><span>◆</span></div>
+        <div class="div-center"><span>◆</span><span>◆</span><span>◆</span></div>
         <div class="div-line"></div>
       </div>
 
@@ -637,7 +657,7 @@ html, body {{ width: 148mm; height: 210mm; overflow: hidden; }}
 
       <div class="divider">
         <div class="div-line"></div>
-        <div class="div-diamonds"><span>◆</span><span>◆</span><span>◆</span></div>
+        <div class="div-center"><span>◆</span><span>◆</span><span>◆</span></div>
         <div class="div-line"></div>
       </div>
 
